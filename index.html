@@ -17,6 +17,18 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
         <link href="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/css/iyrp2026madrid.webflow.shared.13882abe3.css" rel="stylesheet" type="text/css"/>
+        <!-- estilos para ocultar la insignia de Webflow (sobrescriben reglas del CSS exportado) -->
+        <style>
+            /* Oculta únicamente el badge inyectado por Webflow (clase oficial) */
+            .w-webflow-badge, .w-webflow-badge > img {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+                width: 0 !important;
+                height: 0 !important;
+            }
+        </style>
         <style>
             html.w-mod-js:not(.w-mod-ix3) :is(.heading-style-h1, .hero-icon, .hero-subtitle-text, .hero_bottom, .nav_component, .nav_link > *, .page-headings.text-align-center > *, .section_hero, .cta-video_background, .cta_content .text-style-allcaps, .button-wrap, .photo-wrap_first, .photo-wrap_second, .photo-wrap_third) {
                 visibility: hidden !important;
@@ -362,5 +374,21 @@
         <script src="https://cdn.prod.website-files.com/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
         <script src="https://cdn.prod.website-files.com/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
         <script src="https://cdn.prod.website-files.com/gsap/3.13.0/ScrollTrigger.min.js" type="text/javascript"></script>
+        <script>
+            // Fallback: elimina la insignia de Webflow si el script la inyecta después
+            (function removeWebflowBadge() {
+                function clean() {
+                    // eliminar únicamente elementos con la clase oficial de badge
+                    document.querySelectorAll('.w-webflow-badge').forEach(el => el.remove());
+                }
+                // intento inmediato
+                clean();
+                // observar mutaciones para eliminar si aparece después
+                const observer = new MutationObserver(() => clean());
+                observer.observe(document.documentElement, { childList: true, subtree: true });
+                // desconectar después de unos segundos (limpia recursos)
+                setTimeout(() => observer.disconnect(), 15000);
+            })();
+        </script>
     </body>
 </html>
