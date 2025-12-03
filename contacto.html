@@ -46,34 +46,40 @@
             .nav_component[data-wf--navbar--variant="base"] .nav_divider { background-color: rgba(255,255,255,0.25) !important; }
             .nav_component[data-wf--navbar--variant="base"] .button.is-nav .button_text { color: #fff !important; }
         </style>
-        <!-- Strong overrides to ensure the submit button is visible locally (force color/padding) -->
+        <!-- Clean button styling matching site design -->
         <style>
-            /* specific to contacto page */
-            .submit-button {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                width: 100% !important;
-                max-width: 520px !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                padding: 1rem 3rem !important; /* more horizontal room */
-                font-size: 1rem !important; /* slightly smaller to avoid clipping */
-                font-weight: 700 !important;
-                line-height: 1 !important;
-                white-space: nowrap !important; /* keep label on one line */
-                text-align: center !important; /* ensure centered */
-                min-height: 64px !important; /* ensure enough height */
-                color: #fff !important;
-                background-color: #000000 !important; /* strong blue */
-                border: none !important;
-                border-radius: .6rem !important;
-                box-shadow: 0 6px 18px rgba(0,0,0,0.12) !important;
-                text-align: center !important;
+            .contact-submit-btn {
+                display: inline-block;
+                padding: 1rem 3rem;
+                font-size: 1.05rem;
+                font-weight: 700;
+                font-family: 'PT Serif', serif;
+                text-align: center;
+                color: #ffffff;
+                background-color: #000000;
+                border: 2px solid #000000;
+                border-radius: 0.4rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                letter-spacing: 0.5px;
             }
-
-            /* ensure the visible text isn't clipped by any overflow */
-            .button-form { overflow: visible !important; }
+            
+            .contact-submit-btn:hover {
+                background-color: #000000;
+                border-color: #000000;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+            
+            .contact-submit-btn:active {
+                transform: translateY(0);
+            }
+            
+            .button-form {
+                text-align: center;
+                margin-top: 2rem;
+            }
         </style>
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
@@ -209,7 +215,7 @@
                                             </div>
                                             <textarea id="Message" name="Message" maxlength="5000" data-name="Message" placeholder="Mensaje" class="text-field w-input"></textarea>
                                             <div class="button-form">
-                                                <input type="submit" data-wait="" class="submit-button w-button" value="Enviar"/>
+                                                <button type="submit" class="contact-submit-btn">Enviar</button>
                                             </div>
                                         </form>
                                         <div class="success-message w-form-done">
