@@ -4,7 +4,7 @@
 <html data-wf-domain="iyrp2026madrid.webflow.io" data-wf-page="691f33f1a47cf304259c3504" data-wf-site="691f33f0a47cf304259c3453" data-wf-status="1">
     <head>
         <meta charset="utf-8"/>
-        <title>IYRP 2026 MADRID</title>
+        <title>International Meeting-Madrid : Celebrating The IYRP 2026</title>
         <meta content="A modern Webflow template inspired by ranch living — featuring early IX3-style interactions powered by GSAP for smoother animations and enhanced performance." name="description"/>
         <meta content="KALEO - Webflow HTML website template" property="og:title"/>
         <meta content="A modern Webflow template inspired by ranch living — featuring early IX3-style interactions powered by GSAP for smoother animations and enhanced performance." property="og:description"/>
@@ -81,6 +81,38 @@
                 }
             }
 
+            /* Slightly larger hero title now (adjusted per request) */
+            .hero-component .heading-style-h1 .bold-text {
+                font-size: 3rem !important;
+                line-height: 1.12 !important;
+                color: #000 !important;
+                display: block;
+                white-space: normal;
+                letter-spacing: 0.02em;
+            }
+
+            @media screen and (max-width: 991px) {
+                .hero-component .heading-style-h1 .bold-text {
+                    font-size: 2.1rem !important;
+                    line-height: 1.1 !important;
+                }
+            }
+
+            @media screen and (max-width: 479px) {
+                .hero-component .heading-style-h1 .bold-text {
+                    font-size: 1.6rem !important;
+                    line-height: 1.05 !important;
+                }
+            }
+
+            /* Force subtitle/text inside hero to black as well */
+            .hero-subtitle-text,
+            .hero-subtitle-text strong,
+            .hero-subtitle-text b,
+            .hero-subtitle-text a {
+                color: #000 !important;
+            }
+
             /* Desabilitar sticky behavior en section_cta */
             .track-cta {
                 position: relative !important;
@@ -103,6 +135,116 @@
             .section_features {
                 padding-top: 80px !important;
                 padding-bottom: 80px !important;
+            }
+        
+            /* Footer credits layout */
+            .footer .credits {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+                width: 100%;
+            }
+            /* Top row: align copyright + IMIDRA to the left */
+            .footer .credits-top {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                justify-content: flex-start;
+                width: 100%;
+            }
+            .footer .credits-top .copyright {
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            /* Bottom row: keep other logos centered */
+            .footer .credits-logos {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center; /* logos centrados */
+                flex-wrap: wrap;
+                margin-top: 0.25rem;
+                width: 100%;
+            }
+            .footer .credits-logos img,
+            .footer .credits-top img {
+                height: 80px; /* uniform visual height */
+                width: auto;
+                display: block;
+                object-fit: contain;
+            }
+            @media screen and (max-width: 767px) {
+                .footer .credits-logos img,
+                .footer .credits-top img {
+                    height: 56px;
+                    width: auto;
+                }
+                /* On small screens, make top row left-aligned but allow some padding */
+                .footer .credits-top {
+                    padding-left: 8px;
+                }
+            }
+            /* Make IMIDRA logo slightly smaller than the other logos */
+            .footer .credits-top img[alt="IMIDRA"] {
+                height: 56px;
+                width: auto;
+            }
+            @media screen and (max-width: 767px) {
+                .footer .credits-top img[alt="IMIDRA"] {
+                    height: 42px;
+                    width: auto;
+                }
+            }
+
+            /* --- Page-wide centering & justification for index.html --- */
+            /* Center main containers horizontally */
+            .page-wrapper, .main-wrapper, .container-large, .padding-global {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* Make textual content centered in layout but justified within a centered column */
+           
+
+            .page-wrapper p,
+            .page-wrapper li,
+            .page-wrapper .text-block,
+            .page-wrapper .text-size-medium,
+            .page-wrapper .text-size-large,
+            .page-wrapper .paragraph,
+            .page-wrapper .hero-subtitle-text {
+                text-align: justify !important;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Keep some wrappers visually centered */
+            .page-headings, .hero_content, .hero_content-top {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @media screen and (max-width: 991px) {
+                .page-wrapper h1,
+                .page-wrapper h2,
+                .page-wrapper p,
+                .page-wrapper .hero-subtitle-text {
+                    max-width: 680px;
+                }
+            }
+
+            @media screen and (max-width: 479px) {
+                .page-wrapper h1,
+                .page-wrapper h2,
+                .page-wrapper p,
+                .page-wrapper .hero-subtitle-text {
+                    max-width: 92%;
+                }
             }
         </style>
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -316,7 +458,7 @@ a,
                     <div class="container-large">
                         <div class="nav-wrap">
                             <a href="index.html" class="nav_brand w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
-                                <div class="logo">IYRP 2026</div>
+                                <div class="logo">IYRP 2026 MADRID</div>
                             </a>
                             <nav role="navigation" class="nav-menu w-nav-menu">
                                 <div class="nav-menu_wrap w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e">
@@ -407,16 +549,16 @@ a,
                             <div class="hero-component">
                                 <div class="hero_content">
                                     <div class="hero_content-top">
-                                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg" loading="lazy" alt="Kaleo Icon" class="hero-icon"/>
                                         <h1 class="heading-style-h1">
                                             <strong class="bold-text">
-                                                IYRP 2026<br/>MADRID
+                                                INTERNATIONAL MEETING - MADRID  CELEBRATING THE IYRP 2026
                                             </strong>
                                         </h1>
                                     </div>
+                                    <br>
                                     <div class="hero-subtitle">
                                         <p class="hero-subtitle-text">
-                                            En 2026, Madrid se suma a la celebración del <strong>Año Internacional de los Pastizales y del Pastoreo (IYRP 2026)</strong>
+                                            En 2026, La Comunidad de Madrid se suma a la celebración del <strong>Año Internacional de los Pastizales y del Pastoreo (IYRP 2026)</strong>
                                             , una iniciativa global de la FAO que destaca la importancia de los pastizales y el pastoreo para la <strong>sostenibilidad de los ecosistemas, la seguridad alimentaria y el desarrollo de las economías rurales</strong>
                                             . En la ciudad, se llevarán a cabo actividades, eventos y programas de concienciación que promueven el papel clave de la ganadería extensiva y el manejo sostenible de los pastizales, acercando a la ciudadanía la relevancia de estas prácticas para un futuro más sostenible.
                                         </p>
@@ -430,7 +572,7 @@ a,
                     </div>
                     <div class="hero-background">
                         <div class="video-placeholder">
-                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692d8347ceee9998fc0cf730_002-IMIDRA-WEB.jpg" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692d8347ceee9998fc0cf730_002-IMIDRA-WEB-p-500.jpg 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692d8347ceee9998fc0cf730_002-IMIDRA-WEB-p-800.jpg 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692d8347ceee9998fc0cf730_002-IMIDRA-WEB-p-1080.jpg 1080w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692d8347ceee9998fc0cf730_002-IMIDRA-WEB-p-1600.jpg 1600w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692d8347ceee9998fc0cf730_002-IMIDRA-WEB.jpg 1920w" alt="" class="image is-radius"/>
+                            <img src="estilos/home.png" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" alt="" class="image is-radius"/>
                         </div>
                     </div>
                 </div>
@@ -439,8 +581,9 @@ a,
                         <div class="container-large">
                             <div class="page-headings text-align-center">
                                 <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692040a0685dd1db6d15b4b2_UF1B5ST%20IYRP2026_V_Col_ES.png" loading="lazy" width="155" sizes="155px" alt="" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692040a0685dd1db6d15b4b2_UF1B5ST%20IYRP2026_V_Col_ES-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692040a0685dd1db6d15b4b2_UF1B5ST%20IYRP2026_V_Col_ES.png 568w"/>
+                                <br><br>
                                 <h2 class="heading-style-h2">
-                                    IYRP 2026 Madrid<span class="text-span-image"></span>
+                                    International Meeting-Madrid : Celebrating The IYRP 2026
                                     es el punto de encuetro de internacional para investigadores, instituciones, líderes comunitarios, organizaciones medioambientales y profesionales comprometidos con la gestión sostenible de los pastizales.
                                 </h2>
                             </div>
@@ -485,7 +628,7 @@ a,
                                         <em>Unidos por la tierra. Unidos por el cambio.</em>
                                     </div>
                                     <div class="max-width-medium">
-                                        <h2 class="heading-style-h2">IYRP 2026 Madrid es una oportunidad única para construir un futuro más resiliente y sostenible, donde naturaleza y sociedad evolucionen de la mano.</h2>
+                                        <h2 class="heading-style-h2">International Meeting-Madrid : Celebrating The IYRP 2026 es una oportunidad única para construir un futuro más resiliente y sostenible, donde naturaleza y sociedad evolucionen de la mano.</h2>
                                     </div>
                                 </div>
                                 <div class="w-layout-grid location_grid">
@@ -501,7 +644,7 @@ a,
                                                 <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg" loading="lazy" alt="Kaleo Icon" class="button-image"/>
                                             </a>
                                         </div>
-                                        <div class="text-block-2">Consulta el programa oficial de IYRP 2026 Madrid: conferencias, talleres y actividades para no perderte nada del evento.</div>
+                                        <div class="text-block-2">Consulta el programa oficial de International Meeting-Madrid : Celebrating The IYRP 2026: conferencias, talleres y actividades para no perderte nada del evento.</div>
                                     </div>
                                     <div class="location_card is-right">
                                         <a href="noticias.html" class="button w-inline-block">
@@ -513,7 +656,7 @@ a,
                                             </div>
                                             <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg" loading="lazy" alt="Kaleo Icon" class="button-image"/>
                                         </a>
-                                        <div class="text-block">Últimas novedades y actualizaciones del evento, ponentes y actividades destacadas de IYRP 2026 Madrid.</div>
+                                        <div class="text-block">Últimas novedades y actualizaciones del evento, ponentes y actividades destacadas de International Meeting-Madrid : Celebrating The IYRP 2026.</div>
                                     </div>
                                 </div>
                             </div>
@@ -527,7 +670,7 @@ a,
                                 <div class="page-headings text-align-center is-location">
                                     <div class="text-style-allcaps">La sostenibilidad comienza con la cAPITAL.</div>
                                     <div class="max-width-medium">
-                                        <h2 class="heading-style-h2">IYRP 2026 Madrid invita a descubrir, aprender y colaborar por un futuro sostenible para los pastizales y las comunidades pastoriles.</h2>
+                                        <h2 class="heading-style-h2">International Meeting-Madrid : Celebrating The IYRP 2026 invita a descubrir, aprender y colaborar por un futuro sostenible para los pastizales y las comunidades pastoriles.</h2>
                                     </div>
                                 </div>
                                 <div class="features-wrap">
@@ -538,7 +681,7 @@ a,
                                         <h2 class="text-weight-normal text-style-allcaps heading-style-h4">LA TIERRA</h2>
                                         <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3521_divider.svg" loading="lazy" alt="" class="divider-img"/>
                                         <div class="max-width-small">
-                                            <p class="text-size-medium">IYRP 2026 Madrid comienza un viaje por la tierra y los caminos de la trashumancia, celebrando la vida pastoral y sus ecosistemas.</p>
+                                            <p class="text-size-medium">International Meeting-Madrid : Celebrating The IYRP 2026 comienza un viaje por la tierra y los caminos de la trashumancia, celebrando la vida pastoral y sus ecosistemas.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -547,7 +690,7 @@ a,
                                         <h2 class="text-weight-normal text-style-allcaps heading-style-h4">EL ESPíritu</h2>
                                         <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3521_divider.svg" loading="lazy" alt="" class="divider-img"/>
                                         <div class="max-width-small">
-                                            <p class="text-size-medium">IYRP 2026 Madrid inspira el espíritu de colaboración y respeto por la tierra y las comunidades pastoriles.</p>
+                                            <p class="text-size-medium">International Meeting-Madrid : Celebrating The IYRP 2026 inspira el espíritu de colaboración y respeto por la tierra y las comunidades pastoriles.</p>
                                         </div>
                                     </div>
                                     <div class="features_image">
@@ -562,7 +705,7 @@ a,
                                         <h2 class="text-weight-normal text-style-allcaps heading-style-h4">LA VISIÓN</h2>
                                         <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3521_divider.svg" loading="lazy" alt="" class="divider-img"/>
                                         <div class="max-width-small">
-                                            <p class="text-size-medium">IYRP 2026 Madrid tiene la visión de un futuro sostenible, donde la gestión de los pastizales y la preservación de la trashumancia se convierten en pilares para proteger la tierra, fortalecer las comunidades pastoriles y fomentar un espíritu de colaboración global.</p>
+                                            <p class="text-size-medium">International Meeting-Madrid : Celebrating The IYRP 2026 tiene la visión de un futuro sostenible, donde la gestión de los pastizales y la preservación de la trashumancia se convierten en pilares para proteger la tierra, fortalecer las comunidades pastoriles y fomentar un espíritu de colaboración global.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -585,7 +728,7 @@ a,
                             <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg" loading="lazy" alt="Kaleo Icon"/>
                             <h3 class="text-style-allcaps font-zodiak text-size-huge text-weight-normal">&quot;Donde la tierra nos encuentra &quot;</h3>
                             <div class="cta_subtitle text-align-center">
-                                <p class="paragraph">La trashumancia es más que un recorrido: es un legado vivo que une a las personas con la tierra, los animales y sus raíces. IYRP 2026 Madrid celebra este viaje ancestral, donde cada paso revela historias, aprendizajes y la profunda conexión entre las comunidades pastoriles y los paisajes que les dan vida.</p>
+                                <p class="paragraph">La trashumancia es más que un recorrido: es un legado vivo que une a las personas con la tierra, los animales y sus raíces. International Meeting-Madrid : Celebrating The IYRP 2026 celebra este viaje ancestral, donde cada paso revela historias, aprendizajes y la profunda conexión entre las comunidades pastoriles y los paisajes que les dan vida.</p>
                             </div>
                         </div>
                         <div class="video-overlay"></div>
@@ -603,7 +746,7 @@ a,
                             <div class="container-large">
                                 <div class="footer_component">
                                     <div class="footer_left">
-                                        <h3 class="heading-style-h3 is-small">Damos la bienvenida a International Meeting Madrid 2026. IYRP 2026 MADRID te abre sus puertas.</h3>
+                                        <h3 class="heading-style-h3 is-small">Damos la bienvenida a International Meeting-Madrid : Celebrating The IYRP 2026 te abre sus puertas.</h3>
                                         <a href="contacto.html" class="button w-inline-block">
                                             <div class="button-text">
                                                 <div class="button_text">CONTACTO</div>
@@ -614,22 +757,22 @@ a,
                                             <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg" loading="lazy" alt="Kaleo Icon" class="button-image"/>
                                         </a>
                                         <div class="credits">
-                                            <div class="copyright">
-                                                <div class="text-size-regular">Copyright</div>
-                                                <div class="text-size-regular">©</div>
+                                            <div class="credits-top">
+                                                <div class="copyright">
+                                                    <div class="text-size-regular">Copyright</div>
+                                                    <div class="text-size-regular">©</div>
+                                                </div>
+                                                <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra.png" loading="lazy" width="100" height="Auto" alt="IMIDRA" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-1080.png 1080w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-1600.png 1600w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-2000.png 2000w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra.png 3397w" sizes="100px"/>
                                             </div>
-                                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid.png" loading="lazy" width="100" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid-p-1080.png 1080w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid.png 1200w" sizes="100px"/>
-                                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/6920471d554f44241f5dcb2c_UF1B5ST%20IYRP2026_V_Col_ES%20(1).ico" loading="lazy" width="100" height="Auto" alt=""/>
-                                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png" loading="lazy" width="100" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png 975w" sizes="100px"/>
-                                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2810503c3e5b588fc_logo%20fao.png" loading="lazy" width="100" height="Auto" alt=""/>
-                                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra.png" loading="lazy" width="100" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-1080.png 1080w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-1600.png 1600w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-2000.png 2000w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra.png 3397w" sizes="100px"/>
+                                        
                                         </div>
+                                        
                                     </div>
                                     <div class="footer_right">
                                         <div class="footer_right-wrap">
                                             <div class="text-style-allcaps text-size-small">UBICACIÓN</div>
                                             <div class="text-size-large">
-                                                Instituto de Ingeniería de España (IIEs), Calle del General Arrando, 38, 28010 Madrid, España<br/>
+                                                Instituto de la Ingeniería de España, Calle del General Arrando, 38, 28010 Madrid, España<br/>
                                             </div>
                                         </div>
                                         <div class="footer_right-wrap">
@@ -647,7 +790,7 @@ a,
                                             <div class="text-style-allcaps text-size-small">E-MAIL</div>
                                           
                                                 <div class="text-size-large">
-                                                    <strong>iyrp2026@gmail.com</strong>
+                                                    <strong>iyrp2026madrid</strong>
                                                 </div>
                                             </a>
                                         </div>
@@ -656,6 +799,13 @@ a,
                             </div>
                         </div>
                     </div>
+                    <br><br><br>
+                    <div class="credits-logos">
+                                                <img src="estilos/logos/fundacionlogo-1.svg" loading="lazy" width="100" height="Auto" alt="Fundación Trashumancia"/>
+                                                <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png" loading="lazy" width="100" height="Auto" alt="CIHEAM" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png 975w" sizes="100px"/>
+                                                <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2810503c3e5b588fc_logo%20fao.png" loading="lazy" width="100" height="Auto" alt="FAO"/>
+                                                <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" width="100" height="Auto" alt="Comunidad de Madrid"/>
+                                            </div>
                 </footer>
             </main>
         </div>

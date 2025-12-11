@@ -4,13 +4,13 @@
 <html data-wf-domain="iyrp2026madrid.webflow.io" data-wf-page="691f33f1a47cf304259c3505" data-wf-site="691f33f0a47cf304259c3453" data-wf-status="1">
     <head>
         <meta charset="utf-8"/>
-        <title>IYRP 2026 MADRID - NOTICIAS</title>
-        <meta content="IYRP 2026 MADRID - PROGRAMA y AGENDA" name="description"/>
-        <meta content="IYRP 2026 MADRID - PROGRAMA y AGENDA" property="og:title"/>
-        <meta content="IYRP 2026 MADRID - PROGRAMA y AGENDA" property="og:description"/>
+        <title>International Meeting-Madrid : Celebrating The IYRP 2026 - NOTICIAS</title>
+        <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - PROGRAMA y AGENDA" name="description"/>
+        <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - PROGRAMA y AGENDA" property="og:title"/>
+        <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - PROGRAMA y AGENDA" property="og:description"/>
         <meta content="https://cdn.prod.website-files.com/685077c466f113761c6d796b/686d90e639c295cfb687c0a0_Open%20Graph.avif" property="og:image"/>
-        <meta content="IYRP 2026 MADRID - PROGRAMA y AGENDA" property="twitter:title"/>
-        <meta content="IYRP 2026 MADRID - PROGRAMA y AGENDA" property="twitter:description"/>
+        <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - PROGRAMA y AGENDA" property="twitter:title"/>
+        <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - PROGRAMA y AGENDA" property="twitter:description"/>
         <meta content="https://cdn.prod.website-files.com/685077c466f113761c6d796b/686d90e639c295cfb687c0a0_Open%20Graph.avif" property="twitter:image"/>
         <meta property="og:type" content="website"/>
         <meta content="summary_large_image" name="twitter:card"/>
@@ -27,6 +27,67 @@
                 pointer-events: none !important;
                 width: 0 !important;
                 height: 0 !important;
+            }
+        </style>
+        <style>
+            /* Footer credits layout (copiado de index.html para uniformidad) */
+            .footer .credits {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+                width: 100%;
+            }
+            /* Top row: align copyright + IMIDRA to the left */
+            .footer .credits-top {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                justify-content: flex-start;
+                width: 100%;
+            }
+            .footer .credits-top .copyright {
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            /* Bottom row: keep other logos left-aligned */
+            .footer .credits-logos {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center; /* logos centrados */
+                flex-wrap: wrap;
+                margin-top: 0.25rem;
+                width: 100%;
+            }
+            .footer .credits-logos img,
+            .footer .credits-top img {
+                height: 80px;
+                width: auto;
+                display: block;
+                object-fit: contain;
+            }
+            @media screen and (max-width: 767px) {
+                .footer .credits-logos img,
+                .footer .credits-top img {
+                    height: 56px;
+                    width: auto;
+                }
+                .footer .credits-top {
+                    padding-left: 8px;
+                }
+            }
+            .footer .credits-top img[alt="IMIDRA"] {
+                height: 56px;
+                width: auto;
+            }
+            @media screen and (max-width: 767px) {
+                .footer .credits-top img[alt="IMIDRA"] {
+                    height: 42px;
+                    width: auto;
+                }
             }
         </style>
         <style>
@@ -267,7 +328,7 @@ a,
                         <div class="container-large">
                             <div class="nav-wrap">
                                 <a href="index.html" class="nav_brand w-inline-block">
-                                    <div class="logo">IYRP 2026</div>
+                                    <div class="logo">IYRP 2026 MADRID</div>
                                 </a>
                                 <nav role="navigation" class="nav-menu w-nav-menu">
                                     <div class="nav-menu_wrap">
@@ -400,7 +461,7 @@ a,
                         <div class="container-large">
                             <div class="footer_component">
                                 <div class="footer_left">
-                                    <h3 class="heading-style-h3 is-small">Damos la bienvenida a International Meeting Madrid 2026. IYRP 2026 MADRID te abre sus puertas.</h3>
+                                    <h3 class="heading-style-h3 is-small">Damos la bienvenida a International Meeting-Madrid : Celebrating The IYRP 2026 te abre sus puertas.</h3>
                                     <a href="contacto.html" class="button w-inline-block">
                                         <div class="button-text">
                                             <div class="button_text">CONTACTO</div>
@@ -411,47 +472,53 @@ a,
                                         <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg" loading="lazy" alt="Kaleo Icon" class="button-image"/>
                                     </a>
                                     <div class="credits">
-                                        <div class="copyright">
-                                            <div class="text-size-regular">Copyright</div>
-                                            <div class="text-size-regular">©</div>
+                                        <div class="credits-top">
+                                            <div class="copyright">
+                                                <div class="text-size-regular">Copyright</div>
+                                                <div class="text-size-regular">©</div>
+                                            </div>
+                                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra.png" loading="lazy" width="100" height="Auto" alt="IMIDRA" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-1080.png 1080w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-1600.png 1600w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-2000.png 2000w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra.png 3397w" sizes="100px"/>
                                         </div>
-                                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid.png" loading="lazy" width="100" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid-p-1080.png 1080w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2b658df73bff05894_logo%20comunidad%20de%20madrid.png 1200w" sizes="100px"/>
-                                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/6920471d554f44241f5dcb2c_UF1B5ST%20IYRP2026_V_Col_ES%20(1).ico" loading="lazy" width="100" height="Auto" alt=""/>
-                                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png" loading="lazy" width="100" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png 975w" sizes="100px"/>
-                                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2810503c3e5b588fc_logo%20fao.png" loading="lazy" width="100" height="Auto" alt=""/>
-                                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra.png" loading="lazy" width="100" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-1080.png 1080w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-1600.png 1600w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra-p-2000.png 2000w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d282bc10b883d86eb7_logo%20imidra.png 3397w" sizes="100px"/>
+                                    
                                     </div>
+                                    
                                 </div>
                                 <div class="footer_right">
-                                        <div class="footer_right-wrap">
-                                            <div class="text-style-allcaps text-size-small">UBICACIÓN</div>
-                                            <div class="text-size-large">
-                                                Instituto de Ingeniería de España (IIEs), Calle del General Arrando, 38, 28010 Madrid, España<br/>
-                                            </div>
+                                    <div class="footer_right-wrap">
+                                        <div class="text-style-allcaps text-size-small">UBICACIÓN</div>
+                                        <div class="text-size-large">
+                                            Instituto de la Ingeniería de España, Calle del General Arrando, 38, 28010 Madrid, España<br/>
                                         </div>
-                                        <div class="footer_right-wrap">
-                                            <a href="ubicacion.html" class="button w-inline-block">
-                                                <div class="button-text">
+                                    </div>
+                                    <div class="footer_right-wrap">
+                                        <a href="ubicacion.html" class="button w-inline-block">
+                                            <div class="button-text">
+                                                <div class="button_text">UBICACIÓN</div>
+                                                <div class="button-text-animation">
                                                     <div class="button_text">UBICACIÓN</div>
-                                                    <div class="button-text-animation">
-                                                        <div class="button_text">UBICACIÓN</div>
-                                                    </div>
                                                 </div>
-                                                <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg" loading="lazy" alt="Kaleo Icon" class="button-image"/>
-                                            </a>
-                                        </div>
-                                        <div class="footer_right-wrap">
-                                            <div class="text-style-allcaps text-size-small">E-MAIL</div>
-                                           
-                                                <div class="text-size-large">
-                                                    <strong>iyrp2026@gmail.com</strong>
                                             </div>
+                                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg" loading="lazy" alt="Kaleo Icon" class="button-image"/>
                                         </a>
+                                    </div>
+                                    <div class="footer_right-wrap">
+                                        <div class="text-style-allcaps text-size-small">E-MAIL</div>
+                                      
+                                            <div class="text-size-large">
+                                                <strong>iyrp2026madrid</strong>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <br><br><br>
+                <div class="credits-logos">
+                    <img src="estilos/logos/fundacionlogo-1.svg" loading="lazy" width="100" height="Auto" alt="Fundación Trashumancia"/>
+                    <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png" loading="lazy" width="100" height="Auto" alt="CIHEAM" srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png 975w" sizes="100px"/>
+                    <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2810503c3e5b588fc_logo%20fao.png" loading="lazy" width="100" height="Auto" alt="FAO"/>
+                    <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" width="100" height="Auto" alt="Comunidad de Madrid"/>
                 </div>
             </footer>
             <!-- NAV final eliminado (ya hay menú en la cabecera) -->

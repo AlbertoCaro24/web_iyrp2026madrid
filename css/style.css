@@ -199,6 +199,11 @@ td, th {
   content: "";
 }
 
+/* Ensure text-size-medium is justified across the site */
+.text-size-medium {
+  text-align: justify !important;
+}
+
 .w-icon-arrow-down:before, .w-icon-dropdown-toggle:before {
   content: "";
 }
@@ -4083,14 +4088,56 @@ figcaption {
   display: flex;
 }
 
+.hero-component .hero_content {
+  position: relative;
+  z-index: 60; /* ensure content sits above background/video */
+}
+
 .hero-subtitle-text {
-  color: var(--blanco-blanco);
+  color: #000; /* texto oscuro sobre fondo claro */
   text-align: center;
   font-family: PT Serif, serif;
-  font-size: .8rem;
-  font-weight: 800;
+  font-size: .95rem;
+  font-weight: 700;
   text-decoration: none;
-  position: static;
+  position: relative;
+  z-index: 70; /* above the hero background */
+  background-color: rgba(232,221,204,0.6); /* recuadro con 60% de opacidad */
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Force black color for the hero title and subtitle text (including strong/b/a) */
+.hero-component .heading-style-h1 .bold-text {
+  color: #000 !important;
+}
+
+.hero-subtitle-text,
+.hero-subtitle-text strong,
+.hero-subtitle-text b,
+.hero-subtitle-text a {
+  color: #000 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .hero-subtitle-text {
+    font-size: .9rem;
+    padding: .9rem 1rem;
+    max-width: 680px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-subtitle-text {
+    font-size: .85rem;
+    padding: .75rem .9rem;
+    max-width: 92%;
+  }
 }
 
 .text-box {
