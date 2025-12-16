@@ -126,7 +126,7 @@
         .nav_component[data-wf--navbar--variant="base"] .logo,
         .nav_component[data-wf--navbar--variant="base"] .button_text,
         .nav_component[data-wf--navbar--variant="base"] .nav-button_text.is-absolute .text-size-regular {
-            color: #000000 !important;
+            color: #ffffff !important;
         }
 
         /* make the nav divider visible on dark backgrounds */
@@ -136,7 +136,7 @@
 
         /* ensure the INSCRIPCIÓN button text is white */
         .nav_component[data-wf--navbar--variant="base"] .button.is-nav .button_text {
-            color: #fff !important;
+            color: #71779b !important;
         }
     </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -166,7 +166,7 @@
     <meta name="robots" content="noindex">
 </head>
 
-<body>
+<body class="noticias-page">
     <div class="page-wrapper">
         <div class="global-styles w-embed">
             <style>
@@ -181,7 +181,7 @@
                 /* Focus state style for keyboard navigation for the focusable elements */
                 *[tabindex]:focus-visible,
                 input[type="file"]:focus-visible {
-                    outline: 0.125rem solid #4d65ff;
+                    outline: 0.125rem solid #749ba2;
                     outline-offset: 0.125rem;
                 }
 
@@ -367,7 +367,8 @@ a,
                     <div class="container-large">
                         <div class="nav-wrap">
                             <a href="index.html" class="nav_brand w-inline-block">
-                                <div class="logo">IYRP 2026 MADRID</div>
+                                <img src="estilos/logos/logo IYRP blanco.png" alt="logo IYRP 2026 Madrid"
+                                    style="height: 85px; width: auto;">
                             </a>
                             <nav role="navigation" class="nav-menu w-nav-menu">
                                 <div class="nav-menu_wrap">
@@ -458,27 +459,35 @@ a,
                 style="padding-top: 1rem !important; padding-bottom: 2rem !important;">
                 <div class="container-large">
                     <div class="news-grid">
-                        <article>
+                        <!-- Article 1 -->
+                        <article style="margin-bottom: 4rem;">
+                            <!-- Header (Title + Date/Tag) -->
                             <header
-                                style="margin-bottom: 3rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 2rem;">
+                                style="margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1.5rem;">
                                 <h1
-                                    style="font-size: 2rem; line-height: 1.3; margin-bottom: 1rem; font-family: 'PT Serif', serif; font-weight: 700; color: #000;">
+                                    style="font-size: 2rem; line-height: 1.3; margin-bottom: 1rem; font-family: 'PT Serif', serif; font-weight: 700; color: #ffffff;">
                                     2026, Año Internacional del Pastoreo y los Pastizales: comenzamos a organizarnos
                                 </h1>
-                                <div style="display: flex; gap: 1.5rem; font-size: 0.95rem; color: #666;">
+                                <div style="display: flex; gap: 1.5rem; font-size: 0.95rem; color: #ffffff;">
                                     <span><strong>14 julio, 2025</strong></span>
-                                    <span
-                                        style="background-color: #f0f0f0; padding: 0.25rem 0.75rem; border-radius: 4px;">Internacional</span>
+                                    <span class="news-tag">Internacional</span>
                                 </div>
-                                <img src="estilos/fotos/fotos/006-IMIDRA-WEB.jpg" alt="paisaje de pastizales"
-                                    style="width: 100%; height: auto; margin-top: 2rem; border-radius: 8px;" />
                             </header>
 
-                            <div class="w-richtext" style="font-size: 1.05rem; line-height: 1.8; color: #333;">
-                                <p>La Asamblea General de las Naciones Unidas ha designado <strong>2026 como el Año
-                                        Internacional del Pastoreo y los Pastizales (IYRP 2026)</strong>, una iniciativa
-                                    global liderada por la FAO que busca poner en relieve el papel esencial de los
-                                    pastizales y el pastoreo en la sostenibilidad de los ecosistemas, la seguridad
+                            <!-- Image (Full width or contained) -->
+                            <div class="news-image-container" style="margin-bottom: 2rem;">
+                                <img src="estilos/fotos/fotos/006-IMIDRA-WEB.jpg" alt="paisaje de pastizales"
+                                    style="width: 100%; height: auto; border-radius: 4px;" />
+                            </div>
+
+                            <!-- Justified Text -->
+                            <div class="w-richtext"
+                                style="font-size: 1.05rem; line-height: 1.8; color: #ffffff; text-align: justify;">
+                                <p>La Asamblea General de las Naciones Unidas ha designado <strong>2026 como el
+                                        Año Internacional del Pastoreo y los Pastizales (IYRP 2026)</strong>, una
+                                    iniciativa global liderada por la FAO que busca poner en relieve el papel esencial
+                                    de
+                                    los pastizales y el pastoreo en la sostenibilidad de los ecosistemas, la seguridad
                                     alimentaria, la lucha contra el cambio climático y el desarrollo de las zonas
                                     rurales.</p>
 
@@ -523,8 +532,9 @@ a,
 
                                 <p>Para más información sobre el Año Internacional y las iniciativas relacionadas,
                                     pueden contactar a <a href="mailto:info@ganaderiaextensiva.org"
-                                        style="color: #3898ec; text-decoration: none;">info@ganaderiaextensiva.org</a> o
-                                    visitar los sitios oficiales de la FAO y las organizaciones participantes.</p>
+                                        style="color: #ffffff; text-decoration: underline;">info@ganaderiaextensiva.org</a>
+                                    o visitar los sitios oficiales de la FAO y las organizaciones participantes.
+                                </p>
 
                                 <p>Asimismo, desde la Fundación <strong>Entretantos</strong> continuamos trabajando en
                                     la promoción de una ganadería más sostenible y resiliente, valorando el papel
@@ -533,23 +543,29 @@ a,
                             </div>
                         </article>
 
-                        <article>
+                        <!-- Article 2 -->
+                        <article style="margin-bottom: 4rem;">
                             <header
-                                style="margin-bottom: 3rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 2rem;">
+                                style="margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1.5rem;">
                                 <h1
-                                    style="font-size: 2rem; line-height: 1.3; margin-bottom: 1rem; font-family: 'PT Serif', serif; font-weight: 700; color: #000;">
+                                    style="font-size: 2rem; line-height: 1.3; margin-bottom: 1rem; font-family: 'PT Serif', serif; font-weight: 700; color: #ffffff;">
                                     Nueva Iniciativa para la Trashumancia: Caminos y Futuro
                                 </h1>
-                                <div style="display: flex; gap: 1.5rem; font-size: 0.95rem; color: #666;">
+                                <div style="display: flex; gap: 1.5rem; font-size: 0.95rem; color: #ffffff;">
                                     <span><strong>20 agosto, 2025</strong></span>
-                                    <span
-                                        style="background-color: #f0f0f0; padding: 0.25rem 0.75rem; border-radius: 4px;">Nacional</span>
+                                    <span class="news-tag">Nacional</span>
                                 </div>
-                                <img src="estilos/fotos/fotos/002-IMIDRA-WEB.jpg" alt="ganado en trashumancia"
-                                    style="width: 100%; height: auto; margin-top: 2rem; border-radius: 8px;" />
                             </header>
 
-                            <div class="w-richtext" style="font-size: 1.05rem; line-height: 1.8; color: #333;">
+                            <!-- Image for Article 2 - Placeholder or same? Using a different one if available or same for now -->
+                            <!-- Reusing a gallery image or relevant image if no specific one for article 2 exists in context -->
+                            <div class="news-image-container" style="margin-bottom: 2rem;">
+                                <img src="estilos/fotos/fotos/004-IMIDRA-WEB.jpg" alt="trashumancia"
+                                    style="width: 100%; height: auto; border-radius: 4px;" />
+                            </div>
+
+                            <div class="w-richtext"
+                                style="font-size: 1.05rem; line-height: 1.8; color: #ffffff; text-align: justify;">
                                 <p>La práctica de la trashumancia, reconocida como Patrimonio Cultural Inmaterial de la
                                     Humanidad, enfrenta nuevos retos y oportunidades en el contexto actual. Un nuevo
                                     proyecto busca revitalizar las vías pecuarias y fomentar el relevo generacional.</p>
@@ -557,103 +573,68 @@ a,
                                 <p>Expertos en ganadería extensiva señalan que recuperar estos corredores ecológicos no
                                     solo beneficia a los rebaños, sino que conecta territorios y biodiversidad a lo
                                     largo de la península.</p>
-
-                                <p><strong>Objetivos principales:</strong></p>
-
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
-                                    <li style="margin-bottom: 0.75rem;"><strong>Restauración</strong> de tramos
-                                        degradados de las vías pecuarias.</li>
-                                    <li style="margin-bottom: 0.75rem;"><strong>Fomento</strong> del turismo sostenible
-                                        asociado al pastoreo.</li>
-                                    <li style="margin-bottom: 0.75rem;"><strong>Apoyo</strong> a los jóvenes pastores
-                                        mediante formación y recursos.</li>
-                                </ul>
-
-                                <p>Se espera que este programa piloto sirva de modelo para otras regiones europeas con
-                                    tradición pastoril similar.</p>
                             </div>
                         </article>
+
+
                     </div>
                 </div>
             </section>
 
-            <footer class="footer">
-                <div class="padding-global">
-                    <div class="footer-wrap">
-                        <div class="container-large">
-                            <div class="footer_component">
-                                <div class="footer_left">
-                                    <h3 class="heading-style-h3 is-small">Damos la bienvenida a International
-                                        Meeting-Madrid : Celebrating The IYRP 2026 te abre sus puertas.</h3>
-                                    <a href="contacto.html" class="button w-inline-block">
-                                        <div class="button-text">
-                                            <div class="button_text">CONTACTO</div>
-                                            <div class="button-text-animation">
-                                                <div class="button_text">Book a Visit</div>
-                                            </div>
-                                        </div>
-                                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
-                                            loading="lazy" alt="Kaleo Icon" class="button-image" />
-                                    </a>
-                                    <div class="credits">
-                                        <div class="credits-top">
-                                            <div class="copyright">
-                                                <div class="text-size-regular">Copyright</div>
-                                                <div class="text-size-regular">©</div>
-                                            </div>
-                                            <img src="estilos/logos/logo%20IMIDRA.png" loading="lazy" width="100"
-                                                height="Auto" alt="IMIDRA" />
-                                        </div>
+            <footer class="new-footer">
+                <div class="new-footer-container">
+                    <!-- Left Column -->
+                    <div class="new-footer-col-left">
+                        <h3>Te damos la bienvenida a International Meeting-Madrid : Celebrating The IYRP 2026</h3>
 
-                                    </div>
+                        <a href="contacto.html" class="button w-inline-block">
+                            <div class="button_text">CONTACTO</div>
+                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
+                                loading="lazy" alt="Arrow" />
+                        </a>
 
-                                </div>
-                                <div class="footer_right">
-                                    <div class="footer_right-wrap">
-                                        <div class="text-style-allcaps text-size-small">UBICACIÓN</div>
-                                        <div class="text-size-large">
-                                            Instituto de la Ingeniería de España, Calle del General Arrando, 38, 28010
-                                            Madrid, España<br />
-                                        </div>
-                                    </div>
-                                    <div class="footer_right-wrap">
-                                        <a href="ubicacion.html" class="button w-inline-block">
-                                            <div class="button-text">
-                                                <div class="button_text">UBICACIÓN</div>
-                                                <div class="button-text-animation">
-                                                    <div class="button_text">UBICACIÓN</div>
-                                                </div>
-                                            </div>
-                                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
-                                                loading="lazy" alt="Kaleo Icon" class="button-image" />
-                                        </a>
-                                    </div>
-                                    <div class="footer_right-wrap">
-                                        <div class="text-style-allcaps text-size-small">E-MAIL</div>
-
-                                        <div class="text-size-large">
-                                            <strong>iyrp2026madrid</strong>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div style="display:flex; align-items:center; gap:1rem; margin-top:1rem;">
+                            <div style="display:flex; gap:0.5rem; font-size:0.9rem;">
+                                <div>Copyright</div>
+                                <div>©</div>
                             </div>
+                            <img src="estilos/logos/logo%20IMIDRA.png" loading="lazy" style="height:40px; width:auto;"
+                                alt="IMIDRA" />
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="new-footer-col-right">
+                        <!-- Location -->
+                        <div class="new-footer-item">
+                            <div class="new-footer-text">
+                                Instituto de la Ingeniería de España,<br>
+                                Calle del General Arrando, 38, 28010 Madrid, España
+                            </div>
+                        </div>
+
+                        <!-- Location Button -->
+                        <a href="ubicacion.html" class="button w-inline-block">
+                            <div class="button_text">UBICACIÓN</div>
+                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
+                                loading="lazy" alt="Arrow" />
+                        </a>
+
+                        <!-- Email -->
+                        <div class="new-footer-item">
+                            <div class="new-footer-label">E-MAIL</div>
+                            <div class="new-footer-text"><strong>iyrp2026madrid</strong></div>
                         </div>
                     </div>
                 </div>
-                <br><br><br>
-                <div class="credits-logos">
-                    <img src="estilos/logos/fundacionlogo-1.svg" loading="lazy" width="100" height="Auto"
-                        alt="Fundación Trashumancia" />
-                    <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png"
-                        loading="lazy" width="100" height="Auto" alt="CIHEAM"
-                        srcset="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-500.png 500w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam-p-800.png 800w, https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2e4f89ac65bc1f770_logo%20ciheam.png 975w"
-                        sizes="100px" />
-                    <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/692eb6d2810503c3e5b588fc_logo%20fao.png"
-                        loading="lazy" width="100" height="Auto" alt="FAO" />
-                    <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" width="100" height="Auto"
-                        alt="Comunidad de Madrid" />
+
+                <!-- Logos Bottom -->
+                <div class="new-footer-logos">
+                    <img src="estilos/logos/fundacionlogo-1.svg" loading="lazy" alt="Fundación Trashumancia" />
+                    <img src="estilos/logos/CIHEAM-ZARAGOZA_CMJN-horizontal.png" loading="lazy" alt="CIHEAM" />
+                    <img src="estilos/logos/logo fao.png" loading="lazy" alt="FAO" />
+                    <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" alt="Comunidad de Madrid" />
                 </div>
-                <br>
             </footer>
             <!-- NAV final eliminado (ya hay menú en la cabecera) -->
         </div>

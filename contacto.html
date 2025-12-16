@@ -52,7 +52,7 @@
         .nav_component[data-wf--navbar--variant="base"] .logo,
         .nav_component[data-wf--navbar--variant="base"] .button_text,
         .nav_component[data-wf--navbar--variant="base"] .nav-button_text.is-absolute .text-size-regular {
-            color: #000000 !important;
+            color: #ffffff !important;
         }
 
         .nav_component[data-wf--navbar--variant="base"] .nav_divider {
@@ -60,7 +60,7 @@
         }
 
         .nav_component[data-wf--navbar--variant="base"] .button.is-nav .button_text {
-            color: #fff !important;
+            color: #71779b !important;
         }
     </style>
     <!-- Clean button styling matching site design -->
@@ -72,9 +72,9 @@
             font-weight: 700;
             font-family: 'PT Serif', serif;
             text-align: center;
-            color: #ffffff;
-            background-color: #000000;
-            border: 2px solid #000000;
+            color: #71779b;
+            background-color: #ffffff;
+            border: 2px solid #ffffff;
             border-radius: 0.4rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -83,8 +83,8 @@
         }
 
         .contact-submit-btn:hover {
-            background-color: #000000;
-            border-color: #000000;
+            background-color: #ffffff;
+            border-color: #ffffff;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
@@ -124,7 +124,7 @@
         rel="apple-touch-icon" />
 </head>
 
-<body>
+<body class="contacto-page">
     <div class="fs-styleguide_component">
         <div data-wf--navbar--variant="base" data-animation="default" data-collapse="medium" data-duration="400"
             data-easing="ease" data-easing2="ease" role="banner" class="nav_component w-nav">
@@ -132,7 +132,8 @@
                 <div class="container-large">
                     <div class="nav-wrap">
                         <a href="index.html" class="nav_brand w-inline-block">
-                            <div class="logo">IYRP 2026 MADRID</div>
+                            <img src="estilos/logos/logo IYRP blanco.png" alt="logo IYRP 2026 Madrid"
+                                style="height: 85px; width: auto;">
                         </a>
                         <nav role="navigation" class="nav-menu w-nav-menu">
                             <div class="nav-menu_wrap">
@@ -249,6 +250,62 @@
             </div>
         </div>
         </main>
+        <footer class="new-footer">
+            <div class="new-footer-container">
+                <!-- Left Column -->
+                <div class="new-footer-col-left">
+                    <h3>Te damos la bienvenida a International Meeting-Madrid : Celebrating The IYRP 2026</h3>
+
+                    <a href="contacto.html" class="button w-inline-block">
+                        <div class="button_text">CONTACTO</div>
+                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
+                            loading="lazy" alt="Arrow" />
+                    </a>
+
+                    <div style="display:flex; align-items:center; gap:1rem; margin-top:1rem;">
+                        <div style="display:flex; gap:0.5rem; font-size:0.9rem;">
+                            <div>Copyright</div>
+                            <div>©</div>
+                        </div>
+                        <img src="estilos/logos/logo%20IMIDRA.png" loading="lazy" style="height:40px; width:auto;"
+                            alt="IMIDRA" />
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="new-footer-col-right">
+                    <!-- Location -->
+                    <div class="new-footer-item">
+                        <div class="new-footer-text">
+                            Instituto de la Ingeniería de España,<br>
+                            Calle del General Arrando, 38, 28010 Madrid, España
+                        </div>
+                    </div>
+
+                    <!-- Location Button -->
+                    <a href="ubicacion.html" class="button w-inline-block">
+                        <div class="button_text">UBICACIÓN</div>
+                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
+                            loading="lazy" alt="Arrow" />
+                    </a>
+
+                    <!-- Email -->
+                    <div class="new-footer-item">
+                        <div class="new-footer-label">E-MAIL</div>
+                        <div class="new-footer-text"><strong>iyrp2026madrid</strong></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logos Bottom -->
+            <div class="new-footer-logos">
+                <img src="estilos/logos/fundacionlogo-1.svg" loading="lazy" alt="Fundación Trashumancia" />
+                <img src="estilos/logos/CIHEAM-ZARAGOZA_CMJN-horizontal.png" loading="lazy" alt="CIHEAM" />
+                <img src="estilos/logos/logo fao.png" loading="lazy" alt="FAO" />
+                <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" alt="Comunidad de Madrid" />
+            </div>
+        </footer>
     </div>
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=691f33f0a47cf304259c3453"
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="

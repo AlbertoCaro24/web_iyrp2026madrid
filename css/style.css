@@ -4,6 +4,22 @@ html {
   font-family: sans-serif;
 }
 
+:root {
+  /* Violet Palette */
+  --base-color-brand--violet: #6A4C93;
+  /* Main Deep Violet */
+  --base-color-brand--light-violet: #9d81ba;
+  /* Secondary Lighter Violet */
+  --base-color-brand--dark-violet: #382055;
+  /* Dark accents */
+  --base-color-brand--accent-blue: #81D4FA;
+  /* Light Blue Accent */
+  --base-color-brand--light-black: #171411;
+  /* Light Black Text */
+  --text-color-primary: #FFFFFF;
+  --text-color-secondary: #E1BEE7;
+}
+
 body {
   margin: 0;
 }
@@ -42,9 +58,7 @@ template {
   display: none;
 }
 
-a {
-  background-color: #0000;
-}
+
 
 a:active,
 a:hover {
@@ -70,7 +84,7 @@ h1 {
 }
 
 mark {
-  color: #000;
+  color: #ffffff;
   background: #ff0;
 }
 
@@ -262,8 +276,8 @@ html {
 }
 
 body {
-  color: #333;
-  background-color: #fff;
+  color: #ffffff;
+  background-color: var(--base-color-brand--violet);
   min-height: 100%;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -310,10 +324,10 @@ html.w-mod-touch * {
 }
 
 .w-button {
-  color: #fff;
+  color: #ffffff;
   line-height: inherit;
   cursor: pointer;
-  background-color: #3898ec;
+  background-color: var(--base-color-brand--light-violet);
   border: 0;
   border-radius: 0;
   padding: 9px 15px;
@@ -326,7 +340,7 @@ input.w-button {
 }
 
 html[data-w-dynpage] [data-w-cloak] {
-  color: #0000 !important;
+  color: transparent !important;
 }
 
 .w-code-block {
@@ -395,13 +409,13 @@ pre.w-code-block code {
 .w-webflow-badge {
   white-space: nowrap;
   cursor: pointer;
-  box-shadow: 0 0 0 1px #0000001a, 0 1px 3px #0000001a;
+  box-shadow: 0 0 0 1px #ffffff1a, 0 1px 3px #ffffff1a;
   visibility: visible !important;
   opacity: 1 !important;
   z-index: 2147483647 !important;
-  color: #aaadb0 !important;
+  color: var(--base-color-brand--accent-blue) !important;
   overflow: unset !important;
-  background-color: #fff !important;
+  background-color: var(--base-color-brand--violet) !important;
   border-radius: 3px !important;
   width: auto !important;
   height: auto !important;
@@ -477,7 +491,7 @@ p {
 }
 
 blockquote {
-  border-left: 5px solid #e2e2e2;
+  border-left: 5px solid var(--base-color-brand--light-violet);
   margin: 0 0 10px;
   padding: 10px 20px;
   font-size: 18px;
@@ -548,7 +562,7 @@ button,
 
 .w-form-done {
   text-align: center;
-  background-color: #ddd;
+  background-color: var(--base-color-brand--light-violet);
   padding: 20px;
   display: none;
 }
@@ -568,10 +582,10 @@ label {
 
 .w-input,
 .w-select {
-  color: #333;
+  color: #ffffff;
   vertical-align: middle;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--base-color-brand--violet);
+  border: 1px solid var(--base-color-brand--light-violet);
   width: 100%;
   height: 38px;
   margin-bottom: 10px;
@@ -583,12 +597,12 @@ label {
 
 .w-input::placeholder,
 .w-select::placeholder {
-  color: #999;
+  color: var(--base-color-brand--accent-blue);
 }
 
 .w-input:focus,
 .w-select:focus {
-  border-color: #3898ec;
+  border-color: var(--base-color-brand--light-violet);
   outline: 0;
 }
 
@@ -607,7 +621,7 @@ fieldset[disabled] .w-select {
 .w-select[readonly],
 fieldset[disabled]:not(.w-input-disabled) .w-input,
 fieldset[disabled]:not(.w-input-disabled) .w-select {
-  background-color: #eee;
+  background-color: var(--base-color-brand--light-violet);
 }
 
 textarea.w-input,
@@ -616,7 +630,7 @@ textarea.w-select {
 }
 
 .w-select {
-  background-color: #f3f3f3;
+  background-color: var(--base-color-brand--light-violet);
 }
 
 .w-select[multiple] {
@@ -670,7 +684,7 @@ textarea.w-select {
 .w-file-upload-default,
 .w-file-upload-uploading,
 .w-file-upload-success {
-  color: #333;
+  color: #ffffff;
   display: inline-block;
 }
 
@@ -688,8 +702,8 @@ textarea.w-select {
 
 .w-file-upload-uploading-btn {
   cursor: pointer;
-  background-color: #fafafa;
-  border: 1px solid #ccc;
+  background-color: var(--base-color-brand--light-violet);
+  border: 1px solid var(--base-color-brand--light-violet);
   margin: 0;
   padding: 8px 12px;
   font-size: 14px;
@@ -698,8 +712,8 @@ textarea.w-select {
 }
 
 .w-file-upload-file {
-  background-color: #fafafa;
-  border: 1px solid #ccc;
+  background-color: var(--base-color-brand--light-violet);
+  border: 1px solid var(--base-color-brand--light-violet);
   flex-grow: 1;
   justify-content: space-between;
   margin: 0;
@@ -742,8 +756,8 @@ textarea.w-select {
 
 .w-file-upload-label {
   cursor: pointer;
-  background-color: #fafafa;
-  border: 1px solid #ccc;
+  background-color: var(--base-color-brand--light-violet);
+  border: 1px solid var(--base-color-brand--light-violet);
   margin: 0;
   padding: 8px 12px;
   font-size: 14px;
@@ -1107,7 +1121,7 @@ textarea.w-select {
 .w-widget-twitter-count-shim {
   vertical-align: top;
   text-align: center;
-  background: #fff;
+  background: var(--base-color-brand--violet);
   border: 1px solid #758696;
   border-radius: 3px;
   width: 28px;
@@ -1124,7 +1138,7 @@ textarea.w-select {
 
 .w-widget-twitter-count-shim .w-widget-twitter-count-inner {
   text-align: center;
-  color: #999;
+  color: var(--base-color-brand--accent-blue);
   font-family: serif;
   font-size: 15px;
   line-height: 12px;
@@ -1159,7 +1173,7 @@ textarea.w-select {
 .w-widget-twitter-count-shim:not(.w--vertical):after {
   content: " ";
   pointer-events: none;
-  border: solid #0000;
+  border: solid transparent;
   width: 0;
   height: 0;
   position: absolute;
@@ -1182,7 +1196,7 @@ textarea.w-select {
 
 .w-widget-twitter-count-shim:not(.w--vertical):after {
   border-width: 4px;
-  border-color: #fff0 #fff #fff0 #fff0;
+  border-color: transparent var(--base-color-brand--violet) transparent transparent;
   margin-top: -4px;
   margin-left: -8px;
 }
@@ -1203,7 +1217,7 @@ textarea.w-select {
 .w-widget-twitter-count-shim.w--vertical:after {
   content: " ";
   pointer-events: none;
-  border: solid #0000;
+  border: solid transparent;
   width: 0;
   height: 0;
   position: absolute;
@@ -1219,7 +1233,7 @@ textarea.w-select {
 
 .w-widget-twitter-count-shim.w--vertical:after {
   border-width: 4px;
-  border-color: #fff #fff0 #fff0;
+  border-color: var(--base-color-brand--violet) transparent transparent;
   margin-left: -4px;
 }
 
@@ -1233,7 +1247,7 @@ textarea.w-select {
 }
 
 .w-background-video {
-  color: #fff;
+  color: var(--base-color-brand--violet);
   height: 500px;
   position: relative;
   overflow: hidden;
@@ -1257,7 +1271,7 @@ textarea.w-select {
 }
 
 .w-background-video--control {
-  background-color: #0000;
+  background-color: transparent;
   padding: 0;
   position: absolute;
   bottom: 1em;
@@ -1271,9 +1285,9 @@ textarea.w-select {
 .w-slider {
   text-align: center;
   clear: both;
-  -webkit-tap-highlight-color: #0000;
-  tap-highlight-color: #0000;
-  background: #ddd;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  background: var(--base-color-brand--light-violet);
   height: 300px;
   position: relative;
 }
@@ -1302,8 +1316,8 @@ textarea.w-select {
 .w-slider-nav {
   z-index: 2;
   text-align: center;
-  -webkit-tap-highlight-color: #0000;
-  tap-highlight-color: #0000;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
   height: 40px;
   margin: auto;
   padding-top: 10px;
@@ -1324,24 +1338,24 @@ textarea.w-select {
 }
 
 .w-slider-nav.w-shadow>div {
-  box-shadow: 0 0 3px #3336;
+  box-shadow: 0 0 3px #ffffff66;
 }
 
 .w-slider-nav-invert {
-  color: #fff;
+  color: var(--base-color-brand--violet);
 }
 
 .w-slider-nav-invert>div {
-  background-color: #2226;
+  background-color: #ffffff66;
 }
 
 .w-slider-nav-invert>div.w-active {
-  background-color: #222;
+  background-color: #ffffff;
 }
 
 .w-slider-dot {
   cursor: pointer;
-  background-color: #fff6;
+  background-color: #6A4C9366;
   width: 1em;
   height: 1em;
   margin: 0 3px .5em;
@@ -1351,12 +1365,12 @@ textarea.w-select {
 }
 
 .w-slider-dot.w-active {
-  background-color: #fff;
+  background-color: var(--base-color-brand--violet);
 }
 
 .w-slider-dot:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 2px var(--base-color-brand--violet);
 }
 
 .w-slider-dot:focus.w-active {
@@ -1366,9 +1380,9 @@ textarea.w-select {
 .w-slider-arrow-left,
 .w-slider-arrow-right {
   cursor: pointer;
-  color: #fff;
-  -webkit-tap-highlight-color: #0000;
-  tap-highlight-color: #0000;
+  color: var(--base-color-brand--violet);
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
   -webkit-user-select: none;
   user-select: none;
   width: 80px;
@@ -1437,7 +1451,7 @@ textarea.w-select {
 .w-dropdown-toggle,
 .w-dropdown-link {
   vertical-align: top;
-  color: #222;
+  color: #ffffff;
   text-align: left;
   white-space: nowrap;
   margin-left: auto;
@@ -1470,7 +1484,7 @@ textarea.w-select {
 }
 
 .w-dropdown-list {
-  background: #ddd;
+  background: var(--base-color-brand--light-violet);
   min-width: 100%;
   display: none;
   position: absolute;
@@ -1481,13 +1495,13 @@ textarea.w-select {
 }
 
 .w-dropdown-link {
-  color: #222;
+  color: #ffffff;
   padding: 10px 20px;
   display: block;
 }
 
 .w-dropdown-link.w--current {
-  color: #0082f3;
+  color: var(--base-color-brand--light-violet);
 }
 
 .w-dropdown-link:focus {
@@ -1511,14 +1525,14 @@ textarea.w-select {
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-  color: #fff;
+  color: var(--base-color-brand--violet);
   text-align: center;
   z-index: 2000;
   opacity: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -webkit-tap-highlight-color: transparent;
-  background: #000000e6;
+  background: #ffffffe6;
   outline: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
@@ -1598,7 +1612,7 @@ textarea.w-select {
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background: #0006;
+  background: #ffffff66;
   padding: .5em 1em;
   position: absolute;
   bottom: 0;
@@ -1671,7 +1685,7 @@ textarea.w-select {
 }
 
 .w-lightbox-thumbnail {
-  background: #222;
+  background: #ffffff;
   height: 10vh;
   position: relative;
   overflow: hidden;
@@ -1697,7 +1711,7 @@ textarea.w-select {
 
 .w-lightbox-spinner {
   box-sizing: border-box;
-  border: 5px solid #0006;
+  border: 5px solid #ffffff66;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -1711,8 +1725,8 @@ textarea.w-select {
 
 .w-lightbox-spinner:after {
   content: "";
-  border: 3px solid #0000;
-  border-bottom-color: #fff;
+  border: 3px solid transparent;
+  border-bottom-color: var(--base-color-brand--violet);
   border-radius: 50%;
   position: absolute;
   inset: -4px;
@@ -1827,7 +1841,7 @@ textarea.w-select {
 }
 
 .w-richtext figure div {
-  color: #0000;
+  color: transparent;
   font-size: 0;
 }
 
@@ -1915,7 +1929,7 @@ textarea.w-select {
 
 .w-nav {
   z-index: 1000;
-  background: #ddd;
+  background: var(--base-color-brand--light-violet);
   position: relative;
 }
 
@@ -1932,14 +1946,14 @@ textarea.w-select {
 
 .w-nav-brand {
   float: left;
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
   position: relative;
 }
 
 .w-nav-link {
   vertical-align: top;
-  color: #222;
+  color: #ffffff;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
@@ -1950,7 +1964,7 @@ textarea.w-select {
 }
 
 .w-nav-link.w--current {
-  color: #0082f3;
+  color: var(--base-color-brand--light-violet);
 }
 
 .w-nav-menu {
@@ -1960,7 +1974,7 @@ textarea.w-select {
 
 [data-nav-menu-open] {
   text-align: center;
-  background: #c8c8c8;
+  background: var(--base-color-brand--light-violet);
   min-width: 200px;
   position: absolute;
   top: 100%;
@@ -2014,8 +2028,8 @@ textarea.w-select {
 .w-nav-button {
   float: right;
   cursor: pointer;
-  -webkit-tap-highlight-color: #0000;
-  tap-highlight-color: #0000;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
   -webkit-user-select: none;
   user-select: none;
   padding: 18px;
@@ -2029,8 +2043,8 @@ textarea.w-select {
 }
 
 .w-nav-button.w--open {
-  color: #fff;
-  background-color: #c8c8c8;
+  color: var(--base-color-brand--violet);
+  background-color: var(--base-color-brand--light-violet);
 }
 
 .w-nav[data-collapse="all"] .w-nav-menu {
@@ -2104,8 +2118,8 @@ textarea.w-select {
   vertical-align: top;
   text-align: left;
   cursor: pointer;
-  color: #222;
-  background-color: #ddd;
+  color: #ffffff;
+  background-color: var(--base-color-brand--light-violet);
   padding: 9px 30px;
   text-decoration: none;
   display: inline-block;
@@ -2113,7 +2127,7 @@ textarea.w-select {
 }
 
 .w-tab-link.w--current {
-  background-color: #c8c8c8;
+  background-color: var(--base-color-brand--light-violet);
 }
 
 .w-tab-link:focus {
@@ -2156,7 +2170,7 @@ textarea.w-select {
 }
 
 .w-dyn-empty {
-  background-color: #ddd;
+  background-color: var(--base-color-brand--light-violet);
   padding: 10px;
 }
 
@@ -2197,26 +2211,26 @@ textarea.w-select {
   --background-color--background-alternate\<deleted\|variable-41ecbc38-077c-494f-9138-9468b7354b23\>: var(--base-color-neutral--white\<deleted\|variable-248be024-93cf-6ec4-8eec-0e9f047a83ae\>);
   --background-color--background-secondary: var(--base-color-brand--black);
   --link-color--link-primary\<deleted\|variable-ad940cb5-1815-151e-2cbc-4f27dec2b1e5\>: var(--base-color-brand--black);
-  --background-color--white-secondary: #e8ddcc;
+  --background-color--white-secondary: var(--base-color-brand--light-violet);
   --background-color--background-error\<deleted\|variable-89aecd3e-2fe8-312c-65a2-e3e7c57d326c\>: var(--base-color-system--error-red\<deleted\|variable-ad7a5e8d-bd95-fba4-5110-cbccfa2520c4\>);
   --text-color--text-error\<deleted\|variable-4a51c5d2-820c-a0d9-b49e-0e5d273c964f\>: var(--base-color-system--error-red-dark\<deleted\|variable-f7a8b234-8033-a5d6-4d85-0326277c2bf8\>);
   --border-color--border-alternate\<deleted\|variable-551aa6d2-4bf8-6036-137a-78e1c71841a4\>: var(--base-color-neutral--neutral-darker\<deleted\|variable-dda6ad91-259a-0202-f70f-965feb273058\>);
   --background-color--background-warning\<deleted\|variable-0aa1a7ce-e851-b6b5-66db-1a1a96e8e04b\>: var(--base-color-system--warning-yellow\<deleted\|variable-b0ee00e7-091a-a3f5-1619-b09d07f4475a\>);
   --text-color--text-warning\<deleted\|variable-825aa1d8-b093-0b89-37c5-87d980df10f5\>: var(--base-color-system--warning-yellow-dark\<deleted\|variable-296491a7-483e-1229-36b5-e13808cc9004\>);
   --background-color--background-tertiary\<deleted\|variable-6632d948-2d2d-2556-731d-05a71c92f234\>: var(--base-color-brand--pink\<deleted\|variable-c4661572-8a15-7367-e98c-cc1a0987f6d1\>);
-  --base-color-brand--black: #171411;
+  --base-color-brand--black: #ffffff;
   --blanco-blanco: white;
   --_typography---font-family: 'Roboto', sans-serif;
   --_typography---size: 0px;
   --blanco: var(--base-color-brand--white);
-  --base-color-brand--white: #efe5d7;
-  --base-color-neutral--white\<deleted\|variable-248be024-93cf-6ec4-8eec-0e9f047a83ae\>: #fff;
+  --base-color-brand--white: var(--base-color-brand--light-violet);
+  --base-color-neutral--white\<deleted\|variable-248be024-93cf-6ec4-8eec-0e9f047a83ae\>: var(--base-color-brand--violet);
   --base-color-system--success-green\<deleted\|variable-8fc09a81-a1c7-3c5b-2cf2-835ad5d96212\>: #cef5ca;
   --base-color-system--success-green-dark\<deleted\|variable-70ae3530-1c64-4d15-f2af-205678316683\>: #114e0b;
   --base-color-system--error-red\<deleted\|variable-ad7a5e8d-bd95-fba4-5110-cbccfa2520c4\>: #f8e4e4;
   --base-color-system--error-red-dark\<deleted\|variable-f7a8b234-8033-a5d6-4d85-0326277c2bf8\>: #3b0b0b;
-  --base-color-neutral--neutral-darker\<deleted\|variable-dda6ad91-259a-0202-f70f-965feb273058\>: #222;
-  --base-color-system--warning-yellow\<deleted\|variable-b0ee00e7-091a-a3f5-1619-b09d07f4475a\>: #fcf8d8;
+  --base-color-neutral--neutral-darker\<deleted\|variable-dda6ad91-259a-0202-f70f-965feb273058\>: #ffffff;
+  --base-color-system--warning-yellow\<deleted\|variable-b0ee00e7-091a-a3f5-1619-b09d07f4475a\>: #d79a64;
   --base-color-system--warning-yellow-dark\<deleted\|variable-296491a7-483e-1229-36b5-e13808cc9004\>: #5e5515;
   --base-color-brand--pink\<deleted\|variable-c4661572-8a15-7367-e98c-cc1a0987f6d1\>: #dd23bb;
 }
@@ -2327,7 +2341,7 @@ label {
 }
 
 blockquote {
-  border-left: .25rem solid #e2e2e2;
+  border-left: .25rem solid var(--base-color-brand--light-violet);
   margin-bottom: 0;
   padding: 0 1.25rem;
   font-size: 1.25rem;
@@ -2603,11 +2617,11 @@ figcaption {
   width: .875rem;
   height: .875rem;
   margin: 0 .5rem 0 0;
-  box-shadow: 0 0 .25rem 0 #3898ec;
+  box-shadow: 0 0 .25rem 0 var(--base-color-brand--light-violet);
 }
 
 .fs-styleguide_background {
-  border: 1px solid #0000001a;
+  border: 1px solid #ffffff1a;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
@@ -2618,7 +2632,7 @@ figcaption {
 .fs-styleguide_spacing {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
-  background-image: linear-gradient(to top, #2d40ea1a, #fff0);
+  background-image: linear-gradient(to top, #2d40ea1a, transparent);
   grid-template-rows: auto auto;
   grid-template-columns: 1fr;
   grid-auto-columns: 1fr;
@@ -2670,7 +2684,7 @@ figcaption {
 .fs-styleguide_item {
   grid-column-gap: 1.125rem;
   grid-row-gap: 1.125rem;
-  border-bottom: 1px solid #0000001a;
+  border-bottom: 1px solid #ffffff1a;
   grid-template-rows: auto;
   grid-template-columns: 1fr;
   grid-auto-columns: 1fr;
@@ -2691,7 +2705,7 @@ figcaption {
 }
 
 .fs-styleguide_item-header {
-  border-bottom: 1px solid #0000001a;
+  border-bottom: 1px solid #ffffff1a;
   width: 100%;
   padding-bottom: 2rem;
 }
@@ -3021,7 +3035,7 @@ figcaption {
 .form_radio-icon.w--redirected-focus {
   width: .875rem;
   height: .875rem;
-  box-shadow: 0 0 .25rem 0 #3898ec;
+  box-shadow: 0 0 .25rem 0 var(--base-color-brand--light-violet);
 }
 
 .text-style-nowrap {
@@ -3045,7 +3059,7 @@ figcaption {
 
 .form_input {
   border: 1px solid var(--border-color--border-primary);
-  background-color: #0000;
+  background-color: transparent;
   border-radius: .5rem;
   min-height: 3rem;
   margin-bottom: .75rem;
@@ -3103,8 +3117,8 @@ figcaption {
 .fs-styleguide_header {
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
-  background-color: #efe5d7;
-  color: #171411;
+  background-color: var(--base-color-brand--light-violet);
+  color: #ffffff;
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -3146,8 +3160,8 @@ figcaption {
 }
 
 .fs-styleguide_label.is-tag {
-  color: #fff;
-  -webkit-text-stroke-color: #fff;
+  color: var(--base-color-brand--violet);
+  -webkit-text-stroke-color: var(--base-color-brand--violet);
   background-color: #dd23bb;
 }
 
@@ -3212,7 +3226,7 @@ figcaption {
 }
 
 .text-style-quote {
-  border-left: .25rem solid #e2e2e2;
+  border-left: .25rem solid var(--base-color-brand--light-violet);
   margin-bottom: 0;
   padding: 0 1.25rem;
   font-size: 1.25rem;
@@ -3237,9 +3251,9 @@ figcaption {
 }
 
 .button.is-text {
-  color: #000;
-  background-color: #0000;
-  border: 2px solid #0000;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid transparent;
 }
 
 .button.is-small {
@@ -3253,7 +3267,7 @@ figcaption {
 .button.is-secondary {
   border: 1px solid var(--border-color--border-alternate\<deleted\|variable-551aa6d2-4bf8-6036-137a-78e1c71841a4\>);
   color: var(--text-color--text-primary);
-  background-color: #0000;
+  background-color: transparent;
 }
 
 .button.is-icon {
@@ -3413,7 +3427,7 @@ figcaption {
 
 .nav_component {
   z-index: 9999;
-  background-color: #ddd0;
+  background-color: transparent;
   width: 100%;
   padding-top: 2.5rem;
   position: absolute;
@@ -3426,7 +3440,7 @@ figcaption {
 .nav_component .nav-button_text .text-size-regular,
 .nav_component .logo,
 .nav_component .button_text {
-  color: #171411 !important;
+  color: #ffffff !important;
 }
 
 .nav_component .nav_divider {
@@ -3434,7 +3448,7 @@ figcaption {
 }
 
 .w-nav-button .w-icon-nav-menu {
-  color: #171411 !important;
+  color: #ffffff !important;
 }
 
 .nav_button {
@@ -3468,7 +3482,7 @@ figcaption {
 .fs-styleguide_hero-label {
   color: var(--text-color--text-secondary);
   text-transform: uppercase;
-  background-color: #eeeeee2e;
+  background-color: var(--base-color-brand--light-violet)eee2e;
   border-radius: .25rem;
   padding: .25rem .375rem;
   font-size: .75rem;
@@ -3477,7 +3491,7 @@ figcaption {
 }
 
 .fs-styleguide_heading-header {
-  color: #171411;
+  color: #ffffff;
   font-size: 4rem;
   font-weight: 400;
 }
@@ -3807,7 +3821,7 @@ figcaption {
   z-index: 2;
   -webkit-text-fill-color: inherit;
   mix-blend-mode: normal;
-  background-image: radial-gradient(circle, #17141100 20%, #000000ba);
+  background-image: radial-gradient(circle, transparent 20%, #ffffffba);
   background-clip: border-box;
   width: 100%;
   height: 100%;
@@ -3817,7 +3831,7 @@ figcaption {
 
 .video-overlay.light {
   opacity: .46;
-  background-image: radial-gradient(circle, #17141100 73%, #000000ba);
+  background-image: radial-gradient(circle, transparent 73%, #ffffffba);
 }
 
 .location-wrap {
@@ -3972,7 +3986,7 @@ figcaption {
 .form-field {
   background-color: var(--background-color--white-secondary);
   color: var(--text-color--text-primary);
-  border: 0 #000;
+  border: 0 #ffffff;
   border-radius: .5rem;
   min-height: 3.5rem;
   margin-bottom: 0;
@@ -4011,7 +4025,7 @@ figcaption {
 
 .text-field {
   background-color: var(--background-color--white-secondary);
-  border: 0 #000;
+  border: 0 #ffffff;
   border-radius: .5rem;
   min-height: 10rem;
   margin-bottom: 0;
@@ -4064,9 +4078,9 @@ figcaption {
   /* avoid forcing layout overflow */
   height: auto;
   line-height: 1.2;
-  background-color: #3898ec;
+  background-color: var(--base-color-brand--light-violet);
   /* visible button color */
-  color: #fff;
+  color: var(--base-color-brand--violet);
   border: 0;
   border-radius: .5rem;
   transition: background-color .15s ease, transform .08s ease;
@@ -4272,7 +4286,7 @@ figcaption {
 }
 
 .hero-subtitle-text {
-  color: #000;
+  color: #ffffff;
   /* texto oscuro sobre fondo claro */
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -4309,14 +4323,14 @@ figcaption {
 
 /* Force black color for the hero title and subtitle text (including strong/b/a) */
 .hero-component .heading-style-h1 .bold-text {
-  color: #000 !important;
+  color: #ffffff !important;
 }
 
 .hero-subtitle-text,
 .hero-subtitle-text strong,
 .hero-subtitle-text b,
 .hero-subtitle-text a {
-  color: #000 !important;
+  color: #ffffff !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -4661,11 +4675,11 @@ figcaption {
   }
 
   .nav_button {
-    color: #fff;
+    color: var(--base-color-brand--violet);
   }
 
   .nav_button.w--open {
-    background-color: #0000;
+    background-color: transparent;
   }
 
   .fs-styleguide_heading-header {
@@ -4766,7 +4780,7 @@ figcaption {
   }
 
   .nav-menu {
-    background-color: #0000;
+    background-color: transparent;
     border-radius: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -5219,7 +5233,7 @@ figcaption {
   }
 
   .icon:where(.w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e) {
-    color: #000;
+    color: #ffffff;
   }
 }
 
@@ -5236,9 +5250,1035 @@ figcaption {
 .nav_component .text-size-regular,
 .nav_component .logo,
 .nav_component .button_text {
-  color: #171411 !important;
+  color: #ffffff !important;
 }
 
 .w-nav-button .w-icon-nav-menu {
-  color: #171411 !important;
+  color: #ffffff !important;
+}
+
+/* --- TYPOGRAPHY UPDATES (USER REQUEST) --- */
+
+/* Titles, Encabezados, Menu -> Anaheim */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav_link,
+.w-nav-link,
+.nav-menu,
+.w-nav-menu,
+.w-dropdown-toggle,
+.w-dropdown-link,
+.nav-button_text,
+.button_text,
+.logo,
+.menu-item,
+.heading-style-h1,
+.heading-style-h2,
+.heading-style-h3,
+.heading-style-h4,
+.heading-style-h5,
+.heading-style-h6,
+.nav_component .text-size-regular,
+.nav_component .nav_link .text-size-regular,
+.nav-button_text .text-size-regular,
+.gallery-footer-overlay .toggle-text,
+.contact-submit-btn,
+.text-style-allcaps,
+.button_text,
+.footer_right .text-size-large,
+.fs-styleguide_heading-header {
+  font-family: 'Anaheim', sans-serif !important;
+}
+
+/* Revert index.html specific styles */
+body.index-page {
+  background-color: #E8DDCC !important;
+  color: #000000 !important;
+}
+
+body.index-page h1,
+body.index-page h2,
+body.index-page h3,
+body.index-page h4,
+body.index-page h5,
+body.index-page h6,
+body.index-page p,
+body.index-page div,
+body.index-page span,
+body.index-page a,
+body.index-page li,
+body.index-page .nav_link,
+body.index-page .button_text {
+  color: #000000 !important;
+}
+
+/* Specific Index Overrides requested */
+
+/* Buttons: Black background, White text */
+body.index-page .button,
+body.index-page .w-button {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Ensure button text inside is white */
+body.index-page .button .button_text,
+body.index-page .w-button .button_text {
+  color: #ffffff !important;
+}
+
+/* Logo IYRP 2026 MADRID: Black */
+body.index-page .nav_component .logo,
+body.index-page .logo {
+  color: #000000 !important;
+}
+
+
+/* Descubre más: Beige text + No Background style (revert) */
+body.index-page .hero_bottom,
+body.index-page .hero_bottom:visited,
+body.index-page .hero_bottom:hover,
+body.index-page .hero_bottom:active {
+  color: #E8DDCC !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: inline-block;
+  text-decoration: none;
+}
+
+body.index-page .hero_bottom .text-size-regular,
+body.index-page .hero_bottom div,
+body.index-page .hero_bottom span {
+  color: #E8DDCC !important;
+}
+
+/* ========================================= */
+/* GLOBAL FOOTER STYLES (EXCEPT INDEX)       */
+/* ========================================= */
+
+/* "todos los pie de pagina sean como el de que-es.html" */
+/* "menos el de index.html" */
+/* "quiero que me quites ese espaciado que tiene y me lo reduzcas" */
+
+body:not(.index-page) .footer {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  padding-top: 0rem !important;
+  /* Aggressively reduced */
+  margin-top: 0rem !important;
+}
+
+/* ========================================= */
+/* PROFESSIONAL FOOTER LAYOUT (Non-Index)    */
+/* ========================================= */
+
+/* "rediseñame el pie de pagina... que quede bien como si fuese un web profesional" */
+/* "quiero el estilo de como estaba antes, con la ubicacion a la derecha" */
+
+/* 1. Main Container: 2-Column Grid */
+body:not(.index-page) .footer .footer_component {
+  display: grid !important;
+  grid-template-columns: 1.2fr 1fr !important;
+  /* Slightly more space for the left text */
+  gap: 4rem !important;
+  /* Professional whitespace between columns */
+  padding-top: 1rem !important;
+  /* Minimal internal breathing room */
+  margin-top: 0 !important;
+  align-items: start !important;
+  justify-content: space-between !important;
+}
+
+/* 2. Left Column: Intro + Contact + Credits */
+body:not(.index-page) .footer .footer_left {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+body:not(.index-page) .footer h3,
+body:not(.index-page) .footer .heading-style-h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.3 !important;
+  font-size: 1.25rem !important;
+  /* Balanced headings */
+  max-width: 90%;
+}
+
+/* 3. Right Column: Location + Email (Right Aligned) */
+body:not(.index-page) .footer .footer_right {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  text-align: right !important;
+  /* Force right alignment */
+  align-items: flex-end !important;
+  /* Align children to right */
+}
+
+/* Ensure sub-wrappers on the right also align content correctly */
+body:not(.index-page) .footer_right-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  /* Align text/buttons right */
+  gap: 0.5rem !important;
+}
+
+/* 4. Spacing Reset for Container */
+/* Still strictly removing external spacing as requested */
+body:not(.index-page) .footer {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  padding-bottom: 2rem !important;
+  /* Add bottom breathing room */
+}
+
+body:not(.index-page) .footer .padding-global,
+body:not(.index-page) .footer .footer-wrap,
+body:not(.index-page) .footer .container-large {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* 5. Clean up the bottom logos area */
+body:not(.index-page) .footer .credits-logos {
+  margin-top: 3rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* Subtle divider for generic professional look */
+  justify-content: center !important;
+  gap: 2rem !important;
+}
+
+/* ========================================= */
+/* REMOVE BOTTOM SPACING FROM PRE-FOOTER ELEMENT */
+/* ========================================= */
+/* The "gap" is likely the margin-bottom of the section ABOVE the footer */
+
+
+body:not(.index-page) .fs-styleguide_header,
+body:not(.index-page) header,
+body:not(.index-page) section,
+body:not(.index-page) .section-hero,
+/* body:not(.index-page) .fs-styleguide_component, */
+/* Can't zero this globally as footer might be inside */
+body:not(.index-page) .fs-styleguide_classes,
+body:not(.index-page) .fs-styleguide_structure {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Specific targeted kill for the styleguide sections that might be invisible but taking space */
+/* REVERTED: This class actually holds the main content in programa.html! */
+/* Only hide if it's strictly empty, but we can't detect empty via CSS. structure is safe to hide? */
+body:not(.index-page) .fs-styleguide_structure {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+/* Ensure fs-styleguide_classes is visible but has no bottom spacing */
+body:not(.index-page) .fs-styleguide_classes {
+  display: block !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Force specific fix for galeria section padding */
+body:not(.index-page) section.padding-section-medium {
+  padding-bottom: 0 !important;
+}
+
+/* ========================================= */
+/* NEW CLEAN FOOTER (Rebuilt Structure)      */
+/* ========================================= */
+
+.new-footer {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Anaheim', sans-serif;
+  padding: 2rem 5% 2rem 5%;
+  /* Unified padding */
+  width: 100%;
+  margin-top: 0 !important;
+  /* Guaranteed zero top margin */
+  border-top: none;
+}
+
+.new-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.new-footer-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.new-footer-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.new-footer h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+/* Button override for new footer */
+.new-footer .button {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  padding: 0.75rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.new-footer .button .button_text {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.new-footer .button img {
+  height: 1rem;
+  width: auto;
+  filter: invert(1);
+  /* Make icon white if it's black */
+}
+
+/* Right side items */
+.new-footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.new-footer-label {
+  font-family: 'Anaheim', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.new-footer-text {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Bottom Logos Section */
+.new-footer-logos {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.new-footer-logos img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.new-footer-logos img[alt="FAO"] {
+  height: 65px;
+}
+
+/* Responsive */
+@media screen and (max-width: 767px) {
+  .new-footer-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .new-footer-col-left,
+  .new-footer-col-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .new-footer-item {
+    align-items: center;
+  }
+}
+
+/* Force footer to move up if gap persists via negative margin as a last resort */
+/* body:not(.index-page) .footer {
+    margin-top: -1px !important;
+} */
+
+
+/* Target the specific header block in que-es */
+body:not(.index-page) .fs-styleguide_header .padding-global {
+  padding-bottom: 0 !important;
+}
+
+
+/* Mobile Responsiveness for Grid */
+@media screen and (max-width: 767px) {
+  body:not(.index-page) .footer .footer_component {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  body:not(.index-page) .footer .footer_left,
+  body:not(.index-page) .footer .footer_right,
+  body:not(.index-page) .footer_right-wrap {
+    text-align: center !important;
+    align-items: center !important;
+  }
+}
+
+body:not(.index-page) .footer h3,
+body:not(.index-page) .footer .heading-style-h3,
+body:not(.index-page) .footer .text-size-regular,
+body:not(.index-page) .footer .copyright,
+body:not(.index-page) .footer .credits {
+  color: #000000 !important;
+}
+
+/* 1. Inscripcion Button (Header/Nav) - Also apply to all internal pages if it exists there */
+body:not(.index-page) #forms,
+body:not(.index-page) #forms.button {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body:not(.index-page) #forms .button_text {
+  color: #ffffff !important;
+}
+
+/* 2. Footer General Buttons -> Background Black, Text Black */
+body:not(.index-page) .footer .button {
+  background-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body:not(.index-page) .footer .button .button_text {
+  color: #000000 !important;
+}
+
+/* 3. Exception: Contact and Ubicacion -> "botones negros pero las letras en blanco" */
+body:not(.index-page) .footer a[href="contacto.html"].button,
+body:not(.index-page) .footer a[href="contacto.html"] .button_text {
+  color: #ffffff !important;
+}
+
+body:not(.index-page) .footer_right-wrap a[href="ubicacion.html"].button,
+body:not(.index-page) .footer_right-wrap a[href="ubicacion.html"] .button_text {
+  color: #ffffff !important;
+}
+
+/* 4. "iyrp2026madrid" and "E-MAIL". Text Black. */
+body:not(.index-page) .footer .text-style-allcaps,
+body:not(.index-page) .footer .text-size-large,
+body:not(.index-page) .footer .text-size-large strong {
+  color: #000000 !important;
+}
+
+
+/* Reduce spacing below Features (Gallery button area) */
+body.index-page .features-component {
+  margin-bottom: 4rem !important;
+  /* Reduced from 12rem */
+}
+
+/* Reduce spacing above Footer (Video area) */
+body.index-page .location-wrap {
+  margin-bottom: 2rem !important;
+  /* Reduced from 60px */
+}
+
+/* Additional footer spacing refinement if needed */
+body.index-page .footer {
+  padding-top: 0 !important;
+}
+
+/* Inscripción Button Text: White */
+body.index-page #forms .button_text {
+  color: #ffffff !important;
+}
+
+/* Remove video shadows (overlay) on index page */
+body.index-page .video-overlay,
+body.index-page .video-overlay.light {
+  display: none !important;
+  background-image: none !important;
+}
+
+
+/* Text Blocks with Background (matching .hero-subtitle-text style) */
+body.index-page .text-block,
+body.index-page .text-block-2,
+body.index-page .cta_subtitle,
+body.index-page .section_last-cta .cta_content h3 {
+  background-color: rgba(232, 221, 204, 0.6);
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+}
+
+body.index-page .nav_component {
+  background-color: transparent !important;
+}
+
+
+/* Descriptions and Texts -> Roboto */
+p,
+li,
+.paragraph,
+.description,
+.text-size-medium,
+.text-size-regular:not(.nav_component *),
+.text-size-small,
+.text-size-large,
+.text-size-huge,
+.hero-subtitle-text,
+.w-richtext,
+.text-block,
+.text-block-2,
+.gallery-footer-overlay,
+#captionText {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* ========================================= */
+/* PROGRAMA PAGE REDESIGN - Primary Blue Theme */
+/* ========================================= */
+
+body.programa-page {
+  /* Override Variables to kill Violet */
+  --background-color--background-primary: #749ba2;
+  --base-color-brand--white: #ffffff;
+  /* Restore white to actually be white */
+  --base-color-brand--light-violet: #749ba2;
+  /* Map violet to light blue */
+  --base-color-brand--violet: #749ba2;
+  --background-color--white-secondary: #749ba2;
+  --base-color-neutral--white: #ffffff;
+  --background-color--background-alternate: #749ba2;
+  --background-color--background-secondary: #749ba2;
+
+  background-color: #749ba2 !important;
+  /* Light Blue */
+  color: #ffffff !important;
+}
+
+body.programa-page section,
+body.programa-page .section,
+body.programa-page .fs-styleguide_classes {
+  background-color: transparent !important;
+}
+
+/* Headings */
+body.programa-page h1,
+body.programa-page h2,
+body.programa-page h3,
+body.programa-page h4,
+body.programa-page h5,
+body.programa-page h6,
+body.programa-page .heading-style-h1,
+body.programa-page .heading-style-h2,
+body.programa-page .heading-style-h3,
+body.programa-page .program-date-number,
+body.programa-page .program-date-month,
+body.programa-page .agenda-title {
+  color: #ffffff !important;
+}
+
+/* Text */
+body.programa-page p,
+body.programa-page li,
+body.programa-page .paragraph,
+body.programa-page .text-size-regular,
+body.programa-page .text-size-medium,
+body.programa-page .agenda-description,
+body.programa-page .program-date-location,
+body.programa-page .agenda-sublist li::before {
+  color: #ffffff !important;
+  opacity: 0.95;
+}
+
+/* Links and Accents */
+body.programa-page .agenda-time {
+  color: #ffcc00 !important;
+  /* Complementary yellow/gold for times - high visibility */
+  border-bottom-color: rgba(255, 204, 0, 0.3) !important;
+}
+
+body.programa-page .tag-optional {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+/* Nav Days */
+body.programa-page .program-nav {
+  background: rgba(11, 76, 140, 0.95) !important;
+  /* Match bg with blur */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body.programa-page .program-nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+body.programa-page .program-nav-link:hover,
+body.programa-page .program-nav-link.active {
+  background-color: #ffffff !important;
+  color: #0b4c8c !important;
+  border-color: #ffffff !important;
+}
+
+/* Dividers */
+body.programa-page .program-day-section {
+  border-top-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.programa-page .program-date-col {
+  border-right-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media screen and (max-width: 991px) {
+  body.programa-page .program-date-col {
+    border-right: none !important;
+    border-bottom-color: rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+/* Focus states */
+body.programa-page *[tabindex]:focus-visible {
+  outline-color: #ffffff !important;
+}
+
+/* Header/Nav Background Fix */
+body.programa-page .nav_component {
+  background-color: transparent !important;
+}
+
+body.programa-page .nav-menu {
+  background-color: #749ba2 !important;
+  /* Ensure mobile menu also gets the blue */
+}
+
+/* Kill any remaining violet/pink backgrounds */
+body.programa-page .section-hero,
+body.programa-page .padding-global,
+body.programa-page .container-large,
+body.programa-page .w-layout-grid,
+body.programa-page .program-day-section,
+body.programa-page .program-nav,
+body.programa-page .fs-styleguide_component {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Specific Footer Text Override -> Black (Programa) */
+body.programa-page .new-footer h3,
+body.programa-page .footer .heading-style-h3 {
+  color: #000000 !important;
+}
+
+/* Specific Footer Text Override -> Black (Noticias) */
+body.noticias-page .new-footer h3,
+body.noticias-page .footer .heading-style-h3 {
+  color: #000000 !important;
+}
+
+/* ========================================= */
+/* NOTICIAS PAGE REDESIGN - Green Theme */
+/* ========================================= */
+
+body.noticias-page {
+  /* Override Variables to kill Violet */
+  --background-color--background-primary: #8ab875;
+  --base-color-brand--white: #ffffff;
+  --base-color-brand--light-violet: #8ab875;
+  --base-color-brand--violet: #8ab875;
+  --background-color--white-secondary: #8ab875;
+  --base-color-neutral--white: #ffffff;
+  --background-color--background-alternate: #8ab875;
+  --background-color--background-secondary: #8ab875;
+
+  background-color: #8ab875 !important;
+  /* Green */
+  color: #ffffff !important;
+}
+
+body.noticias-page section,
+body.noticias-page .section,
+body.noticias-page .fs-styleguide_classes,
+body.noticias-page .section-hero,
+body.noticias-page .padding-global,
+body.noticias-page .container-large,
+body.noticias-page .w-layout-grid,
+body.noticias-page .fs-styleguide_component {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Headings */
+body.noticias-page h1,
+body.noticias-page h2,
+body.noticias-page h3,
+body.noticias-page h4,
+body.noticias-page h5,
+body.noticias-page h6,
+body.noticias-page .heading-style-h1,
+body.noticias-page .heading-style-h2,
+body.noticias-page .heading-style-h3 {
+  color: #ffffff !important;
+}
+
+/* Text */
+body.noticias-page p,
+body.noticias-page li,
+body.noticias-page .paragraph,
+body.noticias-page .text-size-regular,
+body.noticias-page .text-size-medium {
+  color: #ffffff !important;
+}
+
+/* Header/Nav Background Fix */
+body.noticias-page .nav_component {
+  background-color: transparent !important;
+}
+
+body.noticias-page .nav-menu {
+  background-color: #8ab875 !important;
+}
+
+/* Force Date and Tags to White (overriding inline styles) */
+body.noticias-page article header div,
+body.noticias-page article header div span,
+body.noticias-page article header div strong {
+  color: #ffffff !important;
+}
+
+/* News Two-Column Layout (Text Left, Image Right) */
+.news-two-col {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 3rem;
+}
+
+.news-two-col:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.news-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.news-image-col {
+  flex: 0 0 450px;
+  /* Fixed width for images like que-es slider but maybe smaller for news? */
+  max-width: 40%;
+}
+
+.news-image-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  /* Optional: add shadow or border if desired */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 991px) {
+  .news-two-col {
+    flex-direction: column-reverse;
+    /* Image on top on mobile? User didn't specify, but usually standard. Let's do column normal (Text top) or column-reverse (Image top). que-es stacks vertically. Let's stick to simple column for now */
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .news-image-col {
+    flex: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .news-image-col img {
+    margin-top: 1rem;
+    /* Add space if image is below text */
+  }
+}
+
+/* News Tags styling */
+.news-tag {
+  background-color: #2e4a25 !important;
+  /* Dark Green */
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  color: #ffffff !important;
+}
+
+/* ========================================= */
+/* GALERIA PAGE REDESIGN - Light Bordeaux Theme */
+/* ========================================= */
+
+body.galeria-page {
+  /* Override Variables to kill Violet */
+  --background-color--background-primary: #b07e70;
+  --base-color-brand--white: #ffffff;
+  --base-color-brand--light-violet: #b07e70;
+  --base-color-brand--violet: #b07e70;
+  --background-color--white-secondary: #b07e70;
+  --base-color-neutral--white: #ffffff;
+  --background-color--background-alternate: #b07e70;
+  --background-color--background-secondary: #b07e70;
+
+  background-color: #b07e70 !important;
+  /* Light Bordeaux */
+  color: #ffffff !important;
+}
+
+body.galeria-page section,
+body.galeria-page .section,
+body.galeria-page .fs-styleguide_classes,
+body.galeria-page .section-hero,
+body.galeria-page .padding-global,
+body.galeria-page .container-large,
+body.galeria-page .w-layout-grid,
+body.galeria-page .fs-styleguide_component {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Headings */
+body.galeria-page h1,
+body.galeria-page h2,
+body.galeria-page h3,
+body.galeria-page h4,
+body.galeria-page h5,
+body.galeria-page h6,
+body.galeria-page .heading-style-h1,
+body.galeria-page .heading-style-h2,
+body.galeria-page .heading-style-h3 {
+  color: #ffffff !important;
+}
+
+/* Header/Nav Background Fix */
+body.galeria-page .nav_component {
+  background-color: transparent !important;
+}
+
+body.galeria-page .nav-menu {
+  background-color: #b07e70 !important;
+}
+
+/* SLIDER STYLING for Galeria Page */
+
+/* Buttons (Arrows) - White */
+body.galeria-page .slider-btn {
+  color: #ffffff !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  /* Mild dark bg for contrast if needed, or transparent? User asked for white arrows. Usually implies icon color. */
+}
+
+/* "Ver Información" Toggle - White Text */
+body.galeria-page .footer-toggle,
+body.galeria-page .toggle-text,
+body.galeria-page .toggle-icon {
+  color: #ffffff !important;
+}
+
+/* Footer Content (Caption) - Black Text */
+body.galeria-page .gallery-footer-overlay .footer-content,
+body.galeria-page .gallery-footer-overlay .footer-content p,
+body.galeria-page #captionText {
+  color: #000000 !important;
+}
+
+/* Make sure the footer overlay background is light enough for black text if it was dark? 
+   The slider footer usually has a background. Checking previous code...
+   It wasn't explicitly transparent or white in the snippet I saw, but usually overlays are white or dark. 
+   If user wants black text, likely the overlay is white or light. 
+   I will force the overlay background to white to be safe. 
+*/
+body.galeria-page .gallery-footer-overlay {
+  background-color: transparent !important;
+  /* Default transparent as requested */
+}
+
+/* Only the content part should have background */
+body.galeria-page .gallery-footer-overlay.expanded {
+  background-color: transparent !important;
+}
+
+/* Translucent Glass Effect for Content */
+body.galeria-page .footer-content {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Ensure the toggle button background works if needed, or leave transparent */
+body.galeria-page .footer-toggle {
+  background-color: transparent;
+  /* Clean look */
+}
+
+/* ========================================= */
+/* CONTACTO PAGE REDESIGN - Light Black Theme */
+/* ========================================= */
+
+body.contacto-page {
+  /* Override Variables to kill Violet */
+  --background-color--background-primary: #414042;
+  --base-color-brand--white: #ffffff;
+  --base-color-brand--light-violet: #414042;
+  --base-color-brand--violet: #414042;
+  --background-color--white-secondary: #414042;
+  --base-color-neutral--white: #ffffff;
+  --background-color--background-alternate: #414042;
+  --background-color--background-secondary: #414042;
+
+  background-color: #414042 !important;
+  /* Light Black */
+  color: #ffffff !important;
+}
+
+body.contacto-page section,
+body.contacto-page .section,
+body.contacto-page .fs-styleguide_classes,
+body.contacto-page .section-hero,
+body.contacto-page .padding-global,
+body.contacto-page .container-large,
+body.contacto-page .w-layout-grid,
+body.contacto-page .fs-styleguide_component {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Headings */
+body.contacto-page h1,
+body.contacto-page h2,
+body.contacto-page h3,
+body.contacto-page h4,
+body.contacto-page h5,
+body.contacto-page h6,
+body.contacto-page .heading-style-h1,
+body.contacto-page .heading-style-h2,
+body.contacto-page .heading-style-h3 {
+  color: #ffffff !important;
+}
+
+/* Spacing Override for Contact Header */
+body.contacto-page .section_contact,
+body.contacto-page .contact-component {
+  margin-top: 6rem !important;
+  /* Adding requested space below menu */
+}
+
+/* Header/Nav Background Fix */
+body.contacto-page .nav_component {
+  background-color: transparent !important;
+}
+
+body.contacto-page .nav-menu {
+  background-color: #414042 !important;
+}
+
+/* PROFESSIONAL FORM STYLING (Dark Theme) */
+
+body.contacto-page .form-field_wrap {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  body.contacto-page .form-field_wrap {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+body.contacto-page input.w-input,
+body.contacto-page textarea.w-input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff !important;
+  padding: 1rem 0.5rem !important;
+  font-size: 1rem !important;
+  border-radius: 0 !important;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+body.contacto-page input.w-input::placeholder,
+body.contacto-page textarea.w-input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+body.contacto-page input.w-input:focus,
+body.contacto-page textarea.w-input:focus {
+  border-bottom-color: #ffffff !important;
+  outline: none !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Submit Button Override */
+body.contacto-page .contact-submit-btn {
+  background-color: #ffffff !important;
+  color: #414042 !important;
+  border: 2px solid #ffffff !important;
+  font-weight: 600;
+}
+
+body.contacto-page .contact-submit-btn:hover {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+/* Specific Footer Text Override -> Black (Contacto) */
+body.contacto-page .new-footer h3,
+body.contacto-page .footer .heading-style-h3 {
+  color: #000000 !important;
+}
+
+/* Specific Footer Text Override -> Black (Galeria) */
+body.galeria-page .new-footer h3,
+body.galeria-page .footer .heading-style-h3 {
+  color: #000000 !important;
 }
