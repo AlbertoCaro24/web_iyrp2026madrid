@@ -6282,3 +6282,14 @@ body.galeria-page .new-footer h3,
 body.galeria-page .footer .heading-style-h3 {
   color: #000000 !important;
 }
+
+/* Mobile Menu Background Fix (General) */
+@media screen and (max-width: 991px) {
+
+  .w-nav-menu,
+  .nav-menu,
+  .nav-menu_wrap {
+    background-color: var(--base-color-brand--violet) !important;
+    background: var(--base-color-brand--violet) !important;
+  }
+}
