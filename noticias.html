@@ -136,7 +136,7 @@
 
         /* ensure the INSCRIPCIÓN button text is white */
         .nav_component[data-wf--navbar--variant="base"] .button.is-nav .button_text {
-            color: #71779b !important;
+            color: #000000 !important;
         }
     </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -167,6 +167,143 @@
 </head>
 
 <body class="noticias-page">
+
+    <!-- CUSTOM AGENT MOBILE MENU (clean rebuild) -->
+    <style>
+        /* Only visible on mobile */
+        #custom-mobile-menu {
+            display: none;
+        }
+
+        @media screen and (max-width: 991px) {
+            #custom-mobile-menu {
+                display: block;
+            }
+
+            body {
+                padding-top: 60px;
+                /* Prevent content hiding behind fixed bar */
+            }
+        }
+
+        /* Fixed Green Bar */
+        #mobile-nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #8ab875;
+            z-index: 99999;
+            /* Max Z-Index */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo in Bar */
+        #mobile-nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        /* Hamburger Button */
+        #mobile-nav-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        #mobile-nav-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #E8DDCC;
+            /* Beige */
+            margin: 5px 0;
+            border-radius: 2px;
+        }
+
+        /* Dropdown Menu (White) */
+        #mobile-nav-dropdown {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            top: 70px;
+            /* Below bar */
+            left: 0;
+            width: 100%;
+            background-color: #FFFFFF;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 99998;
+            padding: 20px 0;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #mobile-nav-dropdown a {
+            display: block;
+            padding: 15px 20px;
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            font-family: 'Anaheim', sans-serif;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        #mobile-nav-dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        /* Inscripcion Button in Menu */
+        .mobile-btn-inscripcion {
+            background-color: #E8DDCC;
+            color: #000000 !important;
+            padding: 12px 24px !important;
+            border-radius: 50px;
+            margin: 20px auto;
+            display: inline-block !important;
+            font-weight: bold;
+        }
+    </style>
+
+    <div id="custom-mobile-menu">
+        <div id="mobile-nav-bar">
+            <a href="index.html" id="mobile-nav-logo">
+                <img src="estilos/logos/logo IYRP color.png" alt="Logo">
+            </a>
+            <button id="mobile-nav-toggle" onclick="toggleCustomMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="mobile-nav-dropdown">
+            <a href="que-es.html">¿QUÉ ES?</a>
+            <a href="programa.html">PROGRAMA</a>
+            <a href="noticias.html">NOTICIAS</a>
+            <a href="galeria.html">GALERÍA</a>
+            <a href="contacto.html">CONTACTO</a>
+            <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleCustomMenu() {
+            var menu = document.getElementById('mobile-nav-dropdown');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        }
+    </script>
+    <!-- END CUSTOM AGENT MENU -->
     <div class="page-wrapper">
         <div class="global-styles w-embed">
             <style>
@@ -367,7 +504,7 @@ a,
                     <div class="container-large">
                         <div class="nav-wrap">
                             <a href="index.html" class="nav_brand w-inline-block">
-                                <img src="estilos/logos/logo IYRP blanco.png" alt="logo IYRP 2026 Madrid"
+                                <img src="estilos/logos/logo IYRP color.png" alt="logo IYRP 2026 Madrid"
                                     style="height: 85px; width: auto;">
                             </a>
                             <nav role="navigation" class="nav-menu w-nav-menu">

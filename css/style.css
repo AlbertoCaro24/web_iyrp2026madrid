@@ -4296,28 +4296,27 @@ figcaption {
   position: relative;
   z-index: 70;
   /* above the hero background */
-  background-color: rgba(232, 221, 204, 0.6);
-  /* recuadro con 60% de opacidad */
-  padding: 1rem 1.25rem;
-  border-radius: 10px;
+  /* background-color: rgba(232, 221, 204, 0.6); REMOVED */
+  /* padding: 1rem 1.25rem; REMOVED */
+  /* border-radius: 10px; REMOVED */
   display: inline-block;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); REMOVED */
 }
 
 .title-with-bg {
-  background-color: rgba(232, 221, 204, 0.6);
-  padding: 1rem 1.25rem;
-  border-radius: 10px;
+  /* background-color: rgba(232, 221, 204, 0.6); REMOVED */
+  /* padding: 1rem 1.25rem; REMOVED */
+  /* border-radius: 10px; REMOVED */
   display: inline-block;
   position: relative;
   z-index: 70;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); REMOVED */
   /* backdrop-filter removed to match exact requested style */
 }
 
@@ -5671,12 +5670,11 @@ body:not(.index-page) .footer .credits {
 /* 1. Inscripcion Button (Header/Nav) - Also apply to all internal pages if it exists there */
 body:not(.index-page) #forms,
 body:not(.index-page) #forms.button {
-  background-color: #000000 !important;
-  color: #ffffff !important;
+  background-color: #E8DDCC !important;
 }
 
 body:not(.index-page) #forms .button_text {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 /* 2. Footer General Buttons -> Background Black, Text Black */
@@ -5725,9 +5723,13 @@ body.index-page .footer {
   padding-top: 0 !important;
 }
 
-/* Inscripción Button Text: White */
+/* Inscripción Button Text: Black, Background: Beige */
+body.index-page #forms {
+  background-color: #E8DDCC !important;
+}
+
 body.index-page #forms .button_text {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 /* Remove video shadows (overlay) on index page */
@@ -6292,4 +6294,55 @@ body.galeria-page .footer .heading-style-h3 {
     background-color: var(--base-color-brand--violet) !important;
     background: var(--base-color-brand--violet) !important;
   }
+}
+
+/* Fix for location card background image responsiveness */
+.location_card {
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/* Force 'Descubre m�s' text to black */
+.hero_bottom, .hero_bottom .text-size-regular {
+    color: #000000 !important;
+}
+
+/* Mobile Menu Redesign (Agent Added) */
+@media screen and (max-width: 991px) {
+  html body .w-nav-menu, html body .nav-menu, html body .nav-menu_wrap { background-color: #FFFFFF !important; background: #FFFFFF !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  html body .nav_link, html body .nav-button_text .text-size-regular, html body .nav-button_text.is-absolute .text-size-regular, html body .button.is-nav .button_text { color: #000000 !important; }
+  html body .w-nav-button .w-icon-nav-menu { color: #E8DDCC !important; }
+  html body .button.is-nav { border-color: #E8DDCC !important; background-color: #E8DDCC !important; }
+}
+
+/* Hide Mobile Menu (User Request) */
+@media screen and (max-width: 991px) {
+  html body .w-nav-menu, html body .nav-menu, html body .nav-menu_wrap { display: none !important; }
+}
+
+/* RESTORE Mobile Menu (Agent Fix) */
+@media screen and (max-width: 991px) {
+  html body .nav_component { position: fixed !important; top: 0 !important; background-color: #8ab875 !important; z-index: 9999 !important; }
+  html body .w-nav-menu, html body .nav-menu { display: none; /* Let Webflow toggle this */ position: absolute; left: 0; right: 0; background-color: #FFFFFF !important; }
+  /* Override previous hide */
+  html body .w-nav-menu, html body .nav-menu, html body .nav-menu_wrap { display: revert !important; }
+}
+
+/* FIX Initial Visibility (Agent) */
+@media screen and (max-width: 991px) {
+  html body .w-nav-menu, html body .nav-menu { display: none; }
+  html body .w-nav-button.w--open + .w-nav-menu { display: block !important; }
+}
+
+/* FIX DOUBLE MENU (Agent) */
+@media screen and (max-width: 991px) {
+  html body .w-nav-menu, html body .nav-menu { display: none; }
+  html body .w-nav-button.w--open + .w-nav-menu { display: block !important; }
+}
+
+/* TOTAL PURGE of Webflow Menu on Mobile (Agent) */
+@media screen and (max-width: 991px) {
+  .nav_component, .w-nav { display: none !important; }
 }
