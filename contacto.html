@@ -28,76 +28,12 @@
         rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!-- estilos para ocultar la insignia de Webflow (sobrescriben reglas del CSS exportado) -->
-    <style>
-        /* Oculta únicamente el badge inyectado por Webflow (clase oficial) */
-        .w-webflow-badge,
-        .w-webflow-badge>img {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-            width: 0 !important;
-            height: 0 !important;
-        }
-    </style>
-    <style>
-        html.w-mod-js:not(.w-mod-ix3) :is(.heading-style-h1, .hero-icon, .hero-subtitle-text, .hero_bottom, .nav_component, .nav_link > *, .page-headings.text-align-center > *, .section_hero, .cta-video_background, .cta_content .text-style-allcaps, .button-wrap, .photo-wrap_first, .photo-wrap_second, .photo-wrap_third) {
-            visibility: hidden !important;
-        }
-    </style>
+
+
     <!-- Force nav text white for this page (override) -->
-    <style>
-        .nav_component[data-wf--navbar--variant="base"] .nav_link,
-        .nav_component[data-wf--navbar--variant="base"] .nav-button_text .text-size-regular,
-        .nav_component[data-wf--navbar--variant="base"] .logo,
-        .nav_component[data-wf--navbar--variant="base"] .button_text,
-        .nav_component[data-wf--navbar--variant="base"] .nav-button_text.is-absolute .text-size-regular {
-            color: #ffffff !important;
-        }
 
-        .nav_component[data-wf--navbar--variant="base"] .nav_divider {
-            background-color: rgba(255, 255, 255, 0.25) !important;
-        }
-
-        .nav_component[data-wf--navbar--variant="base"] .button.is-nav .button_text {
-            color: #000000 !important;
-        }
-    </style>
     <!-- Clean button styling matching site design -->
-    <style>
-        .contact-submit-btn {
-            display: inline-block;
-            padding: 1rem 3rem;
-            font-size: 1.05rem;
-            font-weight: 700;
-            font-family: 'PT Serif', serif;
-            text-align: center;
-            color: #71779b;
-            background-color: #ffffff;
-            border: 2px solid #ffffff;
-            border-radius: 0.4rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
 
-        .contact-submit-btn:hover {
-            background-color: #ffffff;
-            border-color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .contact-submit-btn:active {
-            transform: translateY(0);
-        }
-
-        .button-form {
-            text-align: center;
-            margin-top: 2rem;
-        }
-    </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -122,114 +58,168 @@
     <link
         href="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/6920471d554f44241f5dcb2c_UF1B5ST%20IYRP2026_V_Col_ES%20(1).ico"
         rel="apple-touch-icon" />
+
+
+    <!-- Master Navigation CSS (Green Fixed Header) -->
+
+    <style>
+        /* CRITICAL EMERGENCY FIXES FOR CONTACTO */
+
+        /* 1. NUCLEAR OPTION: FORCE BLACK TEXT ON EVERYTHING */
+        .contact-page,
+        .contact-component,
+        /* .contact_form, */
+        /* Removed to let card style take over */
+        .form-field,
+        .heading-style-h1,
+        .field-label,
+        .contact-page *
+
+        /* Keep this but ensure specific elements override if needed */
+            {
+            color: #000000 !important;
+            text-shadow: none !important;
+            -webkit-text-fill-color: #000000 !important;
+        }
+
+        /* Exceptions */
+        .contact-submit-btn {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+
+        /* 2. CARD DESIGN INJECTION (TRANSPARENT V3) */
+        .contact-card {
+            background-color: transparent !important;
+            /* Remove white background */
+            padding: 2rem 0 !important;
+            /* Remove heavy padding */
+            box-shadow: none !important;
+            /* Remove shadow */
+            max-width: 700px !important;
+            margin: 0 auto !important;
+            border: none !important;
+        }
+
+        .field-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            /* More spacing between fields */
+        }
+
+        .field-label {
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 500 !important;
+            font-size: 0.95rem !important;
+            color: #000000 !important;
+            /* Explicit black label */
+            text-transform: none !important;
+            /* Remove uppercase for cleaner look */
+            letter-spacing: normal !important;
+            margin-bottom: 0 !important;
+            display: block !important;
+        }
+
+        /* 3. INPUT BOXES (BEIGE THEME) */
+        .form-field,
+        .text-field {
+            background-color: transparent !important;
+            /* Transparent to show page beige */
+            color: #000000 !important;
+            border: none !important;
+            border-bottom: 2px solid #DCD1C0 !important;
+            /* Darker beige underline */
+            border-radius: 0 !important;
+            /* Sharp edges for clean look */
+            padding: 0.75rem 0 !important;
+            /* Minimal padding */
+            height: auto !important;
+            min-height: 40px !important;
+            /* Slimmer inputs */
+            width: 100% !important;
+            box-sizing: border-box !important;
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 1rem !important;
+            transition: border-color 0.3s ease !important;
+
+            /* Remove defaults */
+            -webkit-appearance: none !important;
+            appearance: none !important;
+            box-shadow: none !important;
+        }
+
+        .form-field:focus,
+        .text-field:focus {
+            background-color: transparent !important;
+            border-bottom-color: #8ab875 !important;
+            /* Green highlight on focus */
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .form-field::placeholder,
+        .text-field::placeholder {
+            color: rgba(0, 0, 0, 0.5) !important;
+            /* Semi-transparent black placeholder */
+        }
+
+        .text-field {
+            min-height: 120px !important;
+            resize: vertical !important;
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            /* Very subtle light background for textarea */
+            padding: 1rem !important;
+            /* Add padding back for textarea */
+            border: 2px solid #DCD1C0 !important;
+            /* Full border for textarea */
+            border-radius: 4px !important;
+        }
+
+        /* 4. BUTTON (GREEN PILL - BLACK TEXT) */
+        .contact-submit-btn {
+            background-color: #7da869 !important;
+            /* Green background */
+            color: #000000 !important;
+            /* EXPLICIT BLACK TEXT */
+            -webkit-text-fill-color: #000000 !important;
+            width: auto !important;
+            padding: 1.2rem 5rem !important;
+            /* Wide pill */
+            border-radius: 50px !important;
+            font-size: 1.3rem !important;
+            /* Large text */
+            font-weight: 900 !important;
+            /* Extra Bold */
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            margin-top: 3rem !important;
+            cursor: pointer !important;
+            border: none !important;
+            transition: all 0.2s ease !important;
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            box-shadow: 0 4px 15px rgba(125, 168, 105, 0.5) !important;
+            text-shadow: none !important;
+            /* Remove shadow for clean black text */
+        }
+
+        .contact-submit-btn:hover {
+            transform: translateY(-2px) !important;
+            background-color: #6a9c55 !important;
+            /* Darker on hover */
+            box-shadow: 0 6px 20px rgba(106, 156, 85, 0.6) !important;
+        }
+    </style>
+
 </head>
 
 <body class="contacto-page">
 
-    <!-- CUSTOM AGENT MOBILE MENU (clean rebuild) -->
-    <style>
-        /* Only visible on mobile */
-        #custom-mobile-menu {
-            display: none;
-        }
-
-        @media screen and (max-width: 991px) {
-            #custom-mobile-menu {
-                display: block;
-            }
-
-            body {
-                padding-top: 60px;
-                /* Prevent content hiding behind fixed bar */
-            }
-        }
-
-        /* Fixed Green Bar */
-        #mobile-nav-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 70px;
-            background-color: #414042;
-            z-index: 99999;
-            /* Max Z-Index */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            box-sizing: border-box;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Logo in Bar */
-        #mobile-nav-logo img {
-            height: 50px;
-            width: auto;
-        }
-
-        /* Hamburger Button */
-        #mobile-nav-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        #mobile-nav-toggle span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: #E8DDCC;
-            /* Beige */
-            margin: 5px 0;
-            border-radius: 2px;
-        }
-
-        /* Dropdown Menu (White) */
-        #mobile-nav-dropdown {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            top: 70px;
-            /* Below bar */
-            left: 0;
-            width: 100%;
-            background-color: #FFFFFF;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            z-index: 99998;
-            padding: 20px 0;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        #mobile-nav-dropdown a {
-            display: block;
-            padding: 15px 20px;
-            color: #000000;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            font-family: 'Anaheim', sans-serif;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        #mobile-nav-dropdown a:last-child {
-            border-bottom: none;
-        }
-
-        /* Inscripcion Button in Menu */
-        .mobile-btn-inscripcion {
-            background-color: #E8DDCC;
-            color: #000000 !important;
-            padding: 12px 24px !important;
-            border-radius: 50px;
-            margin: 20px auto;
-            display: inline-block !important;
-            font-weight: bold;
-        }
-    </style>
-
+    <!-- CUSTOM AGENT MOBILE MENU (Unified) -->
     <div id="custom-mobile-menu">
         <div id="mobile-nav-bar">
             <a href="index.html" id="mobile-nav-logo">
@@ -262,130 +252,127 @@
         }
     </script>
     <!-- END CUSTOM AGENT MENU -->
-    <div class="fs-styleguide_component">
-        <div data-wf--navbar--variant="base" data-animation="default" data-collapse="medium" data-duration="400"
-            data-easing="ease" data-easing2="ease" role="banner" class="nav_component w-nav">
-            <div class="padding-global">
-                <div class="container-large">
-                    <div class="nav-wrap">
-                        <a href="index.html" class="nav_brand w-inline-block">
-                            <img src="estilos/logos/logo IYRP blanco.png" alt="logo IYRP 2026 Madrid"
-                                style="height: 85px; width: auto;">
-                        </a>
-                        <nav role="navigation" class="nav-menu w-nav-menu">
-                            <div class="nav-menu_wrap">
-                                <div class="nav-left">
-                                    <div class="nav_divider"></div>
-                                    <a href="que-es.html" aria-current="page"
-                                        class="nav_link w-inline-block w--current">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">
-                                                ¿QUÉ ES?<br />
-                                            </div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">
-                                                ¿QUÉ ES?<br />
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="programa.html" class="nav_link w-inline-block">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">PROGRAMA</div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">PROGRAMA</div>
-                                        </div>
-                                    </a>
-                                    <a href="noticias.html" class="nav_link w-inline-block">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">NOTICIAS</div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">NOTICIAS</div>
-                                        </div>
-                                    </a>
-                                    <a href="galeria.html" class="nav_link w-inline-block">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">GALERÍA</div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">GALERÍA</div>
-                                        </div>
-                                    </a>
-                                    <a href="contacto.html" class="nav_link w-inline-block">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">CONTACTO</div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">CONTACTO</div>
+
+    <div class="page-wrapper">
+        <div class="global-styles w-embed"></div>
+        <main class="main-wrapper">
+            <!-- UNIFORM HEADER COMPONENT -->
+            <div data-wf--navbar--variant="base" role="banner" class="nav_component w-nav">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="nav-wrap">
+                            <a href="index.html" class="nav_brand w-inline-block">
+                                <img src="estilos/logos/logo IYRP color.png" alt="logo IYRP 2026 Madrid"
+                                    style="height: 85px; width: auto;">
+                            </a>
+                            <nav role="navigation" class="nav-menu w-nav-menu">
+                                <div class="nav-menu_wrap">
+                                    <div class="nav-left">
+                                        <div class="nav_divider"></div>
+                                        <a href="que-es.html" class="nav_link w-inline-block">
+                                            <div class="nav-button_text">¿QUÉ ES?</div>
+                                        </a>
+                                        <a href="programa.html" class="nav_link w-inline-block">
+                                            <div class="nav-button_text">PROGRAMA</div>
+                                        </a>
+                                        <a href="noticias.html" class="nav_link w-inline-block">
+                                            <div class="nav-button_text">NOTICIAS</div>
+                                        </a>
+                                        <a href="galeria.html" class="nav_link w-inline-block">
+                                            <div class="nav-button_text">GALERÍA</div>
+                                        </a>
+                                        <a href="contacto.html" class="nav_link w-inline-block">
+                                            <div class="nav-button_text">CONTACTO</div>
+                                        </a>
+                                    </div>
+                                    <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank"
+                                        class="button is-nav w-inline-block"
+                                        style="background-color: #8ab875 !important; border: 1px solid #E8DDCC !important;">
+                                        <div class="button-text">
+                                            <div class="button_text"
+                                                style="color: #E8DDCC !important; font-weight: bold;">INSCRIPCIÓN</div>
                                         </div>
                                     </a>
                                 </div>
-                                <a id="forms" href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank"
-                                    class="button is-nav w-node-_16e6e34e-738e-bbf3-5f61-941721019e8f-63dfdea9 w-inline-block">
-                                    <div class="button-text">
-                                        <div class="button_text">INSCRIPCIÓN</div>
-                                        <div class="button-text-animation">
-                                            <div class="button_text">Book a Visit</div>
-                                        </div>
-                                    </div>
-                                    <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
-                                        loading="lazy" alt="Kaleo Icon" class="button-image is-nav" />
-                                </a>
-                            </div>
-                        </nav>
-                        <div class="nav_button w-nav-button">
-                            <div class="icon w-icon-nav-menu"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section_contact">
-            <div class="padding-global">
-                <div class="container-large">
-                    <div class="contact-component">
-                        <div class="contact_header text-align-center">
-                            <h1 class="heading-style-h1 is-contact">CONTACTO</h1>
-                        </div>
-                        <div class="contact_form">
-                            <div class="form-block w-form">
-                                <form id="email-form" name="email-form" data-name="Email Form" class="form"
-                                    data-wf-page-id="691f33f1a47cf304259c3503"
-                                    data-wf-element-id="a4a131fa-3db6-1934-a7c9-b96a16837ac6"
-                                    onsubmit="return sendViaMailto(event)">
-                                    <div class="form-field_wrap">
-                                        <input class="form-field w-input" autofocus="true" maxlength="256" name="Nombre"
-                                            data-name="Nombre" placeholder="Nombre" type="text" id="Nombre" />
-                                        <input class="form-field w-input" maxlength="256" name="Surname"
-                                            data-name="Surname" placeholder="Apellidos" type="text" id="Surname"
-                                            required="" />
-                                    </div>
-                                    <div class="form-field_wrap">
-                                        <input class="form-field w-input" maxlength="256" name="Email" data-name="Email"
-                                            placeholder="Email" type="email" id="Email" />
-                                        <input class="form-field w-input" maxlength="256" name="Phone" data-name="Phone"
-                                            placeholder="Teléfono" type="tel" id="Phone" required="" />
-                                    </div>
-                                    <textarea id="Message" name="Message" maxlength="5000" data-name="Message"
-                                        placeholder="Mensaje" class="text-field w-input"></textarea>
-                                    <div class="button-form">
-                                        <button type="submit" class="contact-submit-btn">Enviar</button>
-                                    </div>
-                                </form>
-                                <div class="success-message w-form-done">
-                                    <div class="text-size-regular">Gracias por tu mensaje!</div>
-                                </div>
-                                <div class="error-message w-form-fail">
-                                    <div>Oops! Algo ha ido mal al enviar el formulario.</div>
-                                </div>
+                            </nav>
+                            <div class="nav_button w-nav-button">
+                                <div class="icon w-icon-nav-menu"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div class="section_contact">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="contact-component">
+                            <div class="contact_header text-align-center">
+                                <h1 class="heading-style-h1 is-contact">CONTACTO</h1>
+                            </div>
+
+                            <!-- NEW WRAPPER FOR CARD STYLE -->
+                            <div class="contact-card">
+                                <div class="contact_form">
+                                    <div class="form-block w-form">
+                                        <form id="email-form" name="email-form" data-name="Email Form" class="form"
+                                            data-wf-page-id="691f33f1a47cf304259c3503"
+                                            data-wf-element-id="a4a131fa-3db6-1934-a7c9-b96a16837ac6"
+                                            onsubmit="return sendViaMailto(event)">
+                                            <div class="form-field_wrap">
+                                                <div class="field-group">
+                                                    <label for="Nombre" class="field-label">Nombre</label>
+                                                    <input class="form-field w-input" autofocus="true" maxlength="256"
+                                                        name="Nombre" data-name="Nombre" placeholder="" type="text"
+                                                        id="Nombre" />
+                                                </div>
+                                                <div class="field-group">
+                                                    <label for="Surname" class="field-label">Apellidos</label>
+                                                    <input class="form-field w-input" maxlength="256" name="Surname"
+                                                        data-name="Surname" placeholder="" type="text" id="Surname"
+                                                        required="" />
+                                                </div>
+                                            </div>
+                                            <div class="form-field_wrap">
+                                                <div class="field-group">
+                                                    <label for="Email" class="field-label">Email</label>
+                                                    <input class="form-field w-input" maxlength="256" name="Email"
+                                                        data-name="Email" placeholder="" type="email" id="Email" />
+                                                </div>
+                                                <div class="field-group">
+                                                    <label for="Phone" class="field-label">Teléfono</label>
+                                                    <input class="form-field w-input" maxlength="256" name="Phone"
+                                                        data-name="Phone" placeholder="" type="tel" id="Phone"
+                                                        required="" />
+                                                </div>
+                                            </div>
+
+                                            <div class="field-group">
+                                                <label for="Message" class="field-label">Mensaje</label>
+                                                <textarea id="Message" name="Message" maxlength="5000"
+                                                    data-name="Message" placeholder=""
+                                                    class="text-field w-input"></textarea>
+                                            </div>
+
+                                            <div class="button-form">
+                                                <button type="submit" class="contact-submit-btn">ENVIAR</button>
+                                            </div>
+                                        </form>
+                                        <div class="success-message w-form-done">
+                                            <div class="text-size-regular">Gracias por tu mensaje!</div>
+                                        </div>
+                                        <div class="error-message w-form-fail">
+                                            <div>Oops! Algo ha ido mal al enviar el formulario.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer class="new-footer">
             <div class="new-footer-container">
@@ -399,12 +386,12 @@
                             loading="lazy" alt="Arrow" />
                     </a>
 
-                    <div style="display:flex; align-items:center; gap:1rem; margin-top:1rem;">
-                        <div style="display:flex; gap:0.5rem; font-size:0.9rem;">
+                    <div class="footer-row-copyright">
+                        <div class="footer-text-copyright">
                             <div>Copyright</div>
                             <div>©</div>
                         </div>
-                        <img src="estilos/logos/logo%20IMIDRA.png" loading="lazy" style="height:40px; width:auto;"
+                        <img src="estilos/logos/logo%20IMIDRA.png" loading="lazy" class="footer-imidra-logo"
                             alt="IMIDRA" />
                     </div>
                 </div>
@@ -494,75 +481,7 @@
                 return false;
             }
         </script>
-        <style>
-            /* Footer credits layout (copied from index.html) */
-            .footer .credits {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 0.75rem;
-                width: 100%;
-            }
-
-            .footer .credits-top {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                justify-content: flex-start;
-                width: 100%;
-            }
-
-            .footer .credits-top .copyright {
-                display: flex;
-                gap: 0.5rem;
-                align-items: center;
-                justify-content: flex-start;
-            }
-
-            .footer .credits-logos {
-                display: flex;
-                gap: 1rem;
-                align-items: center;
-                justify-content: center;
-                /* logos centrados */
-                flex-wrap: wrap;
-                margin-top: 0.25rem;
-                width: 100%;
-            }
-
-            .footer .credits-logos img,
-            .footer .credits-top img {
-                height: 80px;
-                width: auto;
-                display: block;
-                object-fit: contain;
-            }
-
-            @media screen and (max-width: 767px) {
-
-                .footer .credits-logos img,
-                .footer .credits-top img {
-                    height: 56px;
-                    width: auto;
-                }
-
-                .footer .credits-top {
-                    padding-left: 8px;
-                }
-            }
-
-            .footer .credits-top img[alt="IMIDRA"] {
-                height: 56px;
-                width: auto;
-            }
-
-            @media screen and (max-width: 767px) {
-                .footer .credits-top img[alt="IMIDRA"] {
-                    height: 42px;
-                    width: auto;
-                }
-            }
-        </style>
+        <!-- Footer styles moved to style.css -->
 </body>
 
 </html>

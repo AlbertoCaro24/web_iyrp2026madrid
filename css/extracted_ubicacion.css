@@ -1,0 +1,97 @@
+/* =========================================
+   EXTRACTED FROM ubicacion.html
+   ========================================= */
+
+/* Location Page Custom Elements */
+.location-header-padding {
+    padding-bottom: 2rem !important;
+}
+
+.location-subtitle {
+    font-family: 'Montserrat', cursive;
+    font-size: 1.2rem;
+    color: var(--green-700);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.location-address {
+    text-align: center !important;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.location-actions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Extracted from Lines 128-194 of ubicacion.html */
+/* Center header block content completely */
+.fs-styleguide_header .fs-styleguide_header-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.fs-styleguide_header .max-width-medium {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width: 100%;
+}
+
+/* Button in header matches header text color (use var for consistency) */
+.fs-styleguide_header .fs-styleguide_header-block a {
+    background: #ffffff !important;
+    color: #749ba2 !important;
+    padding: 0.6rem 1.4rem !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+}
+
+/* Slider styles (centered and fixed size) */
+.agenda-slider-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.agenda-slider {
+    position: relative;
+    width: 100%;
+    /* Keep a fixed aspect ratio so container doesn't change size */
+    aspect-ratio: 16/9;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f5f5f5;
+}
+
+.agenda-slider .slider-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.agenda-slider .slider-img.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Make sure the link/button sits centered too */
+.fs-styleguide_header .fs-styleguide_header-block>div[style] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

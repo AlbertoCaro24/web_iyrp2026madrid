@@ -1,0 +1,180 @@
+/* =========================================
+   EXTRACTED FROM galeria.html (Gallery Slider)
+   ========================================= */
+
+/* Gallery Slider Styles */
+.gallery-slider-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Aspect ratio for the slide container - optional, or let image define height */
+/* Putting a fixed aspect ratio might crop images or leave black bars. 
+Let's try a min-height and flex centering. */
+.gallery-slides {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Fixed height for uniformity */
+    /* Adjust based on image aspect ratio usually 16:9 or 4:3 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.gallery-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: fadeEffect 0.5s;
+}
+
+.gallery-slide.active {
+    display: flex;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    /* Fill container height */
+    object-fit: cover;
+    /* Cover area, cropping if needed to avoid whitespace */
+    display: block;
+}
+
+/* Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #71779b;
+    border: none;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 20;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* Collapsible Footer */
+.gallery-footer-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-toggle {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    color: #71779b;
+    padding: 8px 20px;
+    border-radius: 20px 20px 0 0;
+    /* Rounded top */
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    width: auto;
+    min-width: 180px;
+    justify-content: center;
+}
+
+.footer-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.footer-content {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    text-align: center;
+    padding: 0 2rem;
+    /* Side padding */
+    box-sizing: border-box;
+}
+
+.gallery-footer-overlay.expanded .footer-content {
+    max-height: 300px;
+    /* Allow enough space for text */
+    padding: 1.5rem 2rem;
+}
+
+.gallery-footer-overlay.expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-icon {
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+#captionText {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gallery-slides {
+        min-height: 300px;
+    }
+
+    .slider-btn {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-content {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,206 @@
+/* =========================================
+   EXTRACTED FROM programa.html
+   ========================================= */
+
+/* Specific body padding for Programa page to avoid content hiding behind fixed header */
+.programa-page {
+    padding-top: 100px !important;
+}
+
+/* REDESIGN: SPLIT TIMELINE STYLES */
+
+/* Top Navigation for Days */
+.program-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    /* Adjust based on navbar height */
+    z-index: 90;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.program-nav-link {
+    text-decoration: none;
+    color: #749ba2;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+.program-nav-link:hover {
+    background-color: #ebe7e7;
+    color: #ffffff;
+}
+
+/* Section Dividers */
+.program-day-section {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.program-day-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* Left Column: Sticky Date */
+.program-date-col {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 160px;
+    /* Below the nav */
+    height: fit-content;
+    text-align: right;
+    padding-right: 2rem;
+    border-right: 3px solid #ffffff;
+}
+
+.program-date-number {
+    font-size: 6rem;
+    line-height: 0.8;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: 'Changa One', sans-serif;
+    /* Using available font */
+    color: #ffffff;
+}
+
+.program-date-month {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.program-date-location {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* Right Column: Detailed Agenda */
+.program-agenda-col {
+    flex: 1;
+    padding-top: 1rem;
+}
+
+/* Agenda Items */
+.agenda-item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.agenda-time {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #d15638;
+    /* Accent color */
+    display: inline-block;
+    border-bottom: 2px solid rgba(209, 86, 56, 0.2);
+}
+
+.agenda-title {
+    font-family: 'PT Serif', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.agenda-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    max-width: 65ch;
+}
+
+.agenda-sublist {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.agenda-sublist li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.agenda-sublist li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #d15638;
+    font-weight: bold;
+}
+
+/* Optional Tag */
+.tag-optional {
+    background-color: #efefef;
+    color: #b07e70;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 991px) {
+    .program-day-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .program-date-col {
+        flex: auto;
+        position: static;
+        text-align: left;
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 1rem;
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+    }
+
+    .program-date-number {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+
+    .program-date-location {
+        display: none;
+        /* Hide location in header on mobile to save space, relies on agenda context */
+    }
+
+    .program-nav {
+        top: 60px;
+        padding: 0.5rem 0;
+    }
+}

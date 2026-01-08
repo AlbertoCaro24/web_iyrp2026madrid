@@ -1,0 +1,35 @@
+/* =========================================
+   EXTRACTED FROM contacto.html (Contact Form)
+   ========================================= */
+.contact-submit-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    color: #71779b;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.contact-submit-btn:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-submit-btn:active {
+    transform: translateY(0);
+}
+
+.button-form {
+    text-align: center;
+    margin-top: 2rem;
+}

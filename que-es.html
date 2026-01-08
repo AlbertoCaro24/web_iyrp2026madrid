@@ -34,222 +34,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!-- estilos para ocultar la insignia de Webflow (sobrescriben reglas del CSS exportado) -->
 
-    <style>
-        /* Oculta únicamente el badge inyectado por Webflow (clase oficial) */
-        .w-webflow-badge,
-        .w-webflow-badge>img {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-            width: 0 !important;
-            height: 0 !important;
-        }
-    </style>
-    <style>
-        html.w-mod-js:not(.w-mod-ix3) :is(.heading-style-h1, .hero-icon, .hero-subtitle-text, .hero_bottom, .nav_component, .nav_link > *, .page-headings.text-align-center > *, .section_hero, .cta-video_background, .cta_content .text-style-allcaps, .button-wrap, .photo-wrap_first, .photo-wrap_second, .photo-wrap_third) {
-            visibility: hidden !important;
-        }
-    </style>
-    <!-- Force nav text black for this page -->
-    <style>
-        .nav_component[data-wf--navbar--variant="base"] .nav_link,
-        .nav_component[data-wf--navbar--variant="base"] .nav-button_text .text-size-regular,
-        .nav_component[data-wf--navbar--variant="base"] .logo,
-        .nav_component[data-wf--navbar--variant="base"] .button_text,
-        .nav_component[data-wf--navbar--variant="base"] .nav-button_text.is-absolute .text-size-regular {
-            color: #ffffff !important;
-        }
-
-        .nav_component[data-wf--navbar--variant="base"] .nav_divider {
-            background-color: rgba(255, 255, 255, 0.25) !important;
-        }
-
-        .nav_component[data-wf--navbar--variant="base"] .button.is-nav .button_text {
-            color: #000000 !important;
-        }
-    </style>
-    <style>
-        /* Footer credits layout (copied from index.html) */
-        .footer .credits {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            width: 100%;
-        }
-
-        .footer .credits-top {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            justify-content: flex-start;
-            width: 100%;
-        }
-
-        .footer .credits-top .copyright {
-            display: flex;
-            gap: 0.5rem;
-            align-items: center;
-            justify-content: flex-start;
-        }
-
-        .footer .credits-logos {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            justify-content: center;
-            /* logos centrados */
-            flex-wrap: wrap;
-            margin-top: 0.25rem;
-            width: 100%;
-        }
-
-        .footer .credits-logos img,
-        .footer .credits-top img {
-            height: 80px;
-            width: auto;
-            display: block;
-            object-fit: contain;
-        }
-
-        @media screen and (max-width: 767px) {
-
-            .footer .credits-logos img,
-            .footer .credits-top img {
-                height: 56px;
-                width: auto;
-            }
-
-            .footer .credits-top {
-                padding-left: 8px;
-            }
-
-            .footer .credits-logos {
-                justify-content: center;
-            }
-        }
-
-        /* Make IMIDRA logo slightly smaller than the other logos */
-        .footer .credits-top img[alt="IMIDRA"] {
-            height: 56px;
-            width: auto;
-        }
-
-        @media screen and (max-width: 767px) {
-            .footer .credits-top img[alt="IMIDRA"] {
-                height: 42px;
-                width: auto;
-            }
-        }
-
-        /* Reduce extra vertical space inside footer */
-        .footer {
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
-        }
-
-        .footer .credits-logos {
-            margin-top: 0 !important;
-            padding-top: 0 !important;
-        }
-    </style>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <style>
-        /* Justify main textual content on this page */
-        .page-wrapper p,
-        .page-wrapper .text-size-medium,
-        .page-wrapper .paragraph,
-        .page-wrapper .text-block,
-        .page-wrapper .w-richtext,
-        .page-wrapper .max-width-small,
-        .page-wrapper li {
-            text-align: justify !important;
-        }
-
-        /* Keep headings visually centered */
-        .page-wrapper .page-headings,
-        .page-wrapper .hero_content,
-        .page-wrapper .hero_content-top {
-            text-align: center !important;
-        }
-
-        /* Two-column layout for que-es: text left, slider right */
-        .quees-two-col {
-            display: flex;
-            gap: 2rem;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .quees-two-col .quees-text {
-            flex: 1 1 55%;
-            min-width: 0;
-            /* allow text to truncate correctly inside flex */
-        }
-
-        .quees-two-col .quees-slider {
-            /* Aumentado ligeramente para mayor presencia visual */
-            flex: 0 0 620px;
-            max-width: 60%;
-        }
-
-        .quees-slider .slider-container {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            position: relative;
-            overflow: hidden;
-            border-radius: 6px;
-            background: #749ba2;
-        }
-
-        .quees-slider .slider-img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 600ms ease;
-            display: block;
-        }
-
-        .quees-slider .slider-img.active {
-            opacity: 1;
-        }
-
-        @media screen and (max-width: 767px) {
-            .quees-two-col {
-                flex-direction: column;
-            }
-
-            .quees-two-col .quees-slider {
-                width: 100%;
-                max-width: 100%;
-                flex: 1 1 auto;
-                box-sizing: border-box;
-            }
-
-            /* Fix Header and Text Overflow on Mobile */
-            h1.fs-styleguide_heading-header {
-                font-size: 28px !important;
-                line-height: 1.2 !important;
-                word-wrap: break-word !important;
-                overflow-wrap: break-word !important;
-                hyphens: auto !important;
-                padding-left: 10px !important;
-                padding-right: 10px !important;
-            }
-
-            .quees-text {
-                width: 100% !important;
-                max-width: 100% !important;
-                box-sizing: border-box !important;
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-        }
-    </style>
+    <!-- Styles moved to css/style.css -->
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -279,108 +64,7 @@
 <body class="que-es-page">
 
     <!-- CUSTOM AGENT MOBILE MENU (clean rebuild) -->
-    <style>
-        /* Only visible on mobile */
-        #custom-mobile-menu {
-            display: none;
-        }
-
-        @media screen and (max-width: 991px) {
-            #custom-mobile-menu {
-                display: block;
-            }
-
-            body {
-                padding-top: 60px;
-                /* Prevent content hiding behind fixed bar */
-            }
-        }
-
-        /* Fixed Green Bar */
-        #mobile-nav-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 70px;
-            background-color: #6A4C93;
-            z-index: 99999;
-            /* Max Z-Index */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            box-sizing: border-box;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Logo in Bar */
-        #mobile-nav-logo img {
-            height: 50px;
-            width: auto;
-        }
-
-        /* Hamburger Button */
-        #mobile-nav-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        #mobile-nav-toggle span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: #E8DDCC;
-            /* Beige */
-            margin: 5px 0;
-            border-radius: 2px;
-        }
-
-        /* Dropdown Menu (White) */
-        #mobile-nav-dropdown {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            top: 70px;
-            /* Below bar */
-            left: 0;
-            width: 100%;
-            background-color: #FFFFFF;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            z-index: 99998;
-            padding: 20px 0;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        #mobile-nav-dropdown a {
-            display: block;
-            padding: 15px 20px;
-            color: #000000;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            font-family: 'Anaheim', sans-serif;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        #mobile-nav-dropdown a:last-child {
-            border-bottom: none;
-        }
-
-        /* Inscripcion Button in Menu */
-        .mobile-btn-inscripcion {
-            background-color: #E8DDCC;
-            color: #000000 !important;
-            padding: 12px 24px !important;
-            border-radius: 50px;
-            margin: 20px auto;
-            display: inline-block !important;
-            font-weight: bold;
-        }
-    </style>
+    <!-- Styles moved to css/style.css -->
 
     <div id="custom-mobile-menu">
         <div id="mobile-nav-bar">
@@ -414,420 +98,253 @@
         }
     </script>
     <!-- END CUSTOM AGENT MENU -->
+
+
     <div class="page-wrapper">
         <div class="global-styles w-embed">
-            <style>
-                /* Make text look crisper and more legible in all browsers */
-                body {
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                    font-smoothing: antialiased;
-                    text-rendering: optimizeLegibility;
-                }
-
-                /* Focus state style for keyboard navigation for the focusable elements */
-                *[tabindex]:focus-visible,
-                input[type="file"]:focus-visible {
-                    outline: 0.125rem solid #749ba2;
-                    outline-offset: 0.125rem;
-                }
-
-                /* Set color style to inherit */
-                .inherit-color * {
-                    color: inherit;
-                }
-
-                /* Get rid of top margin on first element in any rich text element */
-                .w-richtext> :not(div):first-child,
-                .w-richtext>div:first-child> :first-child {
-                    margin-top: 0 !important;
-                }
-
-                /* Get rid of bottom margin on last element in any rich text element */
-                .w-richtext>:last-child,
-                .w-richtext ol li:last-child,
-                .w-richtext ul li:last-child {
-                    margin-bottom: 0 !important;
-                }
-
-                /* Make sure containers never lose their center alignment */
-                .container-medium,
-                .container-small,
-                .container-large {
-                    margin-right: auto !important;
-                    margin-left: auto !important;
-                }
-
-                /* 
-Make the following elements inherit typography styles from the parent and not have hardcoded values. 
-Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
-Uncomment this CSS to use it in the project. Leave this message for future hand-off.
-*/
-                /*
-a,
-.w-input,
-.w-select,
-.w-tab-link,
-.w-nav-link,
-.w-dropdown-btn,
-.w-dropdown-toggle,
-.w-dropdown-link {
-  color: inherit;
-  text-decoration: inherit;
-  font-size: inherit;
-}
-*/
-                /* Apply "..." after 3 lines of text */
-                .text-style-3lines {
-                    display: -webkit-box;
-                    overflow: hidden;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                }
-
-                /* Apply "..." after 2 lines of text */
-                .text-style-2lines {
-                    display: -webkit-box;
-                    overflow: hidden;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                }
-
-                /* Adds inline flex display */
-                .display-inlineflex {
-                    display: inline-flex;
-                }
-
-                /* These classes are never overwritten */
-                .hide {
-                    display: none !important;
-                }
-
-                @media screen and (max-width: 991px) {
-
-                    .hide,
-                    .hide-tablet {
-                        display: none !important;
-                    }
-                }
-
-                @media screen and (max-width: 767px) {
-                    .hide-mobile-landscape {
-                        display: none !important;
-                    }
-                }
-
-                @media screen and (max-width: 479px) {
-                    .hide-mobile {
-                        display: none !important;
-                    }
-                }
-
-                .margin-0 {
-                    margin: 0rem !important;
-                }
-
-                .padding-0 {
-                    padding: 0rem !important;
-                }
-
-                .spacing-clean {
-                    padding: 0rem !important;
-                    margin: 0rem !important;
-                }
-
-                .margin-top {
-                    margin-right: 0rem !important;
-                    margin-bottom: 0rem !important;
-                    margin-left: 0rem !important;
-                }
-
-                .padding-top {
-                    padding-right: 0rem !important;
-                    padding-bottom: 0rem !important;
-                    padding-left: 0rem !important;
-                }
-
-                .margin-right {
-                    margin-top: 0rem !important;
-                    margin-bottom: 0rem !important;
-                    margin-left: 0rem !important;
-                }
-
-                .padding-right {
-                    padding-top: 0rem !important;
-                    padding-bottom: 0rem !important;
-                    padding-left: 0rem !important;
-                }
-
-                .margin-bottom {
-                    margin-top: 0rem !important;
-                    margin-right: 0rem !important;
-                    margin-left: 0rem !important;
-                }
-
-                .padding-bottom {
-                    padding-top: 0rem !important;
-                    padding-right: 0rem !important;
-                    padding-left: 0rem !important;
-                }
-
-                .margin-left {
-                    margin-top: 0rem !important;
-                    margin-right: 0rem !important;
-                    margin-bottom: 0rem !important;
-                }
-
-                .padding-left {
-                    padding-top: 0rem !important;
-                    padding-right: 0rem !important;
-                    padding-bottom: 0rem !important;
-                }
-
-                .margin-horizontal {
-                    margin-top: 0rem !important;
-                    margin-bottom: 0rem !important;
-                }
-
-                .padding-horizontal {
-                    padding-top: 0rem !important;
-                    padding-bottom: 0rem !important;
-                }
-
-                .margin-vertical {
-                    margin-right: 0rem !important;
-                    margin-left: 0rem !important;
-                }
-
-                .padding-vertical {
-                    padding-right: 0rem !important;
-                    padding-left: 0rem !important;
-                }
-            </style>
+            <!-- Styles moved to css/style.css -->
         </div>
-        <div data-wf--navbar--variant="base" data-animation="default" data-collapse="medium" data-duration="400"
-            data-easing="ease" data-easing2="ease" role="banner" class="nav_component w-nav">
-            <div class="padding-global">
-                <div class="container-large">
-                    <div class="nav-wrap">
-                        <a href="index.html" class="nav_brand w-inline-block">
-                            <img src="estilos/logos/logo IYRP color.png" alt="logo IYRP 2026 Madrid"
-                                style="height: 85px; width: auto;">
-                        </a>
-                        <nav role="navigation" class="nav-menu w-nav-menu">
-                            <div class="nav-menu_wrap">
-                                <div class="nav-left">
-                                    <div class="nav_divider"></div>
-                                    <a href="que-es.html" aria-current="page"
-                                        class="nav_link w-inline-block w--current">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">
-                                                ¿QUÉ ES?<br />
+        <main class="main-wrapper">
+            <div data-wf--navbar--variant="base" data-animation="default" data-collapse="medium" data-duration="400"
+                data-easing="ease" data-easing2="ease" role="banner" class="nav_component w-nav">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="nav-wrap">
+                            <a href="index.html"
+                                class="nav_brand w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                <img src="estilos/logos/logo IYRP color.png" alt="logo IYRP 2026 Madrid"
+                                    style="height: 85px; width: auto;">
+                            </a>
+                            <nav role="navigation" class="nav-menu w-nav-menu">
+                                <div class="nav-menu_wrap w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e">
+                                    <div class="nav-left">
+                                        <div class="nav_divider"></div>
+                                        <a href="que-es.html"
+                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                            <div class="nav-button_text">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    ¿QUÉ ES?<br />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">
-                                                ¿QUÉ ES?<br />
+                                            <div class="nav-button_text is-absolute">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    ¿QUE ES?<br />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                    <a href="programa.html" class="nav_link w-inline-block">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">PROGRAMA</div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">PROGRAMA</div>
-                                        </div>
-                                    </a>
-                                    <a href="noticias.html" class="nav_link w-inline-block">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">NOTICIAS</div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">NOTICIAS</div>
-                                        </div>
-                                    </a>
-                                    <a href="galeria.html" class="nav_link w-inline-block">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">GALERÍA</div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">GALERÍA</div>
-                                        </div>
-                                    </a>
-                                    <a href="contacto.html" class="nav_link w-inline-block">
-                                        <div class="nav-button_text">
-                                            <div class="text-size-regular text-weight-medium">CONTACTO</div>
-                                        </div>
-                                        <div class="nav-button_text is-absolute">
-                                            <div class="text-size-regular text-weight-medium">CONTACTO</div>
+                                        </a>
+                                        <a href="programa.html"
+                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                            <div class="nav-button_text">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    PROGRAMA<br />
+                                                </div>
+                                            </div>
+                                            <div class="nav-button_text is-absolute">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    PROGRAMA<br />
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="noticias.html"
+                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                            <div class="nav-button_text">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    NOTICIAS<br />
+                                                </div>
+                                            </div>
+                                            <div class="nav-button_text is-absolute">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    NOTICIAS<br />
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="galeria.html"
+                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                            <div class="nav-button_text">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    GALERÍA<br />
+                                                </div>
+                                            </div>
+                                            <div class="nav-button_text is-absolute">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    GALERIA<br />
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="contacto.html"
+                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                            <div class="nav-button_text">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    CONTACTO<br />
+                                                </div>
+                                            </div>
+                                            <div class="nav-button_text is-absolute">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    CONTACTO<br />
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <a id="forms" href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank"
+                                        class="button is-nav w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block"
+                                        style="background-color: #8ab875 !important; color: #E8DDCC !important; border: 1px solid #E8DDCC !important; margin-left: 2rem !important;">
+                                        <div class="button-text">
+                                            <div class="button_text"
+                                                style="color: #E8DDCC !important; font-weight: bold !important;">
+                                                INSCRIPCIÓN</div>
+                                            <div class="button-text-animation">
+                                                <div class="button_text"
+                                                    style="color: #E8DDCC !important; font-weight: bold !important;">
+                                                    Book a Visit</div>
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
-                                <a id="forms" href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank"
-                                    class="button is-nav w-node-_16e6e34e-738e-bbf3-5f61-941721019e8f-63dfdea9 w-inline-block">
-                                    <div class="button-text">
-                                        <div class="button_text">INSCRIPCIÓN</div>
-                                        <div class="button-text-animation">
-                                            <div class="button_text">Book a Visit</div>
-                                        </div>
-                                    </div>
-                                    <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
-                                        loading="lazy" alt="Kaleo Icon" class="button-image is-nav" />
-                                </a>
+                            </nav>
+                            <div class="nav_button w-nav-button">
+                                <div class="icon w-icon-nav-menu"></div>
                             </div>
-                        </nav>
-                        <div class="nav_button w-nav-button">
-                            <div class="icon w-icon-nav-menu"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="fs-styleguide_component">
-            <header class="fs-styleguide_header">
-                <div class="padding-global padding-section-medium" style="padding-bottom: 1rem !important;">
+            <div class="section_hero">
+                <div class="padding-global">
                     <div class="container-large">
-                        <div class="fs-styleguide_header-block">
-                            <h1 class="fs-styleguide_heading-header">¿QUÉ ES INTERNATIONAL MEETING - MADRID CELEBRATING
-                                THE IYRP 2026?</h1>
-
-                            <div class="quees-two-col">
-                                <div class="quees-text max-width-medium">
-                                    <div class="text-size-medium">
-
-                                        <p>
-                                            Desde el Instituto Madrileño de Investigación y Desarrollo Rural, Agrario y
-                                            Alimentario (IMIDRA), el CIHEAM, la Asociación Trashumancia y Naturaleza y
-                                            la Organización de las Naciones Unidas para la Alimentación y la Agricultura
-                                            (FAO), presentamos la iniciativa de organizar una reunión internacional en
-                                            Madrid en el marco del Año Internacional de los Pastizales y los Pastores
-                                            (IYRP). Esta reunión tiene como objetivo fortalecer la cooperación
-                                            internacional y promover el reconocimiento de la trashumancia como una
-                                            práctica cultural, económica y medioambientalmente sostenible en el ámbito
-                                            de Europa y el Mediterráneo.
-                                        </p>
-                                        <br>
-
-                                        <p>
-                                            El reconocimiento de la trashumancia como Patrimonio Cultural Inmaterial de
-                                            la Humanidad por la UNESCO en diciembre de 2023 representó un hito clave en
-                                            la valorización de esta práctica. En este contexto, la región de Madrid
-                                            acogió la primera reunión de puntos focales, con IMIDRA como anfitrión del
-                                            evento el pasado 19 de noviembre de 2024.
-                                        </p>
-                                        <br>
-                                        <p>
-                                            Durante este encuentro, surgió la iniciativa de organizar un evento
-                                            internacional en el marco del Año Internacional de los Pastizales y los
-                                            Pastores, centrado en la digitalización y el relevo generacional en la
-                                            ganadería trashumante. Este evento permite coordinar esfuerzos a nivel
-                                            nacional e internacional, involucrando a todos los actores clave.
-                                        </p>
-                                        <br>
-                                        <p>
-                                            IMIDRA, CIHEAM, la Asociación Trashumancia y Naturaleza y la FAO reafirman
-                                            su compromiso con la promoción y conservación de la trashumancia como un
-                                            modelo de sostenibilidad y patrimonio cultural. La Comunidad de Madrid, con
-                                            sus 4.104 kilómetros de vías pecuarias, juega un papel estratégico en la
-                                            configuración del paisaje y en la promoción de la trashumancia, siendo un
-                                            punto de confluencia de varias vías pecuarias nacionales.
-                                        </p>
-                                    </div>
-
+                        <div class="hero-component">
+                            <div class="hero_content">
+                                <div class="hero_content-top">
+                                    <h1 class="heading-style-h1 title-with-bg">
+                                        <strong class="bold-text">
+                                            ¿QUE ES INTERNATIONAL MEETING - MADRID CELEBRATING THE IYRP 2026?
+                                        </strong>
+                                    </h1>
                                 </div>
-
-                                <div class="quees-slider">
-                                    <div class="slider-container">
-                                        <img class="slider-img active" src="estilos/fotos/fotos/001-IMIDRA-WEB.jpg"
-                                            alt="Foto 1 - Pastizales" loading="lazy" />
-                                        <img class="slider-img" src="estilos/fotos/fotos/002-IMIDRA-WEB.jpg"
-                                            alt="Foto 2 - Ganado en pastizal" loading="lazy" />
-                                        <img class="slider-img" src="estilos/fotos/fotos/003-IMIDRA-WEB.jpg"
-                                            alt="Foto 3 - Vegetación" loading="lazy" />
-                                        <img class="slider-img" src="estilos/fotos/fotos/004-IMIDRA-WEB.jpg"
-                                            alt="Foto 4 - Paisaje rural" loading="lazy" />
-                                        <img class="slider-img" src="estilos/fotos/fotos/005-IMIDRA-WEB.jpg"
-                                            alt="Foto 1 - Pastizales" loading="lazy" />
-                                        <img class="slider-img" src="estilos/fotos/fotos/006-IMIDRA-WEB.jpg"
-                                            alt="Foto 2 - Ganado en pastizal" loading="lazy" />
-                                        <img class="slider-img" src="estilos/fotos/fotos/007-IMIDRA-WEB.jpg"
-                                            alt="Foto 3 - Vegetación" loading="lazy" />
-                                        <img class="slider-img" src="estilos/fotos/fotos/008-IMIDRA-WEB.jpg"
-                                            alt="Foto 4 - Paisaje rural" loading="lazy" />
-                                        <img class="slider-img" src="estilos/fotos/fotos/009-IMIDRA-WEB.jpg"
-                                            alt="Foto 3 - Vegetación" loading="lazy" />
-                                        <img class="slider-img" src="estilos/fotos/fotos/010-IMIDRA-WEB.jpg"
-                                            alt="Foto 4 - Paisaje rural" loading="lazy" />
-                                        <img class="slider-img"
-                                            src="estilos/fotos/fotos/María Mateos Corrales -Trashumancia 2024. Paso de Los Cerillas por Navalmoral de la Mata_IMG_2349.jpg"
-                                            alt="Foto 4 - Paisaje rural" loading="lazy" />
-
-                                    </div>
+                                <div class="hero-subtitle">
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
-            </header>
+                <div class="hero-background">
+                    <div class="video-placeholder">
+                        <img src="estilos/fotos/foto_que-es.png" loading="lazy"
+                            sizes="(max-width: 1920px) 100vw, 1920px" alt="" class="image is-radius" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="quees-two-col">
+                <div class="quees-text">
+                    <p>
+                        Desde el Instituto Madrileño de Investigación y Desarrollo Rural,
+                        Agrario y
+                        Alimentario (IMIDRA), el CIHEAM, la Asociación Trashumancia y Naturaleza
+                        y
+                        la Organización de las Naciones Unidas para la Alimentación y la
+                        Agricultura
+                        (FAO), presentamos la iniciativa de organizar una reunión internacional
+                        en
+                        Madrid en el marco del Año Internacional de los Pastizales y los
+                        Pastores
+                        (IYRP). Esta reunión tiene como objetivo fortalecer la cooperación
+                        internacional y promover el reconocimiento de la trashumancia como una
+                        práctica cultural, económica y medioambientalmente sostenible en el
+                        ámbito
+                        de Europa y el Mediterráneo.
+                    </p>
+                    <br>
+
+                    <p>
+                        El reconocimiento de la trashumancia como Patrimonio Cultural Inmaterial
+                        de
+                        la Humanidad por la UNESCO en diciembre de 2023 representó un hito clave
+                        en
+                        la valorización de esta práctica. En este contexto, la región de Madrid
+                        acogió la primera reunión de puntos focales, con IMIDRA como anfitrión
+                        del
+                        evento el pasado 19 de noviembre de 2024.
+                    </p>
+                    <br>
+                    <p>
+                        Durante este encuentro, surgió la iniciativa de organizar un evento
+                        internacional en el marco del Año Internacional de los Pastizales y los
+                        Pastores, centrado en la digitalización y el relevo generacional en la
+                        ganadería trashumante. Este evento permite coordinar esfuerzos a nivel
+                        nacional e internacional, involucrando a todos los actores clave.
+                    </p>
+                    <br>
+                    <p>
+                        IMIDRA, CIHEAM, la Asociación Trashumancia y Naturaleza y la FAO
+                        reafirman
+                        su compromiso con la promoción y conservación de la trashumancia como un
+                        modelo de sostenibilidad y patrimonio cultural. La Comunidad de Madrid,
+                        con
+                        sus 4.104 kilómetros de vías pecuarias, juega un papel estratégico en la
+                        configuración del paisaje y en la promoción de la trashumancia, siendo
+                        un
+                        punto de confluencia de varias vías pecuarias nacionales.
+                    </p>
+                </div>
+            </div>
             <section class="fs-styleguide_classes">
                 <section class="fs-styleguide_structure"></section>
             </section>
-        </div>
-        <footer class="new-footer">
-            <div class="new-footer-container">
-                <!-- Left Column -->
-                <div class="new-footer-col-left">
-                    <h3>Te damos la bienvenida a International Meeting-Madrid : Celebrating The IYRP 2026</h3>
+            <footer class="new-footer">
+                <div class="new-footer-container">
+                    <!-- Left Column -->
+                    <div class="new-footer-col-left">
+                        <h3>Te damos la bienvenida a International Meeting-Madrid : Celebrating The IYRP 2026</h3>
 
-                    <a href="contacto.html" class="button w-inline-block">
-                        <div class="button_text">CONTACTO</div>
-                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
-                            loading="lazy" alt="Arrow" />
-                    </a>
+                        <a href="contacto.html" class="button w-inline-block">
+                            <div class="button_text">CONTACTO</div>
+                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
+                                loading="lazy" alt="Arrow" />
+                        </a>
 
-                    <div style="display:flex; align-items:center; gap:1rem; margin-top:1rem;">
-                        <div style="display:flex; gap:0.5rem; font-size:0.9rem;">
-                            <div>Copyright</div>
-                            <div>©</div>
-                        </div>
-                        <img src="estilos/logos/logo%20IMIDRA.png" loading="lazy" style="height:40px; width:auto;"
-                            alt="IMIDRA" />
-                    </div>
-                </div>
-
-                <div class="new-footer-col-right">
-                    <!-- Location -->
-                    <div class="new-footer-item">
-                        <div class="new-footer-text">
-                            Instituto de la Ingeniería de España,<br>
-                            Calle del General Arrando, 38, 28010 Madrid, España
+                        <div style="display:flex; align-items:center; gap:1rem; margin-top:1rem;">
+                            <div style="display:flex; gap:0.5rem; font-size:0.9rem;">
+                                <div>Copyright</div>
+                                <div>©</div>
+                            </div>
+                            <img src="estilos/logos/logo%20IMIDRA.png" loading="lazy" style="height:40px; width:auto;"
+                                alt="IMIDRA" />
                         </div>
                     </div>
 
-                    <!-- Location Button -->
-                    <a href="ubicacion.html" class="button w-inline-block">
-                        <div class="button_text">UBICACIÓN</div>
-                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
-                            loading="lazy" alt="Arrow" />
-                    </a>
+                    <div class="new-footer-col-right">
+                        <!-- Location -->
+                        <div class="new-footer-item">
+                            <div class="new-footer-text">
+                                Instituto de la Ingeniería de España,<br>
+                                Calle del General Arrando, 38, 28010 Madrid, España
+                            </div>
+                        </div>
 
-                    <!-- Email -->
-                    <div class="new-footer-item">
-                        <div class="new-footer-label">E-MAIL</div>
-                        <div class="new-footer-text"><strong>iyrp2026madrid</strong></div>
+                        <!-- Location Button -->
+                        <a href="ubicacion.html" class="button w-inline-block">
+                            <div class="button_text">UBICACIÓN</div>
+                            <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
+                                loading="lazy" alt="Arrow" />
+                        </a>
+
+                        <!-- Email -->
+                        <div class="new-footer-item">
+                            <div class="new-footer-label">E-MAIL</div>
+                            <div class="new-footer-text"><strong>iyrp2026madrid</strong></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Logos Bottom -->
-            <div class="new-footer-logos">
-                <img src="estilos/logos/fundacionlogo.png" loading="lazy" alt="Fundación Trashumancia" />
-                <img src="estilos/logos/CIHEAM-ZARAGOZA_CMJN-horizontal.png" loading="lazy" alt="CIHEAM" />
-                <img src="estilos/logos/logo fao.png" loading="lazy" alt="FAO" />
-                <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" alt="Comunidad de Madrid" />
-            </div>
-        </footer>
+                <!-- Logos Bottom -->
+                <div class="new-footer-logos">
+                    <img src="estilos/logos/fundacionlogo.png" loading="lazy" alt="Fundación Trashumancia" />
+                    <img src="estilos/logos/CIHEAM-ZARAGOZA_CMJN-horizontal.png" loading="lazy" alt="CIHEAM" />
+                    <img src="estilos/logos/logo fao.png" loading="lazy" alt="FAO" />
+                    <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" alt="Comunidad de Madrid" />
+                </div>
+            </footer>
         </main>
         <script
             src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=691f33f0a47cf304259c3453"

@@ -1,0 +1,58 @@
+/* =========================================
+   EXTRACTED FROM noticias.html
+   ========================================= */
+
+/* News Article Typography & Layout */
+.news-article-header-title {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.news-article-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+.news-image-container {
+    margin-bottom: 2rem;
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.news-richtext {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.news-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.news-list-item {
+    margin-bottom: 0.75rem;
+    color: inherit;
+}
+
+.news-link {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Footer layout specific overrides if any (mostly handled by global) */
+.footer-imidra-logo {
+    height: 40px;
+    width: auto;
+}
