@@ -63,155 +63,201 @@
     <!-- Master Navigation CSS (Green Fixed Header) -->
 
     <style>
-        /* CRITICAL EMERGENCY FIXES FOR CONTACTO */
+        /* PROFESSIONAL REDESIGN - IYRP 2026 THEME */
 
-        /* 1. NUCLEAR OPTION: FORCE BLACK TEXT ON EVERYTHING */
-        .contact-page,
-        .contact-component,
-        /* .contact_form, */
-        /* Removed to let card style take over */
-        .form-field,
-        .heading-style-h1,
-        .field-label,
-        .contact-page *
-
-        /* Keep this but ensure specific elements override if needed */
-            {
-            color: #000000 !important;
-            text-shadow: none !important;
-            -webkit-text-fill-color: #000000 !important;
+        /* Variables for consistency */
+        :root {
+            --brand-green: #8ab875;
+            --brand-beige: #E8DDCC;
+            --brand-dark-green: #5a7d4a;
+            --brand-text: #8ab875;
+            /* FIXED: Green Text */
         }
 
-        /* Exceptions */
-        .contact-submit-btn {
-            color: #ffffff !important;
-            -webkit-text-fill-color: #ffffff !important;
+        .contacto-page {
+            background-color: var(--brand-beige);
         }
 
-        /* 2. CARD DESIGN INJECTION (TRANSPARENT V3) */
-        .contact-card {
-            background-color: transparent !important;
-            /* Remove white background */
-            padding: 2rem 0 !important;
-            /* Remove heavy padding */
-            box-shadow: none !important;
-            /* Remove shadow */
-            max-width: 700px !important;
-            margin: 0 auto !important;
-            border: none !important;
+        /* Scope Green Text to Main Content Areas */
+        .hero-component,
+        .section_contact {
+            color: var(--brand-text) !important;
         }
 
+        /* Hero Section Styling */
+        .hero-component {
+            position: relative;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        .hero_content-top {
+            margin-bottom: 2rem;
+        }
+
+        /* Form Container - Clean Card */
+        .contact-component {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            border-radius: 8px;
+        }
+
+        /* Typography */
+        .heading-style-h1.is-contact {
+            color: var(--brand-text) !important;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            background-color: transparent;
+        }
+
+        .bold-text {
+            color: var(--brand-text) !important;
+        }
+
+        /* Form Fields overrides - HIGH SPECIFICITY */
         .field-group {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
             margin-bottom: 1.5rem;
-            /* More spacing between fields */
+            text-align: left;
         }
 
         .field-label {
-            font-family: 'Roboto', sans-serif !important;
-            font-weight: 500 !important;
-            font-size: 0.95rem !important;
-            color: #000000 !important;
-            /* Explicit black label */
-            text-transform: none !important;
-            /* Remove uppercase for cleaner look */
-            letter-spacing: normal !important;
-            margin-bottom: 0 !important;
-            display: block !important;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--brand-text) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* 3. INPUT BOXES (BEIGE THEME) */
-        .form-field,
-        .text-field {
+        /* TARGETING INPUTS SPECIFICALLY TO OVERRIDE GLOBAL CSS */
+        .contacto-page .w-input,
+        .contacto-page .form-field,
+        .contacto-page .text-field,
+        input.form-field,
+        textarea.form-field {
             background-color: transparent !important;
-            /* Transparent to show page beige */
-            color: #000000 !important;
-            border: none !important;
-            border-bottom: 2px solid #DCD1C0 !important;
-            /* Darker beige underline */
-            border-radius: 0 !important;
-            /* Sharp edges for clean look */
-            padding: 0.75rem 0 !important;
-            /* Minimal padding */
-            height: auto !important;
-            min-height: 40px !important;
-            /* Slimmer inputs */
-            width: 100% !important;
-            box-sizing: border-box !important;
-            font-family: 'Roboto', sans-serif !important;
-            font-size: 1rem !important;
-            transition: border-color 0.3s ease !important;
-
-            /* Remove defaults */
-            -webkit-appearance: none !important;
-            appearance: none !important;
-            box-shadow: none !important;
+            border: 1px solid var(--brand-text) !important;
+            color: var(--brand-text) !important;
+            border-radius: 4px;
+            padding: 1rem;
+            height: auto;
+            min-height: 48px;
+            font-family: inherit;
+            transition: all 0.3s ease;
         }
 
-        .form-field:focus,
-        .text-field:focus {
-            background-color: transparent !important;
-            border-bottom-color: #8ab875 !important;
-            /* Green highlight on focus */
-            outline: none !important;
-            box-shadow: none !important;
+        .contacto-page .w-input:focus,
+        .contacto-page .form-field:focus {
+            outline: none;
+            border-color: var(--brand-dark-green) !important;
+            box-shadow: 0 0 0 2px rgba(138, 184, 117, 0.2);
         }
 
-        .form-field::placeholder,
-        .text-field::placeholder {
-            color: rgba(0, 0, 0, 0.5) !important;
-            /* Semi-transparent black placeholder */
+        /* Placeholder Styling - STRICT */
+        #email-form input::placeholder,
+        #email-form textarea::placeholder,
+        .contacto-page .w-input::placeholder,
+        .contacto-page .form-field::placeholder {
+            color: #b3d6a6 !important;
+            /* Lighter Green */
+            opacity: 1 !important;
+            font-weight: 500;
         }
 
-        .text-field {
-            min-height: 120px !important;
-            resize: vertical !important;
-            background-color: rgba(255, 255, 255, 0.2) !important;
-            /* Very subtle light background for textarea */
-            padding: 1rem !important;
-            /* Add padding back for textarea */
-            border: 2px solid #DCD1C0 !important;
-            /* Full border for textarea */
-            border-radius: 4px !important;
+        /* Webkit specific */
+        #email-form input::-webkit-input-placeholder,
+        #email-form textarea::-webkit-input-placeholder,
+        .contacto-page .w-input::-webkit-input-placeholder,
+        .contacto-page .form-field::-webkit-input-placeholder {
+            color: #b3d6a6 !important;
+            /* Lighter Green */
+            opacity: 1 !important;
+            font-weight: 500;
         }
 
-        /* 4. BUTTON (GREEN PILL - BLACK TEXT) */
+        /* Mozilla specific */
+        #email-form input::-moz-placeholder,
+        #email-form textarea::-moz-placeholder,
+        .contacto-page .w-input::-moz-placeholder,
+        .contacto-page .form-field::-moz-placeholder {
+            color: #b3d6a6 !important;
+            /* Lighter Green */
+            opacity: 1 !important;
+            font-weight: 500;
+        }
+
+        /* MS specific */
+        #email-form input:-ms-input-placeholder,
+        #email-form textarea:-ms-input-placeholder,
+        .contacto-page .w-input:-ms-input-placeholder,
+        .contacto-page .form-field:-ms-input-placeholder {
+            color: #b3d6a6 !important;
+            /* Lighter Green */
+            opacity: 1 !important;
+            font-weight: 500;
+        }
+
+        /* Submit Button - DESIGN REQ: Green BG, Beige Text */
+        #submit-button,
         .contact-submit-btn {
-            background-color: #7da869 !important;
-            /* Green background */
-            color: #000000 !important;
-            /* EXPLICIT BLACK TEXT */
-            -webkit-text-fill-color: #000000 !important;
-            width: auto !important;
-            padding: 1.2rem 5rem !important;
-            /* Wide pill */
-            border-radius: 50px !important;
-            font-size: 1.3rem !important;
-            /* Large text */
-            font-weight: 900 !important;
-            /* Extra Bold */
-            text-transform: uppercase !important;
-            letter-spacing: 2px !important;
-            margin-top: 3rem !important;
-            cursor: pointer !important;
-            border: none !important;
-            transition: all 0.2s ease !important;
-            display: block !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-            box-shadow: 0 4px 15px rgba(125, 168, 105, 0.5) !important;
-            text-shadow: none !important;
-            /* Remove shadow for clean black text */
+            background-color: #8ab875 !important;
+            /* Green */
+            background: #8ab875 !important;
+            color: #E8DDCC !important;
+            /* Beige Text */
+            border: 2px solid #8ab875 !important;
+            padding: 1rem 3rem;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: block;
+            margin-top: 1rem;
+            -webkit-appearance: none;
+            appearance: none;
         }
 
+        /* Submit Hover - Inverted: Beige BG, Green Text */
         .contact-submit-btn:hover {
-            transform: translateY(-2px) !important;
-            background-color: #6a9c55 !important;
-            /* Darker on hover */
-            box-shadow: 0 6px 20px rgba(106, 156, 85, 0.6) !important;
+            background-color: #E8DDCC !important;
+            /* Beige */
+            color: #8ab875 !important;
+            /* Green */
+            transform: translateY(-2px);
+            border-color: #8ab875 !important;
+        }
+
+        .form-field_wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media screen and (max-width: 767px) {
+            .form-field_wrap {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .hero-component {
+                padding-top: 6rem;
+            }
+
+            .heading-style-h1.is-contact {
+                font-size: 2.5rem;
+            }
         }
     </style>
 
@@ -303,131 +349,152 @@
                 </div>
             </div>
 
+            <div class="section_hero">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="hero-component">
+                            <div class="hero_content">
+                                <div class="hero_content-top">
+                                    <h1 class="heading-style-h1 title-with-bg">
+                                        <strong class="bold-text">
+                                            CONTACTO
+                                            <br><span style="font-size: 0.5em;">INTERNATIONAL MEETING - MADRID
+                                                CELEBRATING THE IYRP 2026</span>
+                                        </strong>
+                                    </h1>
+                                </div>
+                                <div class="hero-subtitle">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-background">
+                    <div class="video-placeholder">
+                        <img src="estilos/fotos/fotos/WhatsApp Image 2025-12-22 at 09.59.10.jpeg" loading="lazy"
+                            sizes="(max-width: 1920px) 100vw, 1920px" alt="" class="image is-radius" />
+                    </div>
+                </div>
+            </div>
+
             <div class="section_contact">
                 <div class="padding-global">
                     <div class="container-large">
                         <div class="contact-component">
-                            <div class="contact_header text-align-center">
-                                <h1 class="heading-style-h1 is-contact">CONTACTO</h1>
-                            </div>
+                            <div class="contact_form">
+                                <div class="form-block w-form">
+                                    <form id="email-form" name="email-form" data-name="Email Form" class="form"
+                                        onsubmit="return sendViaMailto(event)">
 
-                            <!-- NEW WRAPPER FOR CARD STYLE -->
-                            <div class="contact-card">
-                                <div class="contact_form">
-                                    <div class="form-block w-form">
-                                        <form id="email-form" name="email-form" data-name="Email Form" class="form"
-                                            data-wf-page-id="691f33f1a47cf304259c3503"
-                                            data-wf-element-id="a4a131fa-3db6-1934-a7c9-b96a16837ac6"
-                                            onsubmit="return sendViaMailto(event)">
-                                            <div class="form-field_wrap">
-                                                <div class="field-group">
-                                                    <label for="Nombre" class="field-label">Nombre</label>
-                                                    <input class="form-field w-input" autofocus="true" maxlength="256"
-                                                        name="Nombre" data-name="Nombre" placeholder="" type="text"
-                                                        id="Nombre" />
-                                                </div>
-                                                <div class="field-group">
-                                                    <label for="Surname" class="field-label">Apellidos</label>
-                                                    <input class="form-field w-input" maxlength="256" name="Surname"
-                                                        data-name="Surname" placeholder="" type="text" id="Surname"
-                                                        required="" />
-                                                </div>
-                                            </div>
-                                            <div class="form-field_wrap">
-                                                <div class="field-group">
-                                                    <label for="Email" class="field-label">Email</label>
-                                                    <input class="form-field w-input" maxlength="256" name="Email"
-                                                        data-name="Email" placeholder="" type="email" id="Email" />
-                                                </div>
-                                                <div class="field-group">
-                                                    <label for="Phone" class="field-label">Teléfono</label>
-                                                    <input class="form-field w-input" maxlength="256" name="Phone"
-                                                        data-name="Phone" placeholder="" type="tel" id="Phone"
-                                                        required="" />
-                                                </div>
-                                            </div>
-
+                                        <div class="form-field_wrap">
                                             <div class="field-group">
-                                                <label for="Message" class="field-label">Mensaje</label>
-                                                <textarea id="Message" name="Message" maxlength="5000"
-                                                    data-name="Message" placeholder=""
-                                                    class="text-field w-input"></textarea>
+                                                <label for="Nombre" class="field-label">Nombre</label>
+                                                <input class="form-field w-input" name="Nombre" data-name="Nombre"
+                                                    placeholder="Tu nombre" type="text" id="Nombre" required />
                                             </div>
+                                            <div class="field-group">
+                                                <label for="Surname" class="field-label">Apellidos</label>
+                                                <input class="form-field w-input" name="Surname" data-name="Surname"
+                                                    placeholder="Tus apellidos" type="text" id="Surname" required />
+                                            </div>
+                                        </div>
 
-                                            <div class="button-form">
-                                                <button type="submit" class="contact-submit-btn">ENVIAR</button>
+                                        <div class="form-field_wrap">
+                                            <div class="field-group">
+                                                <label for="Email" class="field-label">Email</label>
+                                                <input class="form-field w-input" name="Email" data-name="Email"
+                                                    placeholder="tucorreo@ejemplo.com" type="email" id="Email"
+                                                    required />
                                             </div>
-                                        </form>
-                                        <div class="success-message w-form-done">
-                                            <div class="text-size-regular">Gracias por tu mensaje!</div>
+                                            <div class="field-group">
+                                                <label for="Phone" class="field-label">Teléfono</label>
+                                                <input class="form-field w-input" name="Phone" data-name="Phone"
+                                                    placeholder="+34 000 000 000" type="tel" id="Phone" />
+                                            </div>
                                         </div>
-                                        <div class="error-message w-form-fail">
-                                            <div>Oops! Algo ha ido mal al enviar el formulario.</div>
+
+                                        <div class="field-group">
+                                            <label for="Message" class="field-label">Mensaje</label>
+                                            <textarea id="Message" name="Message" maxlength="5000" data-name="Message"
+                                                placeholder="Escribe tu mensaje aquí..."
+                                                class="form-field text-field w-input"></textarea>
                                         </div>
+
+                                        <div class="button-form">
+                                            <button type="submit" id="submit-button"
+                                                class="contact-submit-btn">ENVIAR</button>
+                                        </div>
+                                    </form>
+                                    <div class="success-message w-form-done">
+                                        <div class="text-size-regular" style="color: var(--brand-text);">¡Gracias por tu
+                                            mensaje! Nos pondremos en contacto contigo pronto.</div>
+                                    </div>
+                                    <div class="error-message w-form-fail">
+                                        <div>Oops! Algo ha ido mal al enviar el formulario.</div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Card -->
-
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer class="new-footer">
-            <div class="new-footer-container">
-                <!-- Left Column -->
-                <div class="new-footer-col-left">
-                    <h3>Te damos la bienvenida a International Meeting-Madrid : Celebrating The IYRP 2026</h3>
 
-                    <a href="contacto.html" class="button w-inline-block">
-                        <div class="button_text">CONTACTO</div>
-                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
-                            loading="lazy" alt="Arrow" />
-                    </a>
+            <footer class="new-footer">
+                <div class="new-footer-container">
+                    <!-- Left Column -->
+                    <div class="new-footer-col-left">
+                        <h3>Te damos la bienvenida a International Meeting-Madrid : Celebrating The IYRP 2026</h3>
 
-                    <div class="footer-row-copyright">
-                        <div class="footer-text-copyright">
-                            <div>Copyright</div>
-                            <div>©</div>
-                        </div>
-                        <img src="estilos/logos/logo%20IMIDRA.png" loading="lazy" class="footer-imidra-logo"
-                            alt="IMIDRA" />
-                    </div>
-                </div>
+                        <a href="contacto.html" class="button w-inline-block"
+                            style="background-color: #8ab875 !important; border: 1px solid #E8DDCC !important;">
+                            <div class="button_text" style="color: #E8DDCC !important;">CONTACTO</div>
 
-                <div class="new-footer-col-right">
-                    <!-- Location -->
-                    <div class="new-footer-item">
-                        <div class="new-footer-text">
-                            Instituto de la Ingeniería de España,<br>
-                            Calle del General Arrando, 38, 28010 Madrid, España
+                        </a>
+
+                        <div class="footer-row-copyright">
+                            <div class="footer-text-copyright">
+                                <div>Copyright</div>
+                                <div>©</div>
+                            </div>
+                            <img src="estilos/logos/logo%20IMIDRA.png" loading="lazy" class="footer-imidra-logo"
+                                alt="IMIDRA" />
                         </div>
                     </div>
 
-                    <!-- Location Button -->
-                    <a href="ubicacion.html" class="button w-inline-block">
-                        <div class="button_text">UBICACIÓN</div>
-                        <img src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/691f33f1a47cf304259c3519_Kaleo_Icon.svg"
-                            loading="lazy" alt="Arrow" />
-                    </a>
+                    <div class="new-footer-col-right">
+                        <!-- Location -->
+                        <div class="new-footer-item">
+                            <div class="new-footer-text">
+                                Instituto de la Ingeniería de España,<br>
+                                Calle del General Arrando, 38, 28010 Madrid, España
+                            </div>
+                        </div>
 
-                    <!-- Email -->
-                    <div class="new-footer-item">
-                        <div class="new-footer-label">E-MAIL</div>
-                        <div class="new-footer-text"><strong>iyrp2026madrid</strong></div>
+                        <!-- Location Button -->
+                        <a href="ubicacion.html" class="button w-inline-block"
+                            style="background-color: #8ab875 !important; border: 1px solid #E8DDCC !important;">
+                            <div class="button_text" style="color: #E8DDCC !important;">UBICACIÓN</div>
+
+                        </a>
+
+                        <!-- Email -->
+                        <div class="new-footer-item">
+                            <div class="new-footer-label">E-MAIL</div>
+                            <div class="new-footer-text"><strong>iyrp2026madrid</strong></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Logos Bottom -->
-            <div class="new-footer-logos">
-                <img src="estilos/logos/fundacionlogo.png" loading="lazy" alt="Fundación Trashumancia" />
-                <img src="estilos/logos/CIHEAM-ZARAGOZA_CMJN-horizontal.png" loading="lazy" alt="CIHEAM" />
-                <img src="estilos/logos/logo fao.png" loading="lazy" alt="FAO" />
-                <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" alt="Comunidad de Madrid" />
-            </div>
-        </footer>
+                <!-- Logos Bottom -->
+                <div class="new-footer-logos">
+                    <img src="estilos/logos/logo iyrp.png" loading="lazy" alt="iyrp" />
+                    <img src="estilos/logos/logo fao.png" loading="lazy" alt="FAO" />
+                    <img src="estilos/logos/CIHEAM-ZARAGOZA_CMJN-horizontal.png" loading="lazy" alt="CIHEAM" />
+                    <img src="estilos/logos/fundacionlogo.png" loading="lazy" alt="Fundación Trashumancia" />
+                    <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" alt="Comunidad de Madrid" />
+                </div>
+            </footer>
         </main>
         <script
             src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=691f33f0a47cf304259c3453"
