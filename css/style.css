@@ -9274,9 +9274,7 @@ PROGRAMA PAGE - BEIGE & GREEN REDESIGN (NO VIOLET)
     color: #222 !important;
     border-bottom: 1px solid #dcd1c0;
 }
-#custom-mobile-menu #mobile-nav-toggle span {
-    background-color: #8ab875 !important;
-}
+#custom-mobile-menu #mobile-nav-toggle span { background-color: #ffffff !important; }
 
 /* Mobile Response */
 @media screen and (max-width: 767px) {
