@@ -130,8 +130,9 @@
         .field-label {
             display: block;
             margin-bottom: 0.5rem;
-            color: var(--brand-text) !important;
-            font-weight: 500;
+            color: #074f00 !important;
+            /* Dark Green (Inverted) */
+            font-weight: 700;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -144,24 +145,26 @@
         input.form-field,
         textarea.form-field {
             background-color: transparent !important;
-            border: 1px solid #8ab875 !important;
-            color: #5a7d4a !important;
-            /* Dark Green Text */
+            border: 1px solid #074f00 !important;
+            /* Dark Border */
+            color: #8ab875 !important;
+            /* Light Green Text (Inverted) */
             border-radius: 4px;
             padding: 1rem;
             height: auto;
             min-height: 48px;
             font-family: inherit;
             transition: all 0.3s ease;
+            text-transform: lowercase !important;
+            /* Requests "minúscula" */
         }
 
         .contacto-page .w-input:focus,
         .contacto-page .form-field:focus {
             outline: none;
-            border-color: #5a7d4a !important;
-            color: #5a7d4a !important;
-            /* Ensure Dark Green on Focus */
-            box-shadow: 0 0 0 2px rgba(90, 125, 74, 0.2);
+            border-color: #074f00 !important;
+            color: #8ab875 !important;
+            box-shadow: 0 0 0 2px rgba(7, 79, 0, 0.2);
         }
 
         /* Placeholder Styling - STRICT */
@@ -169,11 +172,13 @@
         #email-form textarea::placeholder,
         .contacto-page .w-input::placeholder,
         .contacto-page .form-field::placeholder {
-            color: #5a7d4a !important;
-            /* Dark Green */
+            color: #8ab875 !important;
+            /* Light Green */
             opacity: 1 !important;
+            font-weight: 400 !important;
+            /* Regular weight for placeholder maybe? User said "bold y regular" for footer, not here. Keeping it simple or bold if preferred? Previous was bold. I'll keep bold. */
             font-weight: 700 !important;
-            text-transform: uppercase !important;
+            text-transform: lowercase !important;
         }
 
         /* Webkit specific */
@@ -181,11 +186,10 @@
         #email-form textarea::-webkit-input-placeholder,
         .contacto-page .w-input::-webkit-input-placeholder,
         .contacto-page .form-field::-webkit-input-placeholder {
-            color: #5a7d4a !important;
-            /* Dark Green */
+            color: #8ab875 !important;
             opacity: 1 !important;
             font-weight: 700 !important;
-            text-transform: uppercase !important;
+            text-transform: lowercase !important;
         }
 
         /* Mozilla specific */
@@ -193,11 +197,10 @@
         #email-form textarea::-moz-placeholder,
         .contacto-page .w-input::-moz-placeholder,
         .contacto-page .form-field::-moz-placeholder {
-            color: #5a7d4a !important;
-            /* Dark Green */
+            color: #8ab875 !important;
             opacity: 1 !important;
             font-weight: 700 !important;
-            text-transform: uppercase !important;
+            text-transform: lowercase !important;
         }
 
         /* MS specific */
@@ -205,28 +208,26 @@
         #email-form textarea:-ms-input-placeholder,
         .contacto-page .w-input:-ms-input-placeholder,
         .contacto-page .form-field:-ms-input-placeholder {
-            color: #5a7d4a !important;
-            /* Dark Green */
+            color: #8ab875 !important;
             opacity: 1 !important;
             font-weight: 700 !important;
-            text-transform: uppercase !important;
+            text-transform: lowercase !important;
         }
 
         /* Submit Button - DESIGN REQ: Green BG, Beige Text */
         #submit-button,
         .contact-submit-btn {
             background-color: #8ab875 !important;
-            /* Green */
             background: #8ab875 !important;
             color: #074f00 !important;
-            /* Beige Text */
             border: 2px solid #8ab875 !important;
             padding: 1rem 3rem;
             font-size: 1rem;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            border-radius: 50px;
+            border-radius: 9999px !important;
+            /* Pill shape enforced locally too */
             cursor: pointer;
             transition: all 0.3s ease;
             width: 100%;
@@ -295,25 +296,25 @@
             <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
         </div>
     </div>
-        <div id="mobile-nav-dropdown">
-            <a href="que-es.html">¿QUÉ ES?</a>
-            <a href="programa.html">PROGRAMA</a>
-            <a href="eventos_paralelos.html">EVENTOS OPCIONALES</a>
-            <a href="comite.html">COMITÉ ORGANIZADOR</a>
-            <a href="noticias.html">NOTICIAS</a>
-            <a href="galeria.html">GALERÍA</a>
-            <a href="contacto.html">CONTACTO</a>
-            <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
-        </div>
+    <div id="mobile-nav-dropdown">
+        <a href="que-es.html">¿QUÉ ES?</a>
+        <a href="programa.html">PROGRAMA</a>
+        <a href="eventos_paralelos.html">EVENTOS OPCIONALES</a>
+        <a href="comite.html">COMITÉ ORGANIZADOR</a>
+        <a href="noticias.html">NOTICIAS</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="contacto.html">CONTACTO</a>
+        <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
     </div>
-        <div id="mobile-nav-dropdown">
-            <a href="que-es.html">¿QUÉ ES?</a>
-            <a href="programa.html">PROGRAMA</a>
-            <a href="noticias.html">NOTICIAS</a>
-            <a href="galeria.html">GALERÍA</a>
-            <a href="contacto.html">CONTACTO</a>
-            <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
-        </div>
+    </div>
+    <div id="mobile-nav-dropdown">
+        <a href="que-es.html">¿QUÉ ES?</a>
+        <a href="programa.html">PROGRAMA</a>
+        <a href="noticias.html">NOTICIAS</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="contacto.html">CONTACTO</a>
+        <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
+    </div>
     </div>
 
     <script>
@@ -556,7 +557,7 @@
                 <div class="new-footer-container">
                     <!-- Left Column -->
                     <div class="new-footer-col-left">
-                        <h3>Te damos la bienvenida a International Meeting-Madrid : Celebrating The IYRP 2026</h3>
+                        <h3>Te damos la bienvenida a International Meeting-Madrid : <br>Celebrating The IYRP 2026</h3>
 
                         <a href="contacto.html" class="button w-inline-block"
                             style="background-color: #8ab875 !important; border: 1px solid #074f00 !important;">
@@ -578,8 +579,7 @@
 
                         <!-- Email -->
                         <div class="new-footer-item">
-                            <div class="new-footer-label">E-MAIL</div>
-                            <div class="new-footer-text"><strong>iyrp2026madrid</strong></div>
+                            <div class="new-footer-text">E-MAIL <strong>iyrp2026madrid</strong></div>
                         </div>
 
                     </div>
@@ -614,30 +614,31 @@
                     </a>
                 </div>
 
-            <div class="footer-legal-bottom" style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-top: 2rem; padding-bottom: 2rem; gap: 1rem; width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 2rem; padding-right: 2rem;">
-                <div style="display:flex; align-items:center; gap:1rem; margin-top:1rem;">
-                            <div style="display:flex; gap:0.5rem; font-size:0.9rem;">
-                                <div>Copyright</div>
-                                <div><a href="https://www.comunidad.madrid/servicios/medio-rural/investigacion-agraria"
-                                        target="_blank" style="color: inherit; text-decoration: none;">© IMIDRA 2026</a>
-                                </div>
+                <div class="footer-legal-bottom"
+                    style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-top: 2rem; padding-bottom: 2rem; gap: 1rem; width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 2rem; padding-right: 2rem;">
+                    <div style="display:flex; align-items:center; gap:1rem; margin-top:1rem;">
+                        <div style="display:flex; gap:0.5rem; font-size:0.9rem;">
+                            <div>Copyright</div>
+                            <div><a href="https://www.comunidad.madrid/servicios/medio-rural/investigacion-agraria"
+                                    target="_blank" style="color: inherit; text-decoration: none;">© IMIDRA 2026</a>
                             </div>
                         </div>
-                <div class="new-footer-item" style="margin-top: 1rem;">
-                            <div class="new-footer-text" style="font-size: 0.8rem;">
-                                <a href="terminos.html" style="color: inherit; text-decoration: underline;">Términos y
-                                    Condiciones</a> |
-                                <a href="privacidad.html" style="color: inherit; text-decoration: underline;">Política
-                                    de Privacidad</a> |
-                                <a href="privacidad_uso.html"
-                                    style="color: inherit; text-decoration: underline;">Uso de Cookies</a> |
-                                <a href="proteccion_datos.html"
-                                    style="color: inherit; text-decoration: underline;">Protección de Datos</a>
-                            </div>
+                    </div>
+                    <div class="new-footer-item" style="margin-top: 1rem;">
+                        <div class="new-footer-text" style="font-size: 0.8rem;">
+                            <a href="terminos.html" style="color: inherit; text-decoration: underline;">Términos y
+                                Condiciones</a> |
+                            <a href="privacidad.html" style="color: inherit; text-decoration: underline;">Política
+                                de Privacidad</a> |
+                            <a href="privacidad_uso.html" style="color: inherit; text-decoration: underline;">Uso de
+                                Cookies</a> |
+                            <a href="proteccion_datos.html"
+                                style="color: inherit; text-decoration: underline;">Protección de Datos</a>
                         </div>
-            </div>
-            
-</footer>
+                    </div>
+                </div>
+
+            </footer>
         </main>
         <script
             src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=691f33f0a47cf304259c3453"

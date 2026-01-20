@@ -329,7 +329,7 @@ html.w-mod-touch * {
   cursor: pointer;
   background-color: var(--base-color-brand--light-violet);
   border: 0;
-  border-radius: 0;
+  border-radius: 9999px;
   padding: 9px 15px;
   text-decoration: none;
   display: inline-block;
@@ -10232,8 +10232,94 @@ html body .fs-styleguide_header .heading-style-h1 {
   color: #E8DDCC !important;
   -webkit-text-fill-color: #E8DDCC !important;
 }
-.quees-text { color: #000000 !important; }
-.quees-text p { color: #000000 !important; }
-.quees-text h2 { color: #000000 !important; }
-.quees-text a { color: #000000 !important; text-decoration: underline; }
-.quees-text ul li { color: #000000 !important; }
+
+.quees-text {
+  color: #000000 !important;
+}
+
+.quees-text p {
+  color: #000000 !important;
+}
+
+.quees-text h2 {
+  color: #000000 !important;
+}
+
+.quees-text a {
+  color: #000000 !important;
+  text-decoration: underline;
+}
+
+.quees-text ul li {
+  color: #000000 !important;
+}
+
+
+/* --- UI/UX IMPROVEMENTS --- */
+
+/* 1. AGENDA INDENTATION */
+/* Indent the description text within agenda items relative to the title */
+.agenda-description {
+  padding-left: 2rem;
+  box-sizing: border-box;
+  display: block;
+  /* Ensure it behaves as a block */
+}
+
+/* Specific indentation for lists within the description to ensure hierarchy */
+.agenda-sublist {
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem;
+  list-style-position: outside;
+}
+
+.agenda-sublist li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* 2. ROUNDED BUTTONS (PILL SHAPE) */
+/* Override all standard buttons to have fully rounded corners */
+.button,
+.w-button,
+.contact-submit-btn {
+  border-radius: 9999px !important;
+}
+
+/* 3. IMAGE CAPTION STYLING */
+/* Dark green and same typography as web (Roboto/Anaheim) */
+#captionText,
+.gallery-caption,
+.caption {
+  font-family: 'Roboto', sans-serif !important;
+  color: #074f00 !important;
+  /* Dark Green */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Ensure bold text within captions (like "Foto 1:") inherits the green color */
+#captionText strong,
+.gallery-caption strong {
+  color: #074f00 !important;
+  font-weight: 700 !important;
+}
+
+/* Force ALL internal elements (including text nodes in spans/divs if any) to use the dark green color */
+#captionText *,
+.gallery-caption *,
+.caption * {
+  color: #074f00 !important;
+}
+
+/* 4. IMAGE ALIGNMENT (Avoid cutting heads) */
+/* Set default object position to top for cover images */
+img.image,
+.gallery-slide img,
+.hero-background img,
+.w-slide img {
+  object-position: top center !important;
+}
+
+/* 5. CONTACT FORM OVERRIDES (Global if applicable, but specific page has internal styles) */
+/* See contacto.html edits for specific color inversions */
