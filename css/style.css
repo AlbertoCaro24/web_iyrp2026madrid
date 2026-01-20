@@ -10232,3 +10232,8 @@ html body .fs-styleguide_header .heading-style-h1 {
   color: #E8DDCC !important;
   -webkit-text-fill-color: #E8DDCC !important;
 }
+.quees-text { color: #000000 !important; }
+.quees-text p { color: #000000 !important; }
+.quees-text h2 { color: #000000 !important; }
+.quees-text a { color: #000000 !important; text-decoration: underline; }
+.quees-text ul li { color: #000000 !important; }
