@@ -10323,3 +10323,171 @@ img.image,
 
 /* 5. CONTACT FORM OVERRIDES (Global if applicable, but specific page has internal styles) */
 /* See contacto.html edits for specific color inversions */
+
+/* --- MOBILE FIXES (User Request 2026-01-21) --- */
+@media screen and (max-width: 767px) {
+
+  /* 1. Remove Purple Line in que-es.html */
+  .title-with-bg,
+  .hero_content-top,
+  .heading-style-h1 {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+  }
+
+  /* 2. Program/Coordinator Date Visibility */
+  .program-day-section {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-top: 1rem !important;
+  }
+
+  .program-date-col {
+    width: 100% !important;
+    flex: 0 0 auto !important;
+    margin-right: 0 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+    border-right: none !important;
+    border-bottom: 2px solid #E8DDCC !important;
+    /* Nice separator instead of huge gap */
+    padding-bottom: 1rem !important;
+  }
+
+  .program-date-number {
+    font-size: 4rem !important;
+    /* Ensure it fits */
+    line-height: 1 !important;
+    display: block !important;
+  }
+
+  .program-agenda-col {
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  /* 3. Footer Logos (2 Lines, Bigger) */
+  .new-footer-logos {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    padding: 0 10px !important;
+  }
+
+  .footer-logo-link {
+    flex: 0 0 45% !important;
+    /* 2 items per row */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .footer-logo-link img {
+    height: 55px !important;
+    /* Slightly larger visual perception due to spacing */
+    width: auto !important;
+    max-width: 90% !important;
+    /* Prevent overflow */
+    object-fit: contain !important;
+  }
+}
+
+/* --- MOBILE FIXES TRY 2 (User Request 2026-01-21) --- */
+/* --- MOBILE FIXES TRY 3 (User Request 2026-01-21) --- */
+@media screen and (max-width: 767px) {
+
+  /* 1. NUCLEAR PURPLE LINE REMOVAL - BROADER SCOPE */
+  .title-with-bg,
+  .hero_content-top,
+  .heading-style-h1,
+  .section_hero,
+  .hero-component,
+  .hero_content,
+  .quees-two-col,
+  .quees-text,
+  .hero-background {
+    border: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+    text-decoration: none !important;
+  }
+
+  .title-with-bg::before,
+  .title-with-bg::after,
+  .hero_content-top::before,
+  .hero_content-top::after,
+  .heading-style-h1::before,
+  .heading-style-h1::after,
+  .section_hero::after,
+  .section_hero::before {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+    border: none !important;
+  }
+
+  /* 2. PROGRAM SECTION "FATAL" FIX - CORRECTED */
+  .program-day-section {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: auto !important;
+    margin-bottom: 3rem !important;
+    border-bottom: 1px solid #ddd !important;
+    padding-top: 2rem !important;
+  }
+
+  /* CRITICAL: Reset the Date Column which was likely sticky/overlapping */
+  .program-date-col {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    border-right: none !important;
+    border-bottom: 2px solid #E8DDCC !important;
+    padding-right: 0 !important;
+    height: auto !important;
+  }
+
+  /* Reset Agenda Column */
+  .program-agenda-col {
+    display: block !important;
+    height: auto !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .agenda-item {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+    margin-bottom: 2rem !important;
+    background: transparent !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .agenda-time {
+    position: relative !important;
+    display: inline-block !important;
+    margin-bottom: 0.5rem !important;
+    width: auto !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .program-date-number {
+    font-size: 3rem !important;
+  }
+}
