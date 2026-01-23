@@ -10491,3 +10491,43 @@ img.image,
     font-size: 3rem !important;
   }
 }
+
+/* REMOVE PURPLE LINE IN QUE-ES.HTML - DESKTOP */
+body.que-es-page {
+  border: none !important;
+  border-left: none !important;
+}
+
+.title-with-bg,
+.hero_content-top,
+.heading-style-h1,
+.section_hero,
+.hero-component,
+.hero_content,
+.quees-two-col,
+.quees-text,
+.hero-background {
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+  text-decoration: none !important;
+}
+
+.title-with-bg::before,
+.title-with-bg::after,
+.hero_content-top::before,
+.hero_content-top::after,
+.heading-style-h1::before,
+.heading-style-h1::after,
+.section_hero::before,
+.section_hero::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  border: none !important;
+  border-left: none !important;
+}
