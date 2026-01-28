@@ -1,0 +1,49 @@
+
+/* Footer Adjustments for Layout and Widow Lines */
+.new-footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensure columns start at top */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.new-footer-col-left, .new-footer-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fix for widow lines in welcome text */
+.new-footer-col-left h3 {
+    text-wrap: balance; /* Modern browsers */
+    max-width: 90%; /* Helper for older browsers/wrapping */
+}
+
+.new-footer-col-right {
+    align-items: flex-end; /* Align right column content to the right */
+    justify-content: flex-start;
+}
+
+/* Align buttons horizontally with flex if needed, or just ensure consistent margin */
+/* The user mentioned mismatching buttons. We'll ensure they have consistent height/alignment context */
+
+/* Ensure the 'UBICACIÓN' button in right col lines up visually with 'CONTACTO' in left if that was the goal, 
+   but typically they are in different vertical stacks. 
+   Based on the image, the right side seems to have 'UBICACIÓN' and 'E-MAIL'. 
+   We make sure the container aligns them properly. 
+*/
+
+@media screen and (max-width: 767px) {
+    .new-footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .new-footer-col-right {
+        align-items: center;
+        margin-top: 2rem;
+    }
+}
