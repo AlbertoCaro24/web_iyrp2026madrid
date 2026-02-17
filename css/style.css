@@ -10531,3 +10531,150 @@ body.que-es-page {
   border: none !important;
   border-left: none !important;
 }
+
+/* --- AGENT FIX 2026-02-16: HERO OVERLAP FIX (CONTACTO & OTHERS) --- */
+/* The menu is fixed/sticky, so we need to push the hero content down */
+body:not(.index-page) .section_hero .hero_content {
+  padding-top: 1rem !important;
+  /* Reduced to 1rem to raise text further as requested */
+}
+
+/* Override for CONTACTO page (keep text lower as per user request) */
+body.contacto-page .section_hero .hero_content {
+  padding-top: 6rem !important;
+}
+
+
+
+/* --- AGENT FIX 2026-02-16: NAVIGATION & RESPONSIVE --- */
+
+/* 1. Active State */
+.nav_link.active-link,
+.nav_link.active-link .text-size-regular {
+  font-family: 'Roboto', sans-serif !important;
+  /* Switch to Roboto for bold weight support */
+  font-weight: 700 !important;
+  color: #074f00 !important;
+  /* Dark Green */
+  text-decoration: none !important;
+  text-shadow: 0.5px 0 0 #074f00;
+  /* Faux bold backup */
+}
+
+/* 2. Menu Layout Fixes (Desktop) */
+/* Ensure the nav wrap doesn't overflow or break on large screens */
+.nav-menu_wrap {
+  display: flex;
+  justify-content: flex-end;
+  /* Align items to the right */
+  align-items: center;
+  flex-wrap: nowrap;
+  /* Prevent wrapping to keep layout stable */
+  gap: 0px;
+  /* REMOVED GAP completely to save space */
+  max-width: 100%;
+}
+
+/* Ensure links align correctly */
+.nav_link {
+  display: inline-flex !important;
+  align-items: center;
+  white-space: nowrap;
+  /* Prevent text wrapping inside links */
+  height: auto !important;
+  padding: 4px 6px !important;
+  /* MINIMAL PADDING */
+}
+
+/* 3. Custom Mobile Menu Visibility */
+@media screen and (min-width: 992px) {
+  #custom-mobile-menu {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  /* Show Custom Mobile Menu */
+  #custom-mobile-menu {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: white;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #mobile-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+  }
+
+  #mobile-nav-logo img {
+    height: 50px;
+    width: auto;
+  }
+
+  #mobile-nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #mobile-nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #074f00;
+  }
+
+  #mobile-nav-dropdown {
+    display: none;
+    /* Toggled by JS */
+    flex-direction: column;
+    background: white;
+    border-top: 1px solid #eee;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #mobile-nav-dropdown a {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #074f00;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Anaheim', sans-serif;
+    font-size: 1.1rem;
+    display: block;
+  }
+
+  /* Hide Standard Desktop Menu */
+  .nav_component,
+  .w-nav {
+    display: none !important;
+  }
+}
+
+/* 4. Responsive Breakpoints - Tweak Desktop Spacing */
+@media screen and (max-width: 1200px) {
+  .nav-menu_wrap {
+    gap: 0.5rem;
+  }
+
+  .nav_link {
+    padding: 8px 10px !important;
+  }
+}
