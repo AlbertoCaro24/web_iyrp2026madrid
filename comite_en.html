@@ -6,21 +6,16 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>International Meeting-Madrid : Celebrating The IYRP 2026 - ¿QUÉ ES?</title>
-    <meta
-        content="El Congreso International Meeting Madrid 2026 se enmarca dentro de la declaración de la Asamblea General de las Naciones Unidas, que ha designado 2026 como el Año Internacional de los Pastizales y del Pastoreo (IYRP 2026). Esta iniciativa global, liderada por la FAO, busca destacar el papel esencial de los pastizales y el pastoreo en la sostenibilidad de los ecosistemas, la seguridad alimentaria, la lucha contra el cambio climático y el desarrollo de las zonas rurales."
-        name="description" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - ¿QUÉ ES?" property="og:title" />
-    <meta
-        content="El Congreso International Meeting Madrid 2026 se enmarca dentro de la declaración de la Asamblea General de las Naciones Unidas, que ha designado 2026 como el Año Internacional de los Pastizales y del Pastoreo (IYRP 2026). Esta iniciativa global, liderada por la FAO, busca destacar el papel esencial de los pastizales y el pastoreo en la sostenibilidad de los ecosistemas, la seguridad alimentaria, la lucha contra el cambio climático y el desarrollo de las zonas rurales."
-        property="og:description" />
+    <title>International Meeting-Madrid : Celebrating IYRP 2026 - ORGANIZING COMMITTEE</title>
+    <meta content="Comité Organizador del Congreso International Meeting Madrid 2026." name="description" />
+    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - COMITÉ ORGANIZADOR" property="og:title" />
+    <meta content="Comité Organizador del Congreso International Meeting Madrid 2026." property="og:description" />
     <meta
         content="https://cdn.prod.website-files.com/685077c466f113761c6d796b/686d90e639c295cfb687c0a0_Open%20Graph.avif"
         property="og:image" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - ¿QUÉ ES?" property="twitter:title" />
-    <meta
-        content="El Congreso International Meeting Madrid 2026 se enmarca dentro de la declaración de la Asamblea General de las Naciones Unidas, que ha designado 2026 como el Año Internacional de los Pastizales y del Pastoreo (IYRP 2026). Esta iniciativa global, liderada por la FAO, busca destacar el papel esencial de los pastizales y el pastoreo en la sostenibilidad de los ecosistemas, la seguridad alimentaria, la lucha contra el cambio climático y el desarrollo de las zonas rurales."
-        property="twitter:description" />
+    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - COMITÉ ORGANIZADOR"
+        property="twitter:title" />
+    <meta content="Comité Organizador del Congreso International Meeting Madrid 2026." property="twitter:description" />
     <meta
         content="https://cdn.prod.website-files.com/685077c466f113761c6d796b/686d90e639c295cfb687c0a0_Open%20Graph.avif"
         property="twitter:image" />
@@ -32,16 +27,7 @@
         href="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/css/iyrp2026madrid.webflow.shared.e5e44c20d.css"
         rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <!-- estilos para ocultar la insignia de Webflow (sobrescriben reglas del CSS exportado) -->
 
-    <!-- Footer styles moved to style.css -->
-
-    <!-- Force nav text white for this page -->
-    <!-- CUSTOM NAVIGATION COLORS -->
-
-    <!-- Slider CSS -->
-    <!-- Slider Styles moved to style.css -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -66,15 +52,79 @@
         href="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/6920471d554f44241f5dcb2c_UF1B5ST%20IYRP2026_V_Col_ES%20(1).ico"
         rel="apple-touch-icon" />
     <meta name="robots" content="noindex">
-    <!-- Master Navigation CSS (Green Fixed Header) -->
-    <!-- Master Navigation (Standardized in style.css) -->
+
+    <style>
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .committee-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .committee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: #8ab875;
+        }
+
+        .committee-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a4d2e;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+            text-align: center !important;
+            width: 100%;
+            display: block;
+        }
+
+        .committee-affiliation {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.5;
+            text-align: center !important;
+            width: 100%;
+            display: block;
+        }
+
+        .committee-logo-link {
+            display: inline-block;
+            margin-top: auto;
+        }
+
+        .committee-logo-img {
+            max-height: 70px;
+            max-width: 180px;
+            width: auto;
+            object-fit: contain;
+            transition: filter 0.3s ease;
+        }
+
+        .committee-card:hover .committee-logo-img {
+            filter: brightness(1.05);
+        }
+    </style>
 </head>
 
-<body>
+<body class="que-es-page">
 
-    <!-- CUSTOM AGENT MOBILE MENU (clean rebuild) -->
-    <!-- Styles moved to css/style.css -->
-
+    <!-- CUSTOM AGENT MOBILE MENU -->
     <div id="custom-mobile-menu">
         <div id="mobile-nav-bar">
             <a href="index.html" id="mobile-nav-logo">
@@ -95,33 +145,24 @@
             <a href="noticias.html">NOTICIAS</a>
             <a href="galeria.html">GALERÍA</a>
             <a href="contacto.html">CONTACTO</a>
-            <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
-            <div class="mobile-lang-switcher" style="margin-top: 20px; text-align: center;">
-                <a href="ubicacion.html" style="margin: 0 5px; font-weight: bold;">ES</a> |
-                <a href="ubicacion_en.html" style="margin: 0 5px;">EN</a> |
-                <a href="ubicacion_fr.html" style="margin: 0 5px;">FR</a>
-            </div>
+            <a href="https://forms.gle/A3PQotdQDiw66NdE7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
         </div>
     </div>
     <div id="mobile-nav-dropdown">
-        <a href="que-es.html">¿QUÉ ES?</a>
-        <a href="programa.html">PROGRAMA</a>
-        <a href="eventos_paralelos.html">EVENTOS OPCIONALES</a>
-        <a href="comite.html">COMITÉ ORGANIZADOR</a>
-        <a href="poster.html">POSTER</a>
-        <a href="noticias.html">NOTICIAS</a>
-        <a href="galeria.html">GALERÍA</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
-    </div>
-    </div>
-    <div id="mobile-nav-dropdown">
-        <a href="que-es.html">¿QUÉ ES?</a>
-        <a href="programa.html">PROGRAMA</a>
-        <a href="noticias.html">NOTICIAS</a>
-        <a href="galeria.html">GALERÍA</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
+        <a href="que-es_en.html">ABOUT</a>
+        <a href="programa_en.html">PROGRAM</a>
+        <a href="eventos_paralelos_en.html">OPTIONAL EVENTS</a>
+        <a href="comite_en.html" class="active-link">ORGANIZING COMMITTEE</a>
+        <a href="poster_en.html">POSTER</a>
+        <a href="noticias_en.html">NEWS</a>
+        <a href="galeria_en.html">GALLERY</a>
+        <a href="contacto_en.html">CONTACT</a>
+        <a href="https://forms.gle/A3PQotdQDiw66NdE7" target="_blank" class="mobile-btn-inscripcion">REGISTRATION</a>
+        <div class="mobile-lang-switcher" style="margin-top: 20px; text-align: center;">
+            <a href="comite.html" style="margin: 0 5px;">ES</a> |
+            <a href="comite_en.html" style="margin: 0 5px; font-weight: bold;">EN</a> |
+            <a href="comite_fr.html" style="margin: 0 5px;">FR</a>
+        </div>
     </div>
     </div>
 
@@ -139,14 +180,15 @@
 
 
     <div class="page-wrapper">
-
+        <div class="global-styles w-embed">
+        </div>
         <main class="main-wrapper">
             <div data-wf--navbar--variant="base" data-animation="default" data-collapse="medium" data-duration="400"
                 data-easing="ease" data-easing2="ease" role="banner" class="nav_component w-nav">
                 <div class="padding-global">
                     <div class="container-large">
                         <div class="nav-wrap">
-                            <a href="index.html"
+                            <a href="index_en.html"
                                 class="nav_brand w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                 <img src="estilos/logos/logo_iyrp_color.png" alt="logo IYRP 2026 Madrid"
                                     style="height: 85px; width: auto;">
@@ -155,59 +197,59 @@
                                 <div class="nav-menu_wrap w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e">
                                     <div class="nav-left">
                                         <div class="nav_divider"></div>
-                                        <a href="que-es.html"
+                                        <a href="que-es_en.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    ¿QUÉ ES?<br />
+                                                    ABOUT<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    ¿QUÉ ES?<br />
+                                                    ABOUT<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="programa.html"
+                                        <a href="programa_en.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    PROGRAMA<br />
+                                                    PROGRAM<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    PROGRAMA<br />
+                                                    PROGRAM<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="eventos_paralelos.html"
+                                        <a href="eventos_paralelos_en.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    EVENTOS OPCIONALES<br />
+                                                    OPTIONAL EVENTS<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    EVENTOS OPCIONALES<br />
+                                                    OPTIONAL EVENTS<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="comite.html"
-                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                        <a href="comite_en.html"
+                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block active-link">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    COMITÉ ORGANIZADOR<br />
+                                                    ORGANIZING COMMITTEE<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    COMITÉ ORGANIZADOR<br />
+                                                    ORGANIZING COMMITTEE<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="poster.html"
+                                        <a href="poster_en.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
@@ -220,70 +262,70 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="noticias.html"
+                                        <a href="noticias_en.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    NOTICIAS<br />
+                                                    NEWS<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    NOTICIAS<br />
+                                                    NEWS<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="galeria.html"
+                                        <a href="galeria_en.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    GALERÍA<br />
+                                                    GALLERY<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    GALERÍA<br />
+                                                    GALLERY<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="contacto.html"
+                                        <a href="contacto_en.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    CONTACTO<br />
+                                                    CONTACT<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    CONTACTO<br />
+                                                    CONTACT<br />
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <a id="forms" href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank"
+                                    <a id="forms" href="https://forms.gle/A3PQotdQDiw66NdE7" target="_blank"
                                         class="button is-nav w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block"
                                         style="background-color: #8ab875 !important; color: #074f00 !important; border: 1px solid #074f00 !important; margin-left: 2rem !important;">
                                         <div class="button-text">
                                             <div class="button_text"
                                                 style="color: #074f00 !important; font-weight: bold !important;">
-                                                INSCRIPCIÓN</div>
+                                                REGISTRATION</div>
                                             <div class="button-text-animation">
                                                 <div class="button_text"
                                                     style="color: #074f00 !important; font-weight: bold !important;">
-                                                    INSCRIPCIÓN</div>
+                                                    REGISTRATION</div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="lang-switcher"
                                     style="display: flex; gap: 10px; margin-left: 20px; align-items: center;">
-                                    <a href="ubicacion.html" class="lang-link active"
-                                        style="text-decoration: none; font-weight: bold; color: #074f00;">ES</a>
+                                    <a href="comite.html" class="lang-link"
+                                        style="text-decoration: none; color: #074f00;">ES</a>
                                     <span style="color: #074f00;">|</span>
-                                    <a href="ubicacion_en.html" class="lang-link"
-                                        style="text-decoration: none; color: #074f00;">EN</a>
+                                    <a href="comite_en.html" class="lang-link active"
+                                        style="text-decoration: none; font-weight: bold; color: #074f00;">EN</a>
                                     <span style="color: #074f00;">|</span>
-                                    <a href="ubicacion_fr.html" class="lang-link"
+                                    <a href="comite_fr.html" class="lang-link"
                                         style="text-decoration: none; color: #074f00;">FR</a>
                                 </div>
                             </nav>
@@ -294,73 +336,149 @@
                     </div>
                 </div>
             </div>
-            <div class="fs-styleguide_component">
-                <header class="fs-styleguide_header">
-                    <div class="padding-global padding-section-medium location-header-padding">
-                        <div class="container-large">
-                            <div class="fs-styleguide_header-block" style="text-align: center; color: #074f00;">
-                                <h1 class="fs-styleguide_heading-header" style="color: #074f00;">UBICACIÓN</h1>
-                                <div class="max-width-medium" style="margin: 0 auto;">
-                                    <h2 class="location-subtitle" style="color: #074f00; margin-top: 5px;">
-                                        INSTITUTO DE LA INGENIERÍA DE ESPAÑA
-                                    </h2>
-                                    <h2 class="location-subtitle" style="color: #074f00; margin-top: 5px;">
-                                        Calle del General Arrando, 38, 28010 Madrid, España
-                                    </h2>
-                                    <div class="location-actions-container"
-                                        style="display: flex; justify-content: center; gap: 2rem; align-items: center; flex-direction: column; width: 100%; margin-top: 2rem;">
 
-                                        <!-- Google Maps Embed -->
-                                        <div
-                                            style="width: 100%; max-width: 800px; height: 450px; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.1683935292676!2d-3.6936806846067005!3d40.4273189793639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289069d27bb7%3A0xc3910f545465a31!2sC.%20del%20Gral.%20Arrando%2C%2038%2C%2028010%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
-                                                width="100%" height="100%" style="border:0;" allowfullscreen=""
-                                                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                                            </iframe>
-                                        </div>
-
-                                        <!-- Button kept but simplified layout if needed, or removed if map is enough. User liked buttons generally but found gallery confusing. I'll keep the button as a secondary action below map just in case. -->
-                                        <a href="https://www.google.com/maps?q=Instituto+de+Ingenier%C3%ADa+de+Espa%C3%B1a,+Calle+del+General+Arrando,+38,+28010+Madrid"
-                                            target="_blank" class="button w-inline-block"
-                                            style="background-color: #8ab875 !important; border: 1px solid #074f00 !important; margin-top: 1rem; border-radius: 9999px !important;">
-                                            <div class="button_text"
-                                                style="color: #074f00 !important; font-weight: bold !important;">ABRIR
-                                                EN GOOGLE MAPS
-                                            </div>
-                                        </a>
-                                        <br>
-                                    </div>
+            <div class="section_hero">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="hero-component">
+                            <div class="hero_content">
+                                <div class="hero_content-top">
+                                    <h1 class="heading-style-h1 title-with-bg" style="text-align: center;">
+                                        <strong class="bold-text">
+                                            ORGANIZING COMMITTEE
+                                            <br><span style="font-size: 0.5em;">MADRID INTERNATIONAL MEETING -
+                                                CELEBRATING THE IYRP 2026</span>
+                                        </strong>
+                                    </h1>
+                                </div>
+                                <div class="hero-subtitle">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </header>
-                <section class="fs-styleguide_classes">
-                    <section class="fs-styleguide_structure"></section>
-                </section>
+                </div>
+                <!-- Reusing style from other pages -->
+                <div class="hero-background">
+                    <div class="video-placeholder">
+                        <img src="estilos/fotos/foto_que_es.png" loading="lazy"
+                            sizes="(max-width: 1920px) 100vw, 1920px" alt="" class="image is-radius" />
+                    </div>
+                </div>
             </div>
+
+            <div class="section_content" style="padding: 4rem 2rem;">
+                <div class="container-large" style="width: 100%; max-width: 1200px; margin: 0 auto; display: block;">
+                    <h2 style="color: #1a4d2e; margin-bottom: 2rem; text-align: center;">Local Organizing Committee</h2>
+
+                    <div class="committee-grid">
+                        <!-- Francesca Passeti Bombardella -->
+                        <div class="committee-card">
+                            <h3 class="committee-name"
+                                style="text-align: center !important; width: 100%; display: block;">Francesca Passeti
+                                Bombardella</h3>
+                            <p class="committee-affiliation"
+                                style="text-align: center !important; width: 100%; display: block;">Global Alliance for
+                                Rangelands & Pastoralists</p>
+                            <a href="https://iyrp.info" target="_blank" class="committee-logo-link">
+                                <img src="estilos/logos/logo_iyrp.png" alt="Global Alliance for IYRP 2026"
+                                    class="committee-logo-img">
+                            </a>
+                        </div>
+
+                        <!-- Gregorio Velasco Gil -->
+                        <div class="committee-card">
+                            <h3 class="committee-name"
+                                style="text-align: center !important; width: 100%; display: block;">Gregorio Velasco Gil
+                            </h3>
+                            <p class="committee-affiliation"
+                                style="text-align: center !important; width: 100%; display: block;">FAO</p>
+                            <a href="https://www.fao.org" target="_blank" class="committee-logo-link">
+                                <img src="estilos/logos/fao_logo_blue_3lines_es.png" alt="FAO"
+                                    class="committee-logo-img" width="196" height="43"
+                                    style="max-height: 120px; width: auto; height: auto;">
+                            </a>
+                        </div>
+
+                        <!-- Pedro Herrera Calvo -->
+                        <div class="committee-card">
+                            <h3 class="committee-name"
+                                style="text-align: center !important; width: 100%; display: block;">Pedro Herrera Calvo
+                            </h3>
+                            <p class="committee-affiliation"
+                                style="text-align: center !important; width: 100%; display: block;">FAO</p>
+                            <a href="https://www.fao.org" target="_blank" class="committee-logo-link">
+                                <img src="estilos/logos/fao_logo_blue_3lines_es.png" alt="FAO"
+                                    class="committee-logo-img" width="196" height="43"
+                                    style="max-height: 150px; width: auto; height: auto;">
+                            </a>
+                        </div>
+
+                        <!-- Antonio López-Francos Hernández -->
+                        <div class="committee-card">
+                            <h3 class="committee-name"
+                                style="text-align: center !important; width: 100%; display: block;">Antonio
+                                López-Francos Hernández</h3>
+                            <p class="committee-affiliation"
+                                style="text-align: center !important; width: 100%; display: block;">CIHEAM Zaragoza</p>
+                            <a href="https://www.iamz.ciheam.org" target="_blank" class="committee-logo-link">
+                                <img src="estilos/logos/ciheam_zaragoza_cmjn_horizontal.png" alt="CIHEAM Zaragoza"
+                                    class="committee-logo-img" style="max-height: 50px;">
+                            </a>
+                        </div>
+
+                        <!-- Manuel Bahillo Martín -->
+                        <div class="committee-card">
+                            <h3 class="committee-name"
+                                style="text-align: center !important; width: 100%; display: block;">Manuel Bahillo
+                                Martín</h3>
+                            <p class="committee-affiliation"
+                                style="text-align: center !important; width: 100%; display: block;">Trashumancia y
+                                Naturaleza Foundation</p>
+                            <a href="https://trashumanciaynaturaleza.org" target="_blank" class="committee-logo-link">
+                                <img src="estilos/logos/fundacionlogo.png" alt="Fundación Trashumancia y Naturaleza"
+                                    class="committee-logo-img" style="max-height: 50px;">
+                            </a>
+                        </div>
+
+                        <!-- Sonsoles Zabala Argüelles -->
+                        <div class="committee-card">
+                            <h3 class="committee-name"
+                                style="text-align: center !important; width: 100%; display: block;">Sonsoles Zabala
+                                Argüelles</h3>
+                            <p class="committee-affiliation"
+                                style="text-align: center !important; width: 100%; display: block;">Madrid Institute for
+                                Rural, Agricultural and Food Research and Development (IMIDRA)</p>
+                            <a href="https://www.comunidad.madrid/servicios/medio-rural/investigacion-agraria"
+                                target="_blank" class="committee-logo-link">
+                                <img src="estilos/logos/logo_imidra.png" alt="IMIDRA" class="committee-logo-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="fs-styleguide_classes" style="padding-bottom: 4rem;">
+            </section>
+
             <footer class="new-footer">
                 <div class="new-footer-container">
                     <!-- Left Column -->
                     <div class="new-footer-col-left">
-                        <h3>Te damos la bienvenida a International Meeting-Madrid : <br>Celebrating The IYRP 2026</h3>
+                        <h3>Welcome to Madrid International Meeting : <br>Celebrating The IYRP 2026</h3>
 
-                        <a href="contacto.html" class="button w-inline-block"
+                        <a href="contacto_en.html" class="button w-inline-block"
                             style="background-color: #8ab875 !important; border: 1px solid #074f00 !important;">
-                            <div class="button_text" style="color: #074f00 !important;">CONTACTO</div>
-
+                            <div class="button_text" style="color: #074f00 !important;">CONTACT</div>
                         </a>
-
                     </div>
 
                     <div class="new-footer-col-right">
                         <!-- Location Removed -->
 
                         <!-- Location Button -->
-                        <a href="ubicacion.html" class="button w-inline-block"
+                        <a href="ubicacion_en.html" class="button w-inline-block"
                             style="background-color: #8ab875 !important; border: 1px solid #074f00 !important;">
-                            <div class="button_text" style="color: #074f00 !important;">UBICACIÓN</div>
+                            <div class="button_text" style="color: #074f00 !important;">LOCATION</div>
 
                         </a>
 
@@ -390,7 +508,6 @@
                         <img src="estilos/logos/fundacionlogo.png" loading="lazy" alt="Fundación Trashumancia"
                             style="height: 60px; width: auto;" />
                     </a>
-
                     <a href="https://www.comunidad.madrid" target="_blank" class="footer-logo-link">
                         <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" alt="Comunidad de Madrid"
                             style="height: 60px; width: auto;" />
@@ -402,53 +519,33 @@
 
                     <div class="new-footer-item" style="margin-top: 1rem;">
                         <div class="new-footer-text" style="font-size: 0.8rem;">
-                            <a href="terminos.html" style="color: inherit; text-decoration: underline;">Términos y
-                                Condiciones</a> |
-                            <a href="privacidad.html" style="color: inherit; text-decoration: underline;">Política
-                                de Privacidad</a> |
-                            <a href="privacidad_uso.html" style="color: inherit; text-decoration: underline;">Uso de
+                            <a href="terminos_en.html" style="color: inherit; text-decoration: underline;">Terms and
+                                Conditions</a> |
+                            <a href="privacidad_en.html" style="color: inherit; text-decoration: underline;">Privacy
+                                Policy</a> |
+                            <a href="privacidad_uso_en.html" style="color: inherit; text-decoration: underline;">Use of
                                 Cookies</a> |
-                            <a href="proteccion_datos.html"
-                                style="color: inherit; text-decoration: underline;">Protección de Datos</a>
+                            <a href="proteccion_datos_en.html" style="color: inherit; text-decoration: underline;">Data
+                                Protection</a>
                         </div>
                     </div>
                 </div>
 
             </footer>
         </main>
-    </div>
-    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=691f33f0a47cf304259c3453"
-        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/js/webflow.schunk.f03b37aec45db2a8.js"
-        type="text/javascript"></script>
-    <script src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/js/webflow.5bf37b22.61e0f252a0f29ea4.js"
-        type="text/javascript"></script>
-    <script src="https://cdn.prod.website-files.com/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
-    <script src="https://cdn.prod.website-files.com/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
-    <script src="https://cdn.prod.website-files.com/gsap/3.13.0/ScrollTrigger.min.js" type="text/javascript"></script>
-    <!-- Slider Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sliderImages = document.querySelectorAll('.slider-img');
-            if (sliderImages.length === 0) return;
-
-            let currentIndex = 0;
-
-            function showSlide(index) {
-                sliderImages.forEach(img => img.classList.remove('active'));
-                sliderImages[index].classList.add('active');
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % sliderImages.length;
-                showSlide(currentIndex);
-            }
-
-            // Cambiar imagen cada 2 segundos
-            setInterval(nextSlide, 2000);
-        });
-    </script>
+        <script
+            src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=691f33f0a47cf304259c3453"
+            type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/js/webflow.schunk.f03b37aec45db2a8.js"
+            type="text/javascript"></script>
+        <script
+            src="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/js/webflow.5bf37b22.61e0f252a0f29ea4.js"
+            type="text/javascript"></script>
+        <script src="https://cdn.prod.website-files.com/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
+        <script src="https://cdn.prod.website-files.com/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
+        <script src="https://cdn.prod.website-files.com/gsap/3.13.0/ScrollTrigger.min.js"
+            type="text/javascript"></script>
 </body>
 
 </html>

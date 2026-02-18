@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com -->
 <!-- Last Published: Tue Dec 02 2025 10:39:40 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="iyrp2026madrid.webflow.io" data-wf-page="691f33f1a47cf304259c3504"
+<html data-wf-domain="iyrp2026madrid.webflow.io" data-wf-page="691f33f1a47cf304259c3505"
     data-wf-site="691f33f0a47cf304259c3453" data-wf-status="1">
 
 <head>
     <meta charset="utf-8" />
-    <title>International Meeting-Madrid : Celebrating The IYRP 2026 - COMITÉ ORGANIZADOR</title>
-    <meta content="Comité Organizador del Congreso International Meeting Madrid 2026." name="description" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - COMITÉ ORGANIZADOR" property="og:title" />
-    <meta content="Comité Organizador del Congreso International Meeting Madrid 2026." property="og:description" />
+    <title>Madrid International Meeting : Celebrating The IYRP 2026 - GALERIE</title>
+    <meta content="Madrid International Meeting : Celebrating The IYRP 2026 - GALERIE" name="description" />
+    <meta content="Madrid International Meeting : Celebrating The IYRP 2026 - GALERIE" property="og:title" />
+    <meta content="Madrid International Meeting : Celebrating The IYRP 2026 - GALERIE"
+        property="og:description" />
     <meta
         content="https://cdn.prod.website-files.com/685077c466f113761c6d796b/686d90e639c295cfb687c0a0_Open%20Graph.avif"
         property="og:image" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - COMITÉ ORGANIZADOR"
+    <meta content="Madrid International Meeting : Celebrating The IYRP 2026 - GALERIE"
         property="twitter:title" />
-    <meta content="Comité Organizador del Congreso International Meeting Madrid 2026." property="twitter:description" />
+    <meta content="Madrid International Meeting : Celebrating The IYRP 2026 - GALERIE"
+        property="twitter:description" />
     <meta
         content="https://cdn.prod.website-files.com/685077c466f113761c6d796b/686d90e639c295cfb687c0a0_Open%20Graph.avif"
         property="twitter:image" />
@@ -27,7 +29,13 @@
         href="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/css/iyrp2026madrid.webflow.shared.e5e44c20d.css"
         rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- estilos para ocultar la insignia de Webflow (sobrescriben reglas del CSS exportado) -->
 
+
+
+    <!-- Overrides: force navbar 'base' text to black in this page -->
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -53,78 +61,16 @@
         rel="apple-touch-icon" />
     <meta name="robots" content="noindex">
 
-    <style>
-        .committee-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-            width: 100%;
-        }
 
-        .committee-card {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
+    <!-- Master Navigation CSS (Green Fixed Header) -->
 
-        .committee-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            border-color: #8ab875;
-        }
-
-        .committee-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #1a4d2e;
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-            text-align: center !important;
-            width: 100%;
-            display: block;
-        }
-
-        .committee-affiliation {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-            line-height: 1.5;
-            text-align: center !important;
-            width: 100%;
-            display: block;
-        }
-
-        .committee-logo-link {
-            display: inline-block;
-            margin-top: auto;
-        }
-
-        .committee-logo-img {
-            max-height: 70px;
-            max-width: 180px;
-            width: auto;
-            object-fit: contain;
-            transition: filter 0.3s ease;
-        }
-
-        .committee-card:hover .committee-logo-img {
-            filter: brightness(1.05);
-        }
-    </style>
 </head>
 
-<body class="que-es-page">
+<body class="galeria-page">
 
-    <!-- CUSTOM AGENT MOBILE MENU -->
+    <!-- CUSTOM AGENT MOBILE MENU (clean rebuild) -->
+    <!-- Styles moved to css/style.css -->
+
     <div id="custom-mobile-menu">
         <div id="mobile-nav-bar">
             <a href="index.html" id="mobile-nav-logo">
@@ -137,33 +83,21 @@
             </button>
         </div>
         <div id="mobile-nav-dropdown">
-            <a href="que-es.html">¿QUÉ ES?</a>
-            <a href="programa.html">PROGRAMA</a>
-            <a href="eventos_paralelos.html">EVENTOS OPCIONALES</a>
-            <a href="comite.html">COMITÉ ORGANIZADOR</a>
-            <a href="poster.html">POSTER</a>
-            <a href="noticias.html">NOTICIAS</a>
-            <a href="galeria.html">GALERÍA</a>
-            <a href="contacto.html">CONTACTO</a>
-            <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
+            <a href="que-es_fr.html">À PROPOS</a>
+            <a href="programa_fr.html">PROGRAMME</a>
+            <a href="eventos_paralelos_fr.html">ÉVÉNEMENTS FACULTATIFS</a>
+            <a href="comite_fr.html">COMITÉ D'ORGANISATION</a>
+            <a href="poster_fr.html">POSTER</a>
+            <a href="noticias_fr.html">ACTUALITÉS</a>
+            <a href="galeria_fr.html" class="active-link">GALERIE</a>
+            <a href="contacto_fr.html">CONTACT</a>
+            <a href="https://forms.gle/aHf5zp1bR813PMi9A" target="_blank" class="mobile-btn-inscripcion">INSCRIPTION</a>
             <div class="mobile-lang-switcher" style="margin-top: 20px; text-align: center;">
-                <a href="comite.html" style="margin: 0 5px; font-weight: bold;">ES</a> |
-                <a href="comite_en.html" style="margin: 0 5px;">EN</a> |
-                <a href="comite_fr.html" style="margin: 0 5px;">FR</a>
+                <a href="galeria.html" style="margin: 0 5px;">ES</a> |
+                <a href="galeria_en.html" style="margin: 0 5px;">EN</a> |
+                <a href="galeria_fr.html" style="margin: 0 5px; font-weight: bold;">FR</a>
             </div>
         </div>
-    </div>
-    <div id="mobile-nav-dropdown">
-        <a href="que-es.html">¿QUÉ ES?</a>
-        <a href="programa.html">PROGRAMA</a>
-        <a href="eventos_paralelos.html">EVENTOS OPCIONALES</a>
-        <a href="comite.html">COMITÉ ORGANIZADOR</a>
-        <a href="poster.html">POSTER</a>
-        <a href="noticias.html">NOTICIAS</a>
-        <a href="galeria.html">GALERÍA</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
-    </div>
     </div>
 
     <script>
@@ -180,15 +114,14 @@
 
 
     <div class="page-wrapper">
-        <div class="global-styles w-embed">
-        </div>
+
         <main class="main-wrapper">
             <div data-wf--navbar--variant="base" data-animation="default" data-collapse="medium" data-duration="400"
                 data-easing="ease" data-easing2="ease" role="banner" class="nav_component w-nav">
                 <div class="padding-global">
                     <div class="container-large">
                         <div class="nav-wrap">
-                            <a href="index.html"
+                            <a href="index_fr.html"
                                 class="nav_brand w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                 <img src="estilos/logos/logo_iyrp_color.png" alt="logo IYRP 2026 Madrid"
                                     style="height: 85px; width: auto;">
@@ -197,136 +130,136 @@
                                 <div class="nav-menu_wrap w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e">
                                     <div class="nav-left">
                                         <div class="nav_divider"></div>
-                                        <a href="que-es.html"
+                                        <a href="que-es_fr.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    ¿QUÉ ES?<br />
+                                                    À PROPOS<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    ¿QUÉ ES?<br />
+                                                    À PROPOS<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="programa.html"
+                                        <a href="programa_fr.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    PROGRAMA<br />
+                                                    PROGRAMME<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    PROGRAMA<br />
+                                                    PROGRAMME<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="eventos_paralelos.html"
+                                        <a href="eventos_paralelos_fr.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    EVENTOS OPCIONALES<br />
+                                                    ÉVÉNEMENTS FACULTATIFS<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    EVENTOS OPCIONALES<br />
+                                                    ÉVÉNEMENTS FACULTATIFS<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="comite.html"
+                                        <a href="comite_fr.html"
+                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                            <div class="nav-button_text">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    COMITÉ D'ORGANISATION<br />
+                                                </div>
+                                            </div>
+                                            <div class="nav-button_text is-absolute">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    COMITÉ D'ORGANISATION<br />
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="poster_fr.html"
+                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                            <div class="nav-button_text">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    POSTER<br />
+                                                </div>
+                                            </div>
+                                            <div class="nav-button_text is-absolute">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    POSTER<br />
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="noticias_fr.html"
+                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
+                                            <div class="nav-button_text">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    ACTUALITÉS<br />
+                                                </div>
+                                            </div>
+                                            <div class="nav-button_text is-absolute">
+                                                <div class="text-size-regular text-weight-medium">
+                                                    ACTUALITÉS<br />
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="galeria_fr.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block active-link">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    COMITÉ ORGANIZADOR<br />
+                                                    GALERIE<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    COMITÉ ORGANIZADOR<br />
+                                                    GALERIE<br />
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="poster.html"
+                                        <a href="contacto_fr.html"
                                             class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
                                             <div class="nav-button_text">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    POSTER<br />
+                                                    CONTACT<br />
                                                 </div>
                                             </div>
                                             <div class="nav-button_text is-absolute">
                                                 <div class="text-size-regular text-weight-medium">
-                                                    POSTER<br />
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="noticias.html"
-                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
-                                            <div class="nav-button_text">
-                                                <div class="text-size-regular text-weight-medium">
-                                                    NOTICIAS<br />
-                                                </div>
-                                            </div>
-                                            <div class="nav-button_text is-absolute">
-                                                <div class="text-size-regular text-weight-medium">
-                                                    NOTICIAS<br />
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="galeria.html"
-                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
-                                            <div class="nav-button_text">
-                                                <div class="text-size-regular text-weight-medium">
-                                                    GALERÍA<br />
-                                                </div>
-                                            </div>
-                                            <div class="nav-button_text is-absolute">
-                                                <div class="text-size-regular text-weight-medium">
-                                                    GALERÍA<br />
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="contacto.html"
-                                            class="nav_link w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block">
-                                            <div class="nav-button_text">
-                                                <div class="text-size-regular text-weight-medium">
-                                                    CONTACTO<br />
-                                                </div>
-                                            </div>
-                                            <div class="nav-button_text is-absolute">
-                                                <div class="text-size-regular text-weight-medium">
-                                                    CONTACTO<br />
+                                                    CONTACT<br />
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                    <a id="forms" href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank"
+                                    <a id="forms" href="https://forms.gle/aHf5zp1bR813PMi9A" target="_blank"
                                         class="button is-nav w-variant-70bb92a8-5ae0-0df3-e45a-965420160f6e w-inline-block"
                                         style="background-color: #8ab875 !important; color: #074f00 !important; border: 1px solid #074f00 !important; margin-left: 2rem !important;">
                                         <div class="button-text">
                                             <div class="button_text"
                                                 style="color: #074f00 !important; font-weight: bold !important;">
-                                                INSCRIPCIÓN</div>
+                                                INSCRIPTION</div>
                                             <div class="button-text-animation">
                                                 <div class="button_text"
                                                     style="color: #074f00 !important; font-weight: bold !important;">
-                                                    INSCRIPCIÓN</div>
+                                                    INSCRIPTION</div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="lang-switcher"
                                     style="display: flex; gap: 10px; margin-left: 20px; align-items: center;">
-                                    <a href="comite.html" class="lang-link active"
-                                        style="text-decoration: none; font-weight: bold; color: #074f00;">ES</a>
+                                    <a href="galeria.html" class="lang-link"
+                                        style="text-decoration: none; color: #074f00;">ES</a>
                                     <span style="color: #074f00;">|</span>
-                                    <a href="comite_en.html" class="lang-link"
+                                    <a href="galeria_en.html" class="lang-link"
                                         style="text-decoration: none; color: #074f00;">EN</a>
                                     <span style="color: #074f00;">|</span>
-                                    <a href="comite_fr.html" class="lang-link"
-                                        style="text-decoration: none; color: #074f00;">FR</a>
+                                    <a href="galeria_fr.html" class="lang-link active"
+                                        style="text-decoration: none; font-weight: bold; color: #074f00;">FR</a>
                                 </div>
                             </nav>
                             <div class="nav_button w-nav-button">
@@ -343,9 +276,9 @@
                         <div class="hero-component">
                             <div class="hero_content">
                                 <div class="hero_content-top">
-                                    <h1 class="heading-style-h1 title-with-bg" style="text-align: center;">
+                                    <h1 class="heading-style-h1 title-with-bg">
                                         <strong class="bold-text">
-                                            COMITÉ ORGANIZADOR
+                                            GALERIE
                                             <br><span style="font-size: 0.5em;">MADRID INTERNATIONAL MEETING -
                                                 CELEBRATING THE IYRP 2026</span>
                                         </strong>
@@ -354,10 +287,10 @@
                                 <div class="hero-subtitle">
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <!-- Reusing style from other pages -->
                 <div class="hero-background">
                     <div class="video-placeholder">
                         <img src="estilos/fotos/foto_que_es.png" loading="lazy"
@@ -365,111 +298,180 @@
                     </div>
                 </div>
             </div>
+            </header>
 
-            <div class="section_content" style="padding: 4rem 2rem;">
-                <div class="container-large" style="width: 100%; max-width: 1200px; margin: 0 auto; display: block;">
-                    <h2 style="color: #1a4d2e; margin-bottom: 2rem; text-align: center;">Comité Organizador Local</h2>
+            <!-- GALLERY SECTION (SLIDER) -->
+            <section class="padding-global padding-section-medium gallery-section-padding">
+                <div class="container-large">
 
-                    <div class="committee-grid">
-                        <!-- Francesca Passeti Bombardella -->
-                        <div class="committee-card">
-                            <h3 class="committee-name"
-                                style="text-align: center !important; width: 100%; display: block;">Francesca Passeti
-                                Bombardella</h3>
-                            <p class="committee-affiliation"
-                                style="text-align: center !important; width: 100%; display: block;">Global Alliance for
-                                Rangelands & Pastoralists</p>
-                            <a href="https://iyrp.info" target="_blank" class="committee-logo-link">
-                                <img src="estilos/logos/logo_iyrp.png" alt="Global Alliance for IYRP 2026"
-                                    class="committee-logo-img">
-                            </a>
+                    <!-- Slider Component -->
+                    <div class="gallery-slider-wrapper">
+
+                        <!-- Slides -->
+                        <div class="gallery-slides">
+                            <!-- Slide 1 (Trashumancia) - MANTENER PIE DE FOTO ACTUAL -->
+                            <div class="gallery-slide active"
+                                data-caption="&lt;strong&gt;Photo 1:&lt;/strong&gt; Photo de María Mateos Corrales - Transhumance 2024. Passage de Los Cerillas par Navalmoral de la Mata. Photo primée au concours de photographie de la transhumance.">
+                                <img src="estilos/fotos/fotos/mara_mateos_corrales__trashumancia_2024._paso_de_los_cerillas_por_navalmoral_de_la_mata_img_2349.jpg"
+                                    alt="Photo 1 - Transhumance">
+                            </div>
+
+                            <!-- OVEJAS (Slide 2 - 11) - PIE DE FOTO: Imagen cedida por José Barea -->
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/001_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/002_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/003_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/004_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/005_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/006_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/007_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/008_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/009_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+                            <div class="gallery-slide" data-caption="Image fournie par José Barea">
+                                <img src="estilos/fotos/fotos/010_imidra_web.jpg" alt="Image fournie par José Barea">
+                            </div>
+
+                            <!-- RAZA BERRENDA (Slide 12 - 19) - PIE DE FOTO: Imagen cedida por ANABE... -->
+                            <!-- Photos from ANABE -->
+                            <div class="gallery-slide"
+                                data-caption="Image fournie par ANABE (Groupement des Associations d'Éleveurs de Bétail de la Race Berrenda en Negro et en Colorado)">
+                                <img src="estilos/fotos/anabe/raza_berrenda_colorado1.jpg"
+                                    alt="Image fournie par ANABE">
+                            </div>
+                            <div class="gallery-slide"
+                                data-caption="Image fournie par ANABE (Groupement des Associations d'Éleveurs de Bétail de la Race Berrenda en Negro et en Colorado)">
+                                <img src="estilos/fotos/anabe/raza_berrenda_colorado2.jpg"
+                                    alt="Image fournie par ANABE">
+                            </div>
+                            <div class="gallery-slide"
+                                data-caption="Image fournie par ANABE (Groupement des Associations d'Éleveurs de Bétail de la Race Berrenda en Negro et en Colorado)">
+                                <img src="estilos/fotos/anabe/raza_berrenda_colorado3.jpg"
+                                    alt="Image fournie par ANABE">
+                            </div>
+                            <div class="gallery-slide"
+                                data-caption="Image fournie par ANABE (Groupement des Associations d'Éleveurs de Bétail de la Race Berrenda en Negro et en Colorado)">
+                                <img src="estilos/fotos/anabe/raza_berrenda_colorado4.jpg"
+                                    alt="Image fournie par ANABE">
+                            </div>
+                            <div class="gallery-slide"
+                                data-caption="Image fournie par ANABE (Groupement des Associations d'Éleveurs de Bétail de la Race Berrenda en Negro et en Colorado)">
+                                <img src="estilos/fotos/anabe/raza_berrenda_colorado5.jpg"
+                                    alt="Image fournie par ANABE">
+                            </div>
+                            <div class="gallery-slide"
+                                data-caption="Image fournie par ANABE (Groupement des Associations d'Éleveurs de Bétail de la Race Berrenda en Negro et en Colorado)">
+                                <img src="estilos/fotos/anabe/raza_berrenda_colorado6.jpg"
+                                    alt="Image fournie par ANABE">
+                            </div>
+                            <div class="gallery-slide"
+                                data-caption="Image fournie par ANABE (Groupement des Associations d'Éleveurs de Bétail de la Race Berrenda en Negro et en Colorado)">
+                                <img src="estilos/fotos/anabe/raza_berrenda_colorado7.jpg"
+                                    alt="Image fournie par ANABE">
+                            </div>
+                            <div class="gallery-slide"
+                                data-caption="Image fournie par ANABE (Groupement des Associations d'Éleveurs de Bétail de la Race Berrenda en Negro et en Colorado)">
+                                <img src="estilos/fotos/anabe/raza_berrenda_colorado8.jpg"
+                                    alt="Image fournie par ANABE">
+                            </div>
                         </div>
 
-                        <!-- Gregorio Velasco Gil -->
-                        <div class="committee-card">
-                            <h3 class="committee-name"
-                                style="text-align: center !important; width: 100%; display: block;">Gregorio Velasco Gil
-                            </h3>
-                            <p class="committee-affiliation"
-                                style="text-align: center !important; width: 100%; display: block;">FAO</p>
-                            <a href="https://www.fao.org" target="_blank" class="committee-logo-link">
-                                <img src="estilos/logos/fao_logo_blue_3lines_es.png" alt="FAO"
-                                    class="committee-logo-img" width="196" height="43"
-                                    style="max-height: 120px; width: auto; height: auto;">
-                            </a>
+                        <!-- Navigation Arrows -->
+                        <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+
+                        <!-- Collapsible Footer (Overlay) -->
+                        <div class="gallery-footer-overlay" id="galleryFooter">
+                            <div class="footer-toggle" onclick="toggleFooter()">
+                                <span class="toggle-icon">▲</span> <span class="toggle-text">VOIR L'INFORMATION</span>
+                            </div>
+                            <div class="footer-content">
+                                <p id="captionText"></p>
+                            </div>
                         </div>
 
-                        <!-- Pedro Herrera Calvo -->
-                        <div class="committee-card">
-                            <h3 class="committee-name"
-                                style="text-align: center !important; width: 100%; display: block;">Pedro Herrera Calvo
-                            </h3>
-                            <p class="committee-affiliation"
-                                style="text-align: center !important; width: 100%; display: block;">FAO</p>
-                            <a href="https://www.fao.org" target="_blank" class="committee-logo-link">
-                                <img src="estilos/logos/fao_logo_blue_3lines_es.png" alt="FAO"
-                                    class="committee-logo-img" width="196" height="43"
-                                    style="max-height: 150px; width: auto; height: auto;">
-                            </a>
-                        </div>
-
-                        <!-- Antonio López-Francos Hernández -->
-                        <div class="committee-card">
-                            <h3 class="committee-name"
-                                style="text-align: center !important; width: 100%; display: block;">Antonio
-                                López-Francos Hernández</h3>
-                            <p class="committee-affiliation"
-                                style="text-align: center !important; width: 100%; display: block;">CIHEAM Zaragoza</p>
-                            <a href="https://www.iamz.ciheam.org" target="_blank" class="committee-logo-link">
-                                <img src="estilos/logos/ciheam_zaragoza_cmjn_horizontal.png" alt="CIHEAM Zaragoza"
-                                    class="committee-logo-img" style="max-height: 50px;">
-                            </a>
-                        </div>
-
-                        <!-- Manuel Bahillo Martín -->
-                        <div class="committee-card">
-                            <h3 class="committee-name"
-                                style="text-align: center !important; width: 100%; display: block;">Manuel Bahillo
-                                Martín</h3>
-                            <p class="committee-affiliation"
-                                style="text-align: center !important; width: 100%; display: block;">Fundación
-                                Trashumancia y Naturaleza</p>
-                            <a href="https://trashumanciaynaturaleza.org" target="_blank" class="committee-logo-link">
-                                <img src="estilos/logos/fundacionlogo.png" alt="Fundación Trashumancia y Naturaleza"
-                                    class="committee-logo-img" style="max-height: 50px;">
-                            </a>
-                        </div>
-
-                        <!-- Sonsoles Zabala Argüelles -->
-                        <div class="committee-card">
-                            <h3 class="committee-name"
-                                style="text-align: center !important; width: 100%; display: block;">Sonsoles Zabala
-                                Argüelles</h3>
-                            <p class="committee-affiliation"
-                                style="text-align: center !important; width: 100%; display: block;">Instituto Madrileño
-                                de Investigación y Desarrollo Rural,
-                                Agrario y Alimentario (IMIDRA)</p>
-                            <a href="https://www.comunidad.madrid/servicios/medio-rural/investigacion-agraria"
-                                target="_blank" class="committee-logo-link">
-                                <img src="estilos/logos/logo_imidra.png" alt="IMIDRA" class="committee-logo-img">
-                            </a>
-                        </div>
                     </div>
                 </div>
-            </div>
-
-            <section class="fs-styleguide_classes" style="padding-bottom: 4rem;">
             </section>
+
+            <!-- Gallery Styles Moved to style.css -->
+            <!-- Force override for caption color to ensure it applies -->
+            <style>
+                #captionText,
+                #captionText *,
+                .gallery-caption,
+                .gallery-caption * {
+                    color: #074f00 !important;
+                    font-family: 'Roboto', sans-serif !important;
+                }
+            </style>
+
+            <script>
+                let currentSlideIndex = 0;
+                const slides = document.querySelectorAll('.gallery-slide');
+                const captionText = document.getElementById('captionText');
+                const footerOverlay = document.getElementById('galleryFooter');
+
+                // Initialize first slide caption
+                function updateCaption() {
+                    if (slides.length > 0) {
+                        const caption = slides[currentSlideIndex].getAttribute('data-caption');
+                        // Wrap content in a styled div to force color application
+                        captionText.innerHTML = '<div style="color: #074f00 !important; font-family: \'Roboto\', sans-serif !important;">' + caption + '</div>';
+                    }
+                }
+
+                function showSlide(index) {
+                    if (index >= slides.length) { currentSlideIndex = 0; }
+                    else if (index < 0) { currentSlideIndex = slides.length - 1; }
+                    else { currentSlideIndex = index; }
+
+                    slides.forEach(slide => {
+                        slide.classList.remove('active');
+                    });
+
+                    slides[currentSlideIndex].classList.add('active');
+                    updateCaption();
+                }
+
+                function moveSlide(n) {
+                    showSlide(currentSlideIndex + n);
+                }
+
+                function toggleFooter() {
+                    footerOverlay.classList.toggle('expanded');
+                }
+
+                // Initial setup
+                updateCaption();
+            </script>
+
 
             <footer class="new-footer">
                 <div class="new-footer-container">
                     <!-- Left Column -->
                     <div class="new-footer-col-left">
-                        <h3>Te damos la bienvenida a Madrid International Meeting : <br>Celebrating The IYRP 2026</h3>
+                        <h3>Bienvenue à la Madrid International Meeting : <br>Celebrating The IYRP 2026</h3>
 
-                        <a href="contacto.html" class="button w-inline-block"
+                        <a href="contacto_fr.html" class="button w-inline-block"
                             style="background-color: #8ab875 !important; border: 1px solid #074f00 !important;">
-                            <div class="button_text" style="color: #074f00 !important;">CONTACTO</div>
+                            <div class="button_text" style="color: #074f00 !important;">CONTACT</div>
 
                         </a>
 
@@ -479,9 +481,9 @@
                         <!-- Location Removed -->
 
                         <!-- Location Button -->
-                        <a href="ubicacion.html" class="button w-inline-block"
+                        <a href="ubicacion_fr.html" class="button w-inline-block"
                             style="background-color: #8ab875 !important; border: 1px solid #074f00 !important;">
-                            <div class="button_text" style="color: #074f00 !important;">UBICACIÓN</div>
+                            <div class="button_text" style="color: #074f00 !important;">LOCALISATION</div>
 
                         </a>
 
@@ -511,6 +513,7 @@
                         <img src="estilos/logos/fundacionlogo.png" loading="lazy" alt="Fundación Trashumancia"
                             style="height: 60px; width: auto;" />
                     </a>
+
                     <a href="https://www.comunidad.madrid" target="_blank" class="footer-logo-link">
                         <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" alt="Comunidad de Madrid"
                             style="height: 60px; width: auto;" />
@@ -522,14 +525,15 @@
 
                     <div class="new-footer-item" style="margin-top: 1rem;">
                         <div class="new-footer-text" style="font-size: 0.8rem;">
-                            <a href="terminos.html" style="color: inherit; text-decoration: underline;">Términos y
-                                Condiciones</a> |
-                            <a href="privacidad.html" style="color: inherit; text-decoration: underline;">Política
-                                de Privacidad</a> |
-                            <a href="privacidad_uso.html" style="color: inherit; text-decoration: underline;">Uso de
-                                Cookies</a> |
-                            <a href="proteccion_datos.html"
-                                style="color: inherit; text-decoration: underline;">Protección de Datos</a>
+                            <a href="terminos_fr.html" style="color: inherit; text-decoration: underline;">Termes et
+                                Conditions</a> |
+                            <a href="privacidad_fr.html" style="color: inherit; text-decoration: underline;">Politique
+                                de Confidentialité</a> |
+                            <a href="privacidad_uso_fr.html"
+                                style="color: inherit; text-decoration: underline;">Utilisation
+                                de Cookies</a> |
+                            <a href="proteccion_datos_fr.html"
+                                style="color: inherit; text-decoration: underline;">Protection des Données</a>
                         </div>
                     </div>
                 </div>
